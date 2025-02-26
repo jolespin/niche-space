@@ -1,0 +1,33 @@
+2025-02-13 16:36:31,327 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Convert distance matrix to non-redundant KNN
+2025-02-13 16:37:18,528 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Remove disconnected nodes and convert to similarity
+2025-02-13 16:37:33,236 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Convert KNN to iGraph (n_neighbors = 80)
+2025-02-13 17:21:33,678 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Identify leiden communities with multiple seeds
+2025-02-13 17:25:28,878 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Identify membership co-occurrence ratios
+2025-02-13 17:27:31,220 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Identify node pairs that have co-membership 100% of the time
+2025-02-13 17:27:45,303 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Get list of clustered edges
+2025-02-13 17:27:47,323 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Get clustered graph
+2025-02-13 17:27:47,556 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] Calculate silhouette scores using 6712 nodes
+2025-02-13 17:27:49,090 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 80] [score = 0.129897018080212] [n_nodes = 6712] [n_edges = 345257]
+2025-02-13 17:27:49,091 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Convert distance matrix to non-redundant KNN
+2025-02-13 17:28:37,243 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Remove disconnected nodes and convert to similarity
+2025-02-13 17:28:51,294 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Convert KNN to iGraph (n_neighbors = 70)
+2025-02-13 18:00:19,647 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Identify leiden communities with multiple seeds
+2025-02-13 18:03:52,850 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Identify membership co-occurrence ratios
+2025-02-13 18:05:46,874 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Identify node pairs that have co-membership 100% of the time
+2025-02-13 18:06:01,399 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Get list of clustered edges
+2025-02-13 18:06:03,413 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Get clustered graph
+2025-02-13 18:06:03,492 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] Calculate silhouette scores using 6712 nodes
+2025-02-13 18:06:05,019 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 70] [score = 0.14426080947656697] [n_nodes = 6712] [n_edges = 310227]
+2025-02-13 18:06:05,019 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Convert distance matrix to non-redundant KNN
+2025-02-13 18:06:54,961 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Remove disconnected nodes and convert to similarity
+2025-02-13 18:07:09,780 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Convert KNN to iGraph (n_neighbors = 60)
+2025-02-13 18:30:41,329 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Identify leiden communities with multiple seeds
+2025-02-13 18:34:11,540 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Identify membership co-occurrence ratios
+2025-02-13 18:36:05,283 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Identify node pairs that have co-membership 100% of the time
+2025-02-13 18:36:20,310 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Get list of clustered edges
+2025-02-13 18:36:22,077 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Get clustered graph
+2025-02-13 18:36:22,149 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] Calculate silhouette scores using 6711 nodes
+2025-02-13 18:36:23,740 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 60] [score = 0.1351558481997871] [n_nodes = 6711] [n_edges = 265089]
+2025-02-13 18:36:23,741 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 50] Convert distance matrix to non-redundant KNN
+2025-02-13 18:37:16,955 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 50] Remove disconnected nodes and convert to similarity
+2025-02-13 18:37:32,048 - MetabolicFunctionalClass Detection - INFO - [n_neighbors = 50] Convert KNN to iGraph (n_neighbors = 50)

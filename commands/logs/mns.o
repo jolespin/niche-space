@@ -1,0 +1,620 @@
+Number of genomes: 20377, Number of features: 2124, Number of SLCs: 6719
+(20377, 2124)
+(20355, 2124)
+2025-02-16 18:54:55,482 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Start] Filtering observations and classes below feature threshold: 100
+2025-02-16 18:54:55,557 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Dropping] N = 248 y1 classes
+2025-02-16 18:54:55,558 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Dropping] N = 609 observations
+2025-02-16 18:54:55,558 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Remaining] N = 6462 y1 classes
+2025-02-16 18:54:55,559 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Remaining] N = 65 y2 classes
+2025-02-16 18:54:55,559 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Remaining] N = 19746 observations
+2025-02-16 18:54:55,559 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Remaining] N = 2124 features
+2025-02-16 18:54:55,559 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [End] Filtering observations and classes below feature threshold
+2025-02-16 18:54:55,628 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Start] Processing distance matrix
+2025-02-16 18:56:11,840 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [End] Processing distance matrix
+2025-02-16 18:56:11,858 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Begin] Hyperparameter Tuning
+2025-02-16 18:56:11,859 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Loading] Checkpoint file: checkpoints/NAL-GDB_MNS_v2.SLC-MFC.pkl
+2025-02-16 18:56:11,886 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 100] Fitting Diffision Map: n_neighbors=22, n_components=35, alpha=0.33316091383510626
+2025-02-16 18:56:13,796 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 100] Transforming observations: n_neighbors=22, n_components=35, alpha=0.33316091383510626
+2025-02-16 19:00:12,450 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 100] Calculating silhouette score: n_neighbors=22, n_components=35, alpha=0.33316091383510626
+[I 2025-02-16 19:00:15,985] Trial 100 finished with value: 0.6391344340236721 and parameters: {'n_neighbors': 22, 'n_components': 35, 'alpha': 0.33316091383510626}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:00:16,106 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 101] Fitting Diffision Map: n_neighbors=17, n_components=32, alpha=0.3042854257638792
+2025-02-16 19:00:17,989 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 101] Transforming observations: n_neighbors=17, n_components=32, alpha=0.3042854257638792
+2025-02-16 19:04:15,935 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 101] Calculating silhouette score: n_neighbors=17, n_components=32, alpha=0.3042854257638792
+[I 2025-02-16 19:04:19,490] Trial 101 finished with value: 0.6779258586485988 and parameters: {'n_neighbors': 17, 'n_components': 32, 'alpha': 0.3042854257638792}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:04:19,614 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 102] Fitting Diffision Map: n_neighbors=25, n_components=45, alpha=0.5654911670267516
+2025-02-16 19:04:21,847 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 102] Transforming observations: n_neighbors=25, n_components=45, alpha=0.5654911670267516
+2025-02-16 19:08:20,035 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 102] Calculating silhouette score: n_neighbors=25, n_components=45, alpha=0.5654911670267516
+[I 2025-02-16 19:08:23,599] Trial 102 finished with value: 0.6075826902539986 and parameters: {'n_neighbors': 25, 'n_components': 45, 'alpha': 0.5654911670267516}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:08:23,719 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 103] Fitting Diffision Map: n_neighbors=14, n_components=47, alpha=0.6704287156434575
+2025-02-16 19:08:25,546 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 103] Transforming observations: n_neighbors=14, n_components=47, alpha=0.6704287156434575
+2025-02-16 19:12:23,661 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 103] Calculating silhouette score: n_neighbors=14, n_components=47, alpha=0.6704287156434575
+[I 2025-02-16 19:12:27,230] Trial 103 finished with value: 0.6815796159557145 and parameters: {'n_neighbors': 14, 'n_components': 47, 'alpha': 0.6704287156434575}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:12:27,358 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 104] Fitting Diffision Map: n_neighbors=16, n_components=41, alpha=0.624235060424973
+2025-02-16 19:12:29,265 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 104] Transforming observations: n_neighbors=16, n_components=41, alpha=0.624235060424973
+2025-02-16 19:16:26,749 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 104] Calculating silhouette score: n_neighbors=16, n_components=41, alpha=0.624235060424973
+[I 2025-02-16 19:16:30,319] Trial 104 finished with value: 0.6760977147550176 and parameters: {'n_neighbors': 16, 'n_components': 41, 'alpha': 0.624235060424973}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:16:30,437 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 105] Fitting Diffision Map: n_neighbors=15, n_components=56, alpha=0.6350298307490732
+2025-02-16 19:16:32,308 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 105] Transforming observations: n_neighbors=15, n_components=56, alpha=0.6350298307490732
+2025-02-16 19:20:32,652 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 105] Calculating silhouette score: n_neighbors=15, n_components=56, alpha=0.6350298307490732
+[I 2025-02-16 19:20:36,287] Trial 105 finished with value: 0.6283732320291806 and parameters: {'n_neighbors': 15, 'n_components': 56, 'alpha': 0.6350298307490732}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:20:36,411 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 106] Fitting Diffision Map: n_neighbors=18, n_components=59, alpha=0.4145535784206901
+2025-02-16 19:20:38,443 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 106] Transforming observations: n_neighbors=18, n_components=59, alpha=0.4145535784206901
+2025-02-16 19:24:39,159 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 106] Calculating silhouette score: n_neighbors=18, n_components=59, alpha=0.4145535784206901
+[I 2025-02-16 19:24:42,764] Trial 106 finished with value: 0.6143785432552061 and parameters: {'n_neighbors': 18, 'n_components': 59, 'alpha': 0.4145535784206901}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:24:42,883 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 107] Fitting Diffision Map: n_neighbors=12, n_components=49, alpha=0.6008142369769355
+2025-02-16 19:24:44,778 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 107] Transforming observations: n_neighbors=12, n_components=49, alpha=0.6008142369769355
+2025-02-16 19:28:43,413 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 107] Calculating silhouette score: n_neighbors=12, n_components=49, alpha=0.6008142369769355
+[I 2025-02-16 19:28:46,981] Trial 107 finished with value: 0.6004282657153475 and parameters: {'n_neighbors': 12, 'n_components': 49, 'alpha': 0.6008142369769355}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:28:47,098 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 108] Fitting Diffision Map: n_neighbors=10, n_components=37, alpha=0.7098003891002748
+2025-02-16 19:28:49,373 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 108] Transforming observations: n_neighbors=10, n_components=37, alpha=0.7098003891002748
+2025-02-16 19:32:54,472 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 108] Calculating silhouette score: n_neighbors=10, n_components=37, alpha=0.7098003891002748
+[I 2025-02-16 19:32:57,963] Trial 108 finished with value: 0.601433611249274 and parameters: {'n_neighbors': 10, 'n_components': 37, 'alpha': 0.7098003891002748}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:32:58,079 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 109] Fitting Diffision Map: n_neighbors=21, n_components=52, alpha=0.2722342711658331
+2025-02-16 19:33:00,239 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 109] Transforming observations: n_neighbors=21, n_components=52, alpha=0.2722342711658331
+2025-02-16 19:36:59,870 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 109] Calculating silhouette score: n_neighbors=21, n_components=52, alpha=0.2722342711658331
+[I 2025-02-16 19:37:03,445] Trial 109 finished with value: 0.6093002087961171 and parameters: {'n_neighbors': 21, 'n_components': 52, 'alpha': 0.2722342711658331}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:37:03,569 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 110] Fitting Diffision Map: n_neighbors=13, n_components=43, alpha=0.38889307747430657
+2025-02-16 19:37:05,329 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 110] Transforming observations: n_neighbors=13, n_components=43, alpha=0.38889307747430657
+2025-02-16 19:41:04,538 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 110] Calculating silhouette score: n_neighbors=13, n_components=43, alpha=0.38889307747430657
+[I 2025-02-16 19:41:08,053] Trial 110 finished with value: 0.6608401647167187 and parameters: {'n_neighbors': 13, 'n_components': 43, 'alpha': 0.38889307747430657}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:41:08,179 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 111] Fitting Diffision Map: n_neighbors=17, n_components=46, alpha=0.5669489941091599
+2025-02-16 19:41:10,192 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 111] Transforming observations: n_neighbors=17, n_components=46, alpha=0.5669489941091599
+2025-02-16 19:45:10,287 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 111] Calculating silhouette score: n_neighbors=17, n_components=46, alpha=0.5669489941091599
+[I 2025-02-16 19:45:13,771] Trial 111 finished with value: 0.6873219705941553 and parameters: {'n_neighbors': 17, 'n_components': 46, 'alpha': 0.5669489941091599}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:45:13,893 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 112] Fitting Diffision Map: n_neighbors=16, n_components=35, alpha=0.5335877066461953
+2025-02-16 19:45:15,835 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 112] Transforming observations: n_neighbors=16, n_components=35, alpha=0.5335877066461953
+2025-02-16 19:49:15,048 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 112] Calculating silhouette score: n_neighbors=16, n_components=35, alpha=0.5335877066461953
+[I 2025-02-16 19:49:18,572] Trial 112 finished with value: 0.6628780626002596 and parameters: {'n_neighbors': 16, 'n_components': 35, 'alpha': 0.5335877066461953}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:49:18,690 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 113] Fitting Diffision Map: n_neighbors=19, n_components=46, alpha=0.5679069149145615
+2025-02-16 19:49:20,665 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 113] Transforming observations: n_neighbors=19, n_components=46, alpha=0.5679069149145615
+2025-02-16 19:53:20,842 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 113] Calculating silhouette score: n_neighbors=19, n_components=46, alpha=0.5679069149145615
+[I 2025-02-16 19:53:24,375] Trial 113 finished with value: 0.6752269982871552 and parameters: {'n_neighbors': 19, 'n_components': 46, 'alpha': 0.5679069149145615}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:53:24,491 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 114] Fitting Diffision Map: n_neighbors=17, n_components=45, alpha=0.6647569130027176
+2025-02-16 19:53:26,568 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 114] Transforming observations: n_neighbors=17, n_components=45, alpha=0.6647569130027176
+2025-02-16 19:57:27,281 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 114] Calculating silhouette score: n_neighbors=17, n_components=45, alpha=0.6647569130027176
+[I 2025-02-16 19:57:30,846] Trial 114 finished with value: 0.6960326590112761 and parameters: {'n_neighbors': 17, 'n_components': 45, 'alpha': 0.6647569130027176}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 19:57:30,971 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 115] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.4869528408696573
+2025-02-16 19:57:32,955 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 115] Transforming observations: n_neighbors=18, n_components=41, alpha=0.4869528408696573
+2025-02-16 20:01:33,034 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 115] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.4869528408696573
+[I 2025-02-16 20:01:36,574] Trial 115 finished with value: 0.7008650189338018 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.4869528408696573}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:01:36,697 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 116] Fitting Diffision Map: n_neighbors=18, n_components=40, alpha=0.4541352904486356
+2025-02-16 20:01:38,590 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 116] Transforming observations: n_neighbors=18, n_components=40, alpha=0.4541352904486356
+2025-02-16 20:05:37,963 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 116] Calculating silhouette score: n_neighbors=18, n_components=40, alpha=0.4541352904486356
+[I 2025-02-16 20:05:41,520] Trial 116 finished with value: 0.6953958343723308 and parameters: {'n_neighbors': 18, 'n_components': 40, 'alpha': 0.4541352904486356}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:05:41,647 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 117] Fitting Diffision Map: n_neighbors=20, n_components=41, alpha=0.483316812385052
+2025-02-16 20:05:44,023 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 117] Transforming observations: n_neighbors=20, n_components=41, alpha=0.483316812385052
+2025-02-16 20:09:43,871 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 117] Calculating silhouette score: n_neighbors=20, n_components=41, alpha=0.483316812385052
+[I 2025-02-16 20:09:47,374] Trial 117 finished with value: 0.6746814394848931 and parameters: {'n_neighbors': 20, 'n_components': 41, 'alpha': 0.483316812385052}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:09:47,494 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 118] Fitting Diffision Map: n_neighbors=24, n_components=38, alpha=0.4324429692792993
+2025-02-16 20:09:49,552 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 118] Transforming observations: n_neighbors=24, n_components=38, alpha=0.4324429692792993
+2025-02-16 20:13:50,232 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 118] Calculating silhouette score: n_neighbors=24, n_components=38, alpha=0.4324429692792993
+[I 2025-02-16 20:13:53,753] Trial 118 finished with value: 0.6289890982977047 and parameters: {'n_neighbors': 24, 'n_components': 38, 'alpha': 0.4324429692792993}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:13:53,880 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 119] Fitting Diffision Map: n_neighbors=56, n_components=31, alpha=0.46538878440160725
+2025-02-16 20:13:56,905 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 119] Transforming observations: n_neighbors=56, n_components=31, alpha=0.46538878440160725
+2025-02-16 20:17:57,065 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 119] Calculating silhouette score: n_neighbors=56, n_components=31, alpha=0.46538878440160725
+[I 2025-02-16 20:18:00,544] Trial 119 finished with value: 0.4571039771064292 and parameters: {'n_neighbors': 56, 'n_components': 31, 'alpha': 0.46538878440160725}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:18:00,671 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 120] Fitting Diffision Map: n_neighbors=18, n_components=40, alpha=0.5018524368765913
+2025-02-16 20:18:02,701 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 120] Transforming observations: n_neighbors=18, n_components=40, alpha=0.5018524368765913
+2025-02-16 20:22:03,545 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 120] Calculating silhouette score: n_neighbors=18, n_components=40, alpha=0.5018524368765913
+[I 2025-02-16 20:22:07,083] Trial 120 finished with value: 0.6865124383341071 and parameters: {'n_neighbors': 18, 'n_components': 40, 'alpha': 0.5018524368765913}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:22:07,204 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 121] Fitting Diffision Map: n_neighbors=22, n_components=36, alpha=0.450279626809824
+2025-02-16 20:22:09,279 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 121] Transforming observations: n_neighbors=22, n_components=36, alpha=0.450279626809824
+2025-02-16 20:26:09,933 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 121] Calculating silhouette score: n_neighbors=22, n_components=36, alpha=0.450279626809824
+[I 2025-02-16 20:26:13,426] Trial 121 finished with value: 0.6419549007946129 and parameters: {'n_neighbors': 22, 'n_components': 36, 'alpha': 0.450279626809824}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:26:13,546 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 122] Fitting Diffision Map: n_neighbors=18, n_components=44, alpha=0.3534135050894149
+2025-02-16 20:26:15,571 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 122] Transforming observations: n_neighbors=18, n_components=44, alpha=0.3534135050894149
+2025-02-16 20:30:17,215 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 122] Calculating silhouette score: n_neighbors=18, n_components=44, alpha=0.3534135050894149
+[I 2025-02-16 20:30:20,764] Trial 122 finished with value: 0.6982914415508608 and parameters: {'n_neighbors': 18, 'n_components': 44, 'alpha': 0.3534135050894149}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:30:20,884 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 123] Fitting Diffision Map: n_neighbors=18, n_components=44, alpha=0.39978163907189507
+2025-02-16 20:30:22,876 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 123] Transforming observations: n_neighbors=18, n_components=44, alpha=0.39978163907189507
+2025-02-16 20:34:23,151 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 123] Calculating silhouette score: n_neighbors=18, n_components=44, alpha=0.39978163907189507
+[I 2025-02-16 20:34:26,666] Trial 123 finished with value: 0.6982915135640034 and parameters: {'n_neighbors': 18, 'n_components': 44, 'alpha': 0.39978163907189507}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:34:26,787 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 124] Fitting Diffision Map: n_neighbors=19, n_components=44, alpha=0.35743466251896183
+2025-02-16 20:34:28,786 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 124] Transforming observations: n_neighbors=19, n_components=44, alpha=0.35743466251896183
+2025-02-16 20:38:28,459 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 124] Calculating silhouette score: n_neighbors=19, n_components=44, alpha=0.35743466251896183
+[I 2025-02-16 20:38:32,050] Trial 124 finished with value: 0.6862586338075573 and parameters: {'n_neighbors': 19, 'n_components': 44, 'alpha': 0.35743466251896183}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:38:32,177 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 125] Fitting Diffision Map: n_neighbors=15, n_components=38, alpha=0.3919446499155951
+2025-02-16 20:38:34,133 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 125] Transforming observations: n_neighbors=15, n_components=38, alpha=0.3919446499155951
+2025-02-16 20:42:34,207 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 125] Calculating silhouette score: n_neighbors=15, n_components=38, alpha=0.3919446499155951
+[I 2025-02-16 20:42:37,760] Trial 125 finished with value: 0.6741427295875909 and parameters: {'n_neighbors': 15, 'n_components': 38, 'alpha': 0.3919446499155951}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:42:37,880 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 126] Fitting Diffision Map: n_neighbors=21, n_components=42, alpha=0.4208320510690857
+2025-02-16 20:42:39,909 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 126] Transforming observations: n_neighbors=21, n_components=42, alpha=0.4208320510690857
+2025-02-16 20:46:38,891 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 126] Calculating silhouette score: n_neighbors=21, n_components=42, alpha=0.4208320510690857
+[I 2025-02-16 20:46:42,454] Trial 126 finished with value: 0.6616834236971674 and parameters: {'n_neighbors': 21, 'n_components': 42, 'alpha': 0.4208320510690857}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:46:42,574 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 127] Fitting Diffision Map: n_neighbors=23, n_components=34, alpha=0.33402730107057277
+2025-02-16 20:46:44,698 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 127] Transforming observations: n_neighbors=23, n_components=34, alpha=0.33402730107057277
+2025-02-16 20:50:42,895 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 127] Calculating silhouette score: n_neighbors=23, n_components=34, alpha=0.33402730107057277
+[I 2025-02-16 20:50:46,536] Trial 127 finished with value: 0.6038693741160868 and parameters: {'n_neighbors': 23, 'n_components': 34, 'alpha': 0.33402730107057277}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:50:46,654 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 128] Fitting Diffision Map: n_neighbors=40, n_components=40, alpha=0.3540138811395974
+2025-02-16 20:50:49,338 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 128] Transforming observations: n_neighbors=40, n_components=40, alpha=0.3540138811395974
+2025-02-16 20:54:49,064 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 128] Calculating silhouette score: n_neighbors=40, n_components=40, alpha=0.3540138811395974
+[I 2025-02-16 20:54:52,714] Trial 128 finished with value: 0.45652693285127993 and parameters: {'n_neighbors': 40, 'n_components': 40, 'alpha': 0.3540138811395974}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:54:52,850 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 129] Fitting Diffision Map: n_neighbors=18, n_components=49, alpha=0.3963590155334162
+2025-02-16 20:54:54,961 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 129] Transforming observations: n_neighbors=18, n_components=49, alpha=0.3963590155334162
+2025-02-16 20:58:54,190 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 129] Calculating silhouette score: n_neighbors=18, n_components=49, alpha=0.3963590155334162
+[I 2025-02-16 20:58:57,778] Trial 129 finished with value: 0.6690911207626858 and parameters: {'n_neighbors': 18, 'n_components': 49, 'alpha': 0.3963590155334162}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 20:58:57,909 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 130] Fitting Diffision Map: n_neighbors=14, n_components=44, alpha=0.4612930953268283
+2025-02-16 20:58:59,833 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 130] Transforming observations: n_neighbors=14, n_components=44, alpha=0.4612930953268283
+2025-02-16 21:03:00,253 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 130] Calculating silhouette score: n_neighbors=14, n_components=44, alpha=0.4612930953268283
+[I 2025-02-16 21:03:03,821] Trial 130 finished with value: 0.6726791973056577 and parameters: {'n_neighbors': 14, 'n_components': 44, 'alpha': 0.4612930953268283}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:03:03,943 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 131] Fitting Diffision Map: n_neighbors=20, n_components=37, alpha=0.10112179727840065
+2025-02-16 21:03:05,769 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 131] Transforming observations: n_neighbors=20, n_components=37, alpha=0.10112179727840065
+2025-02-16 21:07:05,034 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 131] Calculating silhouette score: n_neighbors=20, n_components=37, alpha=0.10112179727840065
+[I 2025-02-16 21:07:08,651] Trial 131 finished with value: 0.6772433844810736 and parameters: {'n_neighbors': 20, 'n_components': 37, 'alpha': 0.10112179727840065}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:07:08,775 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 132] Fitting Diffision Map: n_neighbors=15, n_components=79, alpha=0.2759377422003036
+2025-02-16 21:07:10,780 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 132] Transforming observations: n_neighbors=15, n_components=79, alpha=0.2759377422003036
+2025-02-16 21:11:11,217 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 132] Calculating silhouette score: n_neighbors=15, n_components=79, alpha=0.2759377422003036
+[I 2025-02-16 21:11:14,874] Trial 132 finished with value: 0.5010843558915724 and parameters: {'n_neighbors': 15, 'n_components': 79, 'alpha': 0.2759377422003036}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:11:15,011 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 133] Fitting Diffision Map: n_neighbors=17, n_components=42, alpha=0.48978386121496514
+2025-02-16 21:11:17,020 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 133] Transforming observations: n_neighbors=17, n_components=42, alpha=0.48978386121496514
+2025-02-16 21:15:17,330 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 133] Calculating silhouette score: n_neighbors=17, n_components=42, alpha=0.48978386121496514
+[I 2025-02-16 21:15:20,873] Trial 133 finished with value: 0.695980929198407 and parameters: {'n_neighbors': 17, 'n_components': 42, 'alpha': 0.48978386121496514}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:15:20,997 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 134] Fitting Diffision Map: n_neighbors=19, n_components=42, alpha=0.5180826359722442
+2025-02-16 21:15:22,972 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 134] Transforming observations: n_neighbors=19, n_components=42, alpha=0.5180826359722442
+2025-02-16 21:19:21,902 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 134] Calculating silhouette score: n_neighbors=19, n_components=42, alpha=0.5180826359722442
+[I 2025-02-16 21:19:25,476] Trial 134 finished with value: 0.6912397483488361 and parameters: {'n_neighbors': 19, 'n_components': 42, 'alpha': 0.5180826359722442}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:19:25,604 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 135] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.47921319594021006
+2025-02-16 21:19:27,588 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 135] Transforming observations: n_neighbors=18, n_components=41, alpha=0.47921319594021006
+2025-02-16 21:23:25,626 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 135] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.47921319594021006
+[I 2025-02-16 21:23:29,165] Trial 135 finished with value: 0.7008661912957327 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.47921319594021006}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:23:29,285 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 136] Fitting Diffision Map: n_neighbors=21, n_components=39, alpha=0.5226645595784134
+2025-02-16 21:23:31,394 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 136] Transforming observations: n_neighbors=21, n_components=39, alpha=0.5226645595784134
+2025-02-16 21:27:29,738 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 136] Calculating silhouette score: n_neighbors=21, n_components=39, alpha=0.5226645595784134
+[I 2025-02-16 21:27:33,260] Trial 136 finished with value: 0.6756790004022056 and parameters: {'n_neighbors': 21, 'n_components': 39, 'alpha': 0.5226645595784134}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:27:33,377 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 137] Fitting Diffision Map: n_neighbors=19, n_components=48, alpha=0.47920970815956027
+2025-02-16 21:27:35,350 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 137] Transforming observations: n_neighbors=19, n_components=48, alpha=0.47920970815956027
+2025-02-16 21:31:33,428 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 137] Calculating silhouette score: n_neighbors=19, n_components=48, alpha=0.47920970815956027
+[I 2025-02-16 21:31:37,006] Trial 137 finished with value: 0.6638074198702617 and parameters: {'n_neighbors': 19, 'n_components': 48, 'alpha': 0.47920970815956027}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:31:37,129 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 138] Fitting Diffision Map: n_neighbors=18, n_components=44, alpha=0.4350852381729463
+2025-02-16 21:31:39,123 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 138] Transforming observations: n_neighbors=18, n_components=44, alpha=0.4350852381729463
+2025-02-16 21:35:38,016 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 138] Calculating silhouette score: n_neighbors=18, n_components=44, alpha=0.4350852381729463
+[I 2025-02-16 21:35:41,651] Trial 138 finished with value: 0.6973514288207342 and parameters: {'n_neighbors': 18, 'n_components': 44, 'alpha': 0.4350852381729463}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:35:41,789 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 139] Fitting Diffision Map: n_neighbors=17, n_components=45, alpha=0.4432296466624175
+2025-02-16 21:35:44,441 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 139] Transforming observations: n_neighbors=17, n_components=45, alpha=0.4432296466624175
+2025-02-16 21:39:43,338 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 139] Calculating silhouette score: n_neighbors=17, n_components=45, alpha=0.4432296466624175
+[I 2025-02-16 21:39:46,912] Trial 139 finished with value: 0.6953884985034904 and parameters: {'n_neighbors': 17, 'n_components': 45, 'alpha': 0.4432296466624175}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:39:47,036 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 140] Fitting Diffision Map: n_neighbors=17, n_components=45, alpha=0.4439817634680315
+2025-02-16 21:39:49,180 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 140] Transforming observations: n_neighbors=17, n_components=45, alpha=0.4439817634680315
+2025-02-16 21:43:47,959 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 140] Calculating silhouette score: n_neighbors=17, n_components=45, alpha=0.4439817634680315
+[I 2025-02-16 21:43:51,533] Trial 140 finished with value: 0.695862209616135 and parameters: {'n_neighbors': 17, 'n_components': 45, 'alpha': 0.4439817634680315}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:43:51,669 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 141] Fitting Diffision Map: n_neighbors=17, n_components=51, alpha=0.43745476169877745
+2025-02-16 21:43:53,820 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 141] Transforming observations: n_neighbors=17, n_components=51, alpha=0.43745476169877745
+2025-02-16 21:47:53,879 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 141] Calculating silhouette score: n_neighbors=17, n_components=51, alpha=0.43745476169877745
+[I 2025-02-16 21:47:57,532] Trial 141 finished with value: 0.6660843389857686 and parameters: {'n_neighbors': 17, 'n_components': 51, 'alpha': 0.43745476169877745}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:47:57,663 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 142] Fitting Diffision Map: n_neighbors=16, n_components=54, alpha=0.41982185731594784
+2025-02-16 21:47:59,706 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 142] Transforming observations: n_neighbors=16, n_components=54, alpha=0.41982185731594784
+2025-02-16 21:51:59,552 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 142] Calculating silhouette score: n_neighbors=16, n_components=54, alpha=0.41982185731594784
+[I 2025-02-16 21:52:03,153] Trial 142 finished with value: 0.638906352398922 and parameters: {'n_neighbors': 16, 'n_components': 54, 'alpha': 0.41982185731594784}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:52:03,282 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 143] Fitting Diffision Map: n_neighbors=18, n_components=45, alpha=0.4954385890826993
+2025-02-16 21:52:05,339 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 143] Transforming observations: n_neighbors=18, n_components=45, alpha=0.4954385890826993
+2025-02-16 21:56:05,072 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 143] Calculating silhouette score: n_neighbors=18, n_components=45, alpha=0.4954385890826993
+[I 2025-02-16 21:56:08,636] Trial 143 finished with value: 0.6922441366256207 and parameters: {'n_neighbors': 18, 'n_components': 45, 'alpha': 0.4954385890826993}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 21:56:08,763 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 144] Fitting Diffision Map: n_neighbors=17, n_components=44, alpha=0.45009796589268225
+2025-02-16 21:56:10,848 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 144] Transforming observations: n_neighbors=17, n_components=44, alpha=0.45009796589268225
+2025-02-16 22:00:10,602 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 144] Calculating silhouette score: n_neighbors=17, n_components=44, alpha=0.45009796589268225
+[I 2025-02-16 22:00:14,177] Trial 144 finished with value: 0.6919249424537369 and parameters: {'n_neighbors': 17, 'n_components': 44, 'alpha': 0.45009796589268225}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 22:00:14,304 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 145] Fitting Diffision Map: n_neighbors=20, n_components=40, alpha=0.9995466403386377
+2025-02-16 22:00:16,304 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 145] Transforming observations: n_neighbors=20, n_components=40, alpha=0.9995466403386377
+2025-02-16 22:04:15,069 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 145] Calculating silhouette score: n_neighbors=20, n_components=40, alpha=0.9995466403386377
+[I 2025-02-16 22:04:18,655] Trial 145 finished with value: 0.669700316248945 and parameters: {'n_neighbors': 20, 'n_components': 40, 'alpha': 0.9995466403386377}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 22:04:18,790 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 146] Fitting Diffision Map: n_neighbors=16, n_components=48, alpha=0.38182352574084333
+2025-02-16 22:04:20,968 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 146] Transforming observations: n_neighbors=16, n_components=48, alpha=0.38182352574084333
+2025-02-16 22:08:20,001 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 146] Calculating silhouette score: n_neighbors=16, n_components=48, alpha=0.38182352574084333
+[I 2025-02-16 22:08:23,597] Trial 146 finished with value: 0.679769091147771 and parameters: {'n_neighbors': 16, 'n_components': 48, 'alpha': 0.38182352574084333}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 22:08:23,728 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 147] Fitting Diffision Map: n_neighbors=18, n_components=45, alpha=0.48211185722867134
+2025-02-16 22:08:25,769 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 147] Transforming observations: n_neighbors=18, n_components=45, alpha=0.48211185722867134
+2025-02-16 22:12:25,377 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 147] Calculating silhouette score: n_neighbors=18, n_components=45, alpha=0.48211185722867134
+[I 2025-02-16 22:12:28,957] Trial 147 finished with value: 0.6922440703097018 and parameters: {'n_neighbors': 18, 'n_components': 45, 'alpha': 0.48211185722867134}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 22:12:29,085 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 148] Fitting Diffision Map: n_neighbors=23, n_components=41, alpha=0.4354052288908734
+2025-02-16 22:12:31,210 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 148] Transforming observations: n_neighbors=23, n_components=41, alpha=0.4354052288908734
+2025-02-16 22:33:17,351 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 148] Calculating silhouette score: n_neighbors=23, n_components=41, alpha=0.4354052288908734
+[I 2025-02-16 22:33:22,098] Trial 148 finished with value: 0.6389872593282667 and parameters: {'n_neighbors': 23, 'n_components': 41, 'alpha': 0.4354052288908734}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 22:33:22,230 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 149] Fitting Diffision Map: n_neighbors=13, n_components=42, alpha=0.45740971537482006
+2025-02-16 22:33:26,841 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 149] Transforming observations: n_neighbors=13, n_components=42, alpha=0.45740971537482006
+2025-02-16 22:54:16,971 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 149] Calculating silhouette score: n_neighbors=13, n_components=42, alpha=0.45740971537482006
+[I 2025-02-16 22:54:21,640] Trial 149 finished with value: 0.6609561950142511 and parameters: {'n_neighbors': 13, 'n_components': 42, 'alpha': 0.45740971537482006}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 22:54:21,771 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 150] Fitting Diffision Map: n_neighbors=22, n_components=38, alpha=0.40741467689398175
+2025-02-16 22:54:28,679 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 150] Transforming observations: n_neighbors=22, n_components=38, alpha=0.40741467689398175
+2025-02-16 23:15:06,706 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 150] Calculating silhouette score: n_neighbors=22, n_components=38, alpha=0.40741467689398175
+[I 2025-02-16 23:15:11,444] Trial 150 finished with value: 0.6689913276011116 and parameters: {'n_neighbors': 22, 'n_components': 38, 'alpha': 0.40741467689398175}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 23:15:11,569 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 151] Fitting Diffision Map: n_neighbors=20, n_components=44, alpha=0.5069346927548137
+2025-02-16 23:15:18,841 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 151] Transforming observations: n_neighbors=20, n_components=44, alpha=0.5069346927548137
+2025-02-16 23:36:06,860 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 151] Calculating silhouette score: n_neighbors=20, n_components=44, alpha=0.5069346927548137
+[I 2025-02-16 23:36:11,672] Trial 151 finished with value: 0.6653302898979148 and parameters: {'n_neighbors': 20, 'n_components': 44, 'alpha': 0.5069346927548137}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 23:36:11,791 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 152] Fitting Diffision Map: n_neighbors=15, n_components=47, alpha=0.40520752571958735
+2025-02-16 23:36:17,080 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 152] Transforming observations: n_neighbors=15, n_components=47, alpha=0.40520752571958735
+2025-02-16 23:57:04,122 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 152] Calculating silhouette score: n_neighbors=15, n_components=47, alpha=0.40520752571958735
+[I 2025-02-16 23:57:09,401] Trial 152 finished with value: 0.6803836482031175 and parameters: {'n_neighbors': 15, 'n_components': 47, 'alpha': 0.40520752571958735}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-16 23:57:09,531 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 153] Fitting Diffision Map: n_neighbors=17, n_components=40, alpha=0.3662325503547326
+2025-02-16 23:57:14,758 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 153] Transforming observations: n_neighbors=17, n_components=40, alpha=0.3662325503547326
+2025-02-17 00:18:06,383 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 153] Calculating silhouette score: n_neighbors=17, n_components=40, alpha=0.3662325503547326
+[I 2025-02-17 00:18:11,091] Trial 153 finished with value: 0.6894624912525322 and parameters: {'n_neighbors': 17, 'n_components': 40, 'alpha': 0.3662325503547326}. Best is trial 84 with value: 0.7013868505228956.
+2025-02-17 00:18:11,212 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 154] Fitting Diffision Map: n_neighbors=18, n_components=42, alpha=0.42577439814772366
+2025-02-17 00:18:18,848 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 154] Transforming observations: n_neighbors=18, n_components=42, alpha=0.42577439814772366
+2025-02-17 00:39:04,311 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 154] Calculating silhouette score: n_neighbors=18, n_components=42, alpha=0.42577439814772366
+[I 2025-02-17 00:39:09,215] Trial 154 finished with value: 0.7020373659532004 and parameters: {'n_neighbors': 18, 'n_components': 42, 'alpha': 0.42577439814772366}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 00:39:09,337 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 155] Fitting Diffision Map: n_neighbors=18, n_components=43, alpha=0.42712197032278726
+2025-02-17 00:39:15,002 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 155] Transforming observations: n_neighbors=18, n_components=43, alpha=0.42712197032278726
+2025-02-17 01:00:00,871 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 155] Calculating silhouette score: n_neighbors=18, n_components=43, alpha=0.42712197032278726
+[I 2025-02-17 01:00:06,483] Trial 155 finished with value: 0.6961834668249621 and parameters: {'n_neighbors': 18, 'n_components': 43, 'alpha': 0.42712197032278726}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 01:00:06,599 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 156] Fitting Diffision Map: n_neighbors=16, n_components=43, alpha=0.42720518983936057
+2025-02-17 01:00:11,887 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 156] Transforming observations: n_neighbors=16, n_components=43, alpha=0.42720518983936057
+2025-02-17 01:20:59,272 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 156] Calculating silhouette score: n_neighbors=16, n_components=43, alpha=0.42720518983936057
+[I 2025-02-17 01:21:05,265] Trial 156 finished with value: 0.684822107147563 and parameters: {'n_neighbors': 16, 'n_components': 43, 'alpha': 0.42720518983936057}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 01:21:05,388 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 157] Fitting Diffision Map: n_neighbors=18, n_components=46, alpha=0.4498461889701763
+2025-02-17 01:21:12,923 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 157] Transforming observations: n_neighbors=18, n_components=46, alpha=0.4498461889701763
+2025-02-17 01:42:11,201 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 157] Calculating silhouette score: n_neighbors=18, n_components=46, alpha=0.4498461889701763
+[I 2025-02-17 01:42:16,207] Trial 157 finished with value: 0.6891781978017048 and parameters: {'n_neighbors': 18, 'n_components': 46, 'alpha': 0.4498461889701763}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 01:42:16,338 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 158] Fitting Diffision Map: n_neighbors=18, n_components=50, alpha=0.4753390280956787
+2025-02-17 01:42:23,159 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 158] Transforming observations: n_neighbors=18, n_components=50, alpha=0.4753390280956787
+2025-02-17 02:03:14,050 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 158] Calculating silhouette score: n_neighbors=18, n_components=50, alpha=0.4753390280956787
+[I 2025-02-17 02:03:18,799] Trial 158 finished with value: 0.6678073532103134 and parameters: {'n_neighbors': 18, 'n_components': 50, 'alpha': 0.4753390280956787}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 02:03:18,932 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 159] Fitting Diffision Map: n_neighbors=21, n_components=43, alpha=0.4936990376547586
+2025-02-17 02:03:26,201 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 159] Transforming observations: n_neighbors=21, n_components=43, alpha=0.4936990376547586
+2025-02-17 02:24:17,212 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 159] Calculating silhouette score: n_neighbors=21, n_components=43, alpha=0.4936990376547586
+[I 2025-02-17 02:24:22,365] Trial 159 finished with value: 0.6628247794215709 and parameters: {'n_neighbors': 21, 'n_components': 43, 'alpha': 0.4936990376547586}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 02:24:22,483 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 160] Fitting Diffision Map: n_neighbors=16, n_components=38, alpha=0.3762562736388308
+2025-02-17 02:24:27,883 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 160] Transforming observations: n_neighbors=16, n_components=38, alpha=0.3762562736388308
+2025-02-17 02:45:08,562 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 160] Calculating silhouette score: n_neighbors=16, n_components=38, alpha=0.3762562736388308
+[I 2025-02-17 02:45:13,354] Trial 160 finished with value: 0.6948567396926077 and parameters: {'n_neighbors': 16, 'n_components': 38, 'alpha': 0.3762562736388308}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 02:45:13,483 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 161] Fitting Diffision Map: n_neighbors=19, n_components=45, alpha=0.4064146361076595
+2025-02-17 02:45:21,323 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 161] Transforming observations: n_neighbors=19, n_components=45, alpha=0.4064146361076595
+2025-02-17 03:06:12,413 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 161] Calculating silhouette score: n_neighbors=19, n_components=45, alpha=0.4064146361076595
+[I 2025-02-17 03:06:17,337] Trial 161 finished with value: 0.6774419963359023 and parameters: {'n_neighbors': 19, 'n_components': 45, 'alpha': 0.4064146361076595}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 03:06:17,469 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 162] Fitting Diffision Map: n_neighbors=20, n_components=41, alpha=0.43255773842560813
+2025-02-17 03:06:23,323 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 162] Transforming observations: n_neighbors=20, n_components=41, alpha=0.43255773842560813
+2025-02-17 03:27:07,661 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 162] Calculating silhouette score: n_neighbors=20, n_components=41, alpha=0.43255773842560813
+[I 2025-02-17 03:27:12,520] Trial 162 finished with value: 0.680057256812821 and parameters: {'n_neighbors': 20, 'n_components': 41, 'alpha': 0.43255773842560813}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 03:27:12,644 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 163] Fitting Diffision Map: n_neighbors=16, n_components=38, alpha=0.38068429809903714
+2025-02-17 03:27:20,443 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 163] Transforming observations: n_neighbors=16, n_components=38, alpha=0.38068429809903714
+2025-02-17 03:48:12,081 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 163] Calculating silhouette score: n_neighbors=16, n_components=38, alpha=0.38068429809903714
+[I 2025-02-17 03:48:17,028] Trial 163 finished with value: 0.6987791805754754 and parameters: {'n_neighbors': 16, 'n_components': 38, 'alpha': 0.38068429809903714}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 03:48:17,159 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 164] Fitting Diffision Map: n_neighbors=17, n_components=40, alpha=0.38822225919947445
+2025-02-17 03:48:23,079 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 164] Transforming observations: n_neighbors=17, n_components=40, alpha=0.38822225919947445
+2025-02-17 04:09:08,204 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 164] Calculating silhouette score: n_neighbors=17, n_components=40, alpha=0.38822225919947445
+[I 2025-02-17 04:09:13,051] Trial 164 finished with value: 0.6943925084857623 and parameters: {'n_neighbors': 17, 'n_components': 40, 'alpha': 0.38822225919947445}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 04:09:13,173 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 165] Fitting Diffision Map: n_neighbors=15, n_components=43, alpha=0.3503201539721758
+2025-02-17 04:09:17,400 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 165] Transforming observations: n_neighbors=15, n_components=43, alpha=0.3503201539721758
+2025-02-17 04:30:04,940 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 165] Calculating silhouette score: n_neighbors=15, n_components=43, alpha=0.3503201539721758
+[I 2025-02-17 04:30:10,128] Trial 165 finished with value: 0.6732272944842422 and parameters: {'n_neighbors': 15, 'n_components': 43, 'alpha': 0.3503201539721758}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 04:30:10,257 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 166] Fitting Diffision Map: n_neighbors=12, n_components=36, alpha=0.31533695783084803
+2025-02-17 04:30:14,205 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 166] Transforming observations: n_neighbors=12, n_components=36, alpha=0.31533695783084803
+2025-02-17 04:51:06,552 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 166] Calculating silhouette score: n_neighbors=12, n_components=36, alpha=0.31533695783084803
+[I 2025-02-17 04:51:11,238] Trial 166 finished with value: 0.627516637464122 and parameters: {'n_neighbors': 12, 'n_components': 36, 'alpha': 0.31533695783084803}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 04:51:11,359 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 167] Fitting Diffision Map: n_neighbors=14, n_components=39, alpha=0.4649823945104307
+2025-02-17 04:51:16,598 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 167] Transforming observations: n_neighbors=14, n_components=39, alpha=0.4649823945104307
+2025-02-17 05:12:08,940 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 167] Calculating silhouette score: n_neighbors=14, n_components=39, alpha=0.4649823945104307
+[I 2025-02-17 05:12:13,540] Trial 167 finished with value: 0.6889404018383676 and parameters: {'n_neighbors': 14, 'n_components': 39, 'alpha': 0.4649823945104307}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 05:12:13,671 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 168] Fitting Diffision Map: n_neighbors=17, n_components=47, alpha=0.5398090475435785
+2025-02-17 05:12:20,920 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 168] Transforming observations: n_neighbors=17, n_components=47, alpha=0.5398090475435785
+2025-02-17 05:33:19,443 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 168] Calculating silhouette score: n_neighbors=17, n_components=47, alpha=0.5398090475435785
+[I 2025-02-17 05:33:24,259] Trial 168 finished with value: 0.6819366711258416 and parameters: {'n_neighbors': 17, 'n_components': 47, 'alpha': 0.5398090475435785}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 05:33:24,388 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 169] Fitting Diffision Map: n_neighbors=19, n_components=41, alpha=0.8970995999862847
+2025-02-17 05:33:30,919 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 169] Transforming observations: n_neighbors=19, n_components=41, alpha=0.8970995999862847
+2025-02-17 05:54:17,991 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 169] Calculating silhouette score: n_neighbors=19, n_components=41, alpha=0.8970995999862847
+[I 2025-02-17 05:54:23,092] Trial 169 finished with value: 0.6799957097367167 and parameters: {'n_neighbors': 19, 'n_components': 41, 'alpha': 0.8970995999862847}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 05:54:23,215 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 170] Fitting Diffision Map: n_neighbors=16, n_components=33, alpha=0.41973069362150184
+2025-02-17 05:54:29,807 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 170] Transforming observations: n_neighbors=16, n_components=33, alpha=0.41973069362150184
+2025-02-17 06:15:16,481 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 170] Calculating silhouette score: n_neighbors=16, n_components=33, alpha=0.41973069362150184
+[I 2025-02-17 06:15:21,262] Trial 170 finished with value: 0.6773160807538323 and parameters: {'n_neighbors': 16, 'n_components': 33, 'alpha': 0.41973069362150184}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 06:15:21,387 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 171] Fitting Diffision Map: n_neighbors=13, n_components=45, alpha=0.44319408695602275
+2025-02-17 06:15:27,805 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 171] Transforming observations: n_neighbors=13, n_components=45, alpha=0.44319408695602275
+2025-02-17 06:36:18,540 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 171] Calculating silhouette score: n_neighbors=13, n_components=45, alpha=0.44319408695602275
+[I 2025-02-17 06:36:23,543] Trial 171 finished with value: 0.6680664050537028 and parameters: {'n_neighbors': 13, 'n_components': 45, 'alpha': 0.44319408695602275}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 06:36:23,671 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 172] Fitting Diffision Map: n_neighbors=15, n_components=49, alpha=0.3951790849266607
+2025-02-17 06:36:30,204 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 172] Transforming observations: n_neighbors=15, n_components=49, alpha=0.3951790849266607
+2025-02-17 06:57:24,861 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 172] Calculating silhouette score: n_neighbors=15, n_components=49, alpha=0.3951790849266607
+[I 2025-02-17 06:57:29,678] Trial 172 finished with value: 0.6821317825959281 and parameters: {'n_neighbors': 15, 'n_components': 49, 'alpha': 0.3951790849266607}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 06:57:29,798 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 173] Fitting Diffision Map: n_neighbors=18, n_components=38, alpha=0.3877549647620518
+2025-02-17 06:57:36,602 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 173] Transforming observations: n_neighbors=18, n_components=38, alpha=0.3877549647620518
+2025-02-17 07:18:33,980 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 173] Calculating silhouette score: n_neighbors=18, n_components=38, alpha=0.3877549647620518
+[I 2025-02-17 07:18:38,692] Trial 173 finished with value: 0.6961053633210637 and parameters: {'n_neighbors': 18, 'n_components': 38, 'alpha': 0.3877549647620518}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 07:18:38,811 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 174] Fitting Diffision Map: n_neighbors=18, n_components=37, alpha=0.3725915603999886
+2025-02-17 07:18:45,008 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 174] Transforming observations: n_neighbors=18, n_components=37, alpha=0.3725915603999886
+2025-02-17 07:39:41,990 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 174] Calculating silhouette score: n_neighbors=18, n_components=37, alpha=0.3725915603999886
+[I 2025-02-17 07:39:46,899] Trial 174 finished with value: 0.6801907641049312 and parameters: {'n_neighbors': 18, 'n_components': 37, 'alpha': 0.3725915603999886}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 07:39:47,025 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 175] Fitting Diffision Map: n_neighbors=17, n_components=42, alpha=0.3418812883739669
+2025-02-17 07:39:54,199 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 175] Transforming observations: n_neighbors=17, n_components=42, alpha=0.3418812883739669
+2025-02-17 08:00:40,940 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 175] Calculating silhouette score: n_neighbors=17, n_components=42, alpha=0.3418812883739669
+[I 2025-02-17 08:00:45,711] Trial 175 finished with value: 0.6960325513878357 and parameters: {'n_neighbors': 17, 'n_components': 42, 'alpha': 0.3418812883739669}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 08:00:45,841 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 176] Fitting Diffision Map: n_neighbors=19, n_components=43, alpha=0.34858432748248536
+2025-02-17 08:00:52,049 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 176] Transforming observations: n_neighbors=19, n_components=43, alpha=0.34858432748248536
+2025-02-17 08:21:45,432 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 176] Calculating silhouette score: n_neighbors=19, n_components=43, alpha=0.34858432748248536
+[I 2025-02-17 08:21:50,329] Trial 176 finished with value: 0.6817045090716056 and parameters: {'n_neighbors': 19, 'n_components': 43, 'alpha': 0.34858432748248536}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 08:21:50,452 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 177] Fitting Diffision Map: n_neighbors=18, n_components=39, alpha=0.33251175466980887
+2025-02-17 08:21:56,845 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 177] Transforming observations: n_neighbors=18, n_components=39, alpha=0.33251175466980887
+2025-02-17 08:42:50,046 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 177] Calculating silhouette score: n_neighbors=18, n_components=39, alpha=0.33251175466980887
+[I 2025-02-17 08:42:54,942] Trial 177 finished with value: 0.6951728351421916 and parameters: {'n_neighbors': 18, 'n_components': 39, 'alpha': 0.33251175466980887}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 08:42:55,077 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 178] Fitting Diffision Map: n_neighbors=16, n_components=35, alpha=0.42178126737748095
+2025-02-17 08:43:01,000 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 178] Transforming observations: n_neighbors=16, n_components=35, alpha=0.42178126737748095
+2025-02-17 09:03:58,150 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 178] Calculating silhouette score: n_neighbors=16, n_components=35, alpha=0.42178126737748095
+[I 2025-02-17 09:04:02,984] Trial 178 finished with value: 0.6620799948918066 and parameters: {'n_neighbors': 16, 'n_components': 35, 'alpha': 0.42178126737748095}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 09:04:03,116 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 179] Fitting Diffision Map: n_neighbors=21, n_components=42, alpha=0.40090195703577547
+2025-02-17 09:04:11,248 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 179] Transforming observations: n_neighbors=21, n_components=42, alpha=0.40090195703577547
+2025-02-17 09:25:04,561 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 179] Calculating silhouette score: n_neighbors=21, n_components=42, alpha=0.40090195703577547
+[I 2025-02-17 09:25:09,465] Trial 179 finished with value: 0.6584450404687817 and parameters: {'n_neighbors': 21, 'n_components': 42, 'alpha': 0.40090195703577547}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 09:25:09,587 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 180] Fitting Diffision Map: n_neighbors=20, n_components=71, alpha=0.28802308203958205
+2025-02-17 09:25:16,117 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 180] Transforming observations: n_neighbors=20, n_components=71, alpha=0.28802308203958205
+2025-02-17 09:46:25,343 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 180] Calculating silhouette score: n_neighbors=20, n_components=71, alpha=0.28802308203958205
+[I 2025-02-17 09:46:30,776] Trial 180 finished with value: 0.48838175740833073 and parameters: {'n_neighbors': 20, 'n_components': 71, 'alpha': 0.28802308203958205}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 09:46:30,905 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 181] Fitting Diffision Map: n_neighbors=17, n_components=90, alpha=0.38108534296226915
+2025-02-17 09:46:37,966 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 181] Transforming observations: n_neighbors=17, n_components=90, alpha=0.38108534296226915
+2025-02-17 10:07:34,302 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 181] Calculating silhouette score: n_neighbors=17, n_components=90, alpha=0.38108534296226915
+[I 2025-02-17 10:07:40,002] Trial 181 finished with value: 0.4009001020287775 and parameters: {'n_neighbors': 17, 'n_components': 90, 'alpha': 0.38108534296226915}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 10:07:40,132 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 182] Fitting Diffision Map: n_neighbors=15, n_components=45, alpha=0.31168284388252987
+2025-02-17 10:07:44,292 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 182] Transforming observations: n_neighbors=15, n_components=45, alpha=0.31168284388252987
+2025-02-17 10:28:37,835 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 182] Calculating silhouette score: n_neighbors=15, n_components=45, alpha=0.31168284388252987
+[I 2025-02-17 10:28:42,826] Trial 182 finished with value: 0.6764056032687319 and parameters: {'n_neighbors': 15, 'n_components': 45, 'alpha': 0.31168284388252987}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 10:28:42,965 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 183] Fitting Diffision Map: n_neighbors=18, n_components=39, alpha=0.4722963618510333
+2025-02-17 10:28:47,640 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 183] Transforming observations: n_neighbors=18, n_components=39, alpha=0.4722963618510333
+2025-02-17 10:49:42,162 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 183] Calculating silhouette score: n_neighbors=18, n_components=39, alpha=0.4722963618510333
+[I 2025-02-17 10:49:47,277] Trial 183 finished with value: 0.6850280378379004 and parameters: {'n_neighbors': 18, 'n_components': 39, 'alpha': 0.4722963618510333}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 10:49:47,405 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 184] Fitting Diffision Map: n_neighbors=18, n_components=38, alpha=0.34282925071755194
+2025-02-17 10:49:52,523 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 184] Transforming observations: n_neighbors=18, n_components=38, alpha=0.34282925071755194
+2025-02-17 11:10:40,390 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 184] Calculating silhouette score: n_neighbors=18, n_components=38, alpha=0.34282925071755194
+[I 2025-02-17 11:10:45,331] Trial 184 finished with value: 0.696351677392962 and parameters: {'n_neighbors': 18, 'n_components': 38, 'alpha': 0.34282925071755194}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 11:10:45,456 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 185] Fitting Diffision Map: n_neighbors=19, n_components=41, alpha=0.34037722390059677
+2025-02-17 11:10:51,563 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 185] Transforming observations: n_neighbors=19, n_components=41, alpha=0.34037722390059677
+2025-02-17 11:31:51,755 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 185] Calculating silhouette score: n_neighbors=19, n_components=41, alpha=0.34037722390059677
+[I 2025-02-17 11:31:56,611] Trial 185 finished with value: 0.6816472628351393 and parameters: {'n_neighbors': 19, 'n_components': 41, 'alpha': 0.34037722390059677}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 11:31:56,739 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 186] Fitting Diffision Map: n_neighbors=16, n_components=38, alpha=0.36210313936479727
+2025-02-17 11:32:03,717 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 186] Transforming observations: n_neighbors=16, n_components=38, alpha=0.36210313936479727
+2025-02-17 11:52:42,702 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 186] Calculating silhouette score: n_neighbors=16, n_components=38, alpha=0.36210313936479727
+[I 2025-02-17 11:52:47,552] Trial 186 finished with value: 0.6976677797661839 and parameters: {'n_neighbors': 16, 'n_components': 38, 'alpha': 0.36210313936479727}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 11:52:47,683 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 187] Fitting Diffision Map: n_neighbors=14, n_components=38, alpha=0.3600195231751736
+2025-02-17 11:52:53,249 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 187] Transforming observations: n_neighbors=14, n_components=38, alpha=0.3600195231751736
+2025-02-17 12:13:43,441 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 187] Calculating silhouette score: n_neighbors=14, n_components=38, alpha=0.3600195231751736
+[I 2025-02-17 12:13:48,186] Trial 187 finished with value: 0.692018927797268 and parameters: {'n_neighbors': 14, 'n_components': 38, 'alpha': 0.3600195231751736}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 12:13:48,325 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 188] Fitting Diffision Map: n_neighbors=15, n_components=36, alpha=0.25251534689308147
+2025-02-17 12:13:55,799 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 188] Transforming observations: n_neighbors=15, n_components=36, alpha=0.25251534689308147
+2025-02-17 12:34:48,401 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 188] Calculating silhouette score: n_neighbors=15, n_components=36, alpha=0.25251534689308147
+[I 2025-02-17 12:34:53,070] Trial 188 finished with value: 0.682069781692752 and parameters: {'n_neighbors': 15, 'n_components': 36, 'alpha': 0.25251534689308147}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 12:34:53,199 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 189] Fitting Diffision Map: n_neighbors=17, n_components=37, alpha=0.323487303580701
+2025-02-17 12:34:59,086 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 189] Transforming observations: n_neighbors=17, n_components=37, alpha=0.323487303580701
+2025-02-17 12:55:46,362 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 189] Calculating silhouette score: n_neighbors=17, n_components=37, alpha=0.323487303580701
+[I 2025-02-17 12:55:51,317] Trial 189 finished with value: 0.6753897699451055 and parameters: {'n_neighbors': 17, 'n_components': 37, 'alpha': 0.323487303580701}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 12:55:51,457 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 190] Fitting Diffision Map: n_neighbors=21, n_components=33, alpha=0.3657277943338048
+2025-02-17 12:55:58,445 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 190] Transforming observations: n_neighbors=21, n_components=33, alpha=0.3657277943338048
+2025-02-17 13:16:40,241 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 190] Calculating silhouette score: n_neighbors=21, n_components=33, alpha=0.3657277943338048
+[I 2025-02-17 13:16:45,059] Trial 190 finished with value: 0.641421544692917 and parameters: {'n_neighbors': 21, 'n_components': 33, 'alpha': 0.3657277943338048}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 13:16:45,183 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 191] Fitting Diffision Map: n_neighbors=16, n_components=40, alpha=0.3854181090888522
+2025-02-17 13:16:50,917 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 191] Transforming observations: n_neighbors=16, n_components=40, alpha=0.3854181090888522
+2025-02-17 13:37:50,501 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 191] Calculating silhouette score: n_neighbors=16, n_components=40, alpha=0.3854181090888522
+[I 2025-02-17 13:37:55,358] Trial 191 finished with value: 0.6787540961535208 and parameters: {'n_neighbors': 16, 'n_components': 40, 'alpha': 0.3854181090888522}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 13:37:55,491 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 192] Fitting Diffision Map: n_neighbors=20, n_components=42, alpha=0.41076187026357885
+2025-02-17 13:38:01,405 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 192] Transforming observations: n_neighbors=20, n_components=42, alpha=0.41076187026357885
+2025-02-17 13:58:54,312 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 192] Calculating silhouette score: n_neighbors=20, n_components=42, alpha=0.41076187026357885
+[I 2025-02-17 13:58:59,157] Trial 192 finished with value: 0.6696989895625186 and parameters: {'n_neighbors': 20, 'n_components': 42, 'alpha': 0.41076187026357885}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 13:58:59,285 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 193] Fitting Diffision Map: n_neighbors=18, n_components=44, alpha=0.4397795063459473
+2025-02-17 13:59:07,163 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 193] Transforming observations: n_neighbors=18, n_components=44, alpha=0.4397795063459473
+2025-02-17 14:20:09,042 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 193] Calculating silhouette score: n_neighbors=18, n_components=44, alpha=0.4397795063459473
+[I 2025-02-17 14:20:14,002] Trial 193 finished with value: 0.698281499108572 and parameters: {'n_neighbors': 18, 'n_components': 44, 'alpha': 0.4397795063459473}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 14:20:14,125 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 194] Fitting Diffision Map: n_neighbors=18, n_components=43, alpha=0.4550158997160613
+2025-02-17 14:20:21,245 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 194] Transforming observations: n_neighbors=18, n_components=43, alpha=0.4550158997160613
+2025-02-17 14:41:22,155 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 194] Calculating silhouette score: n_neighbors=18, n_components=43, alpha=0.4550158997160613
+[I 2025-02-17 14:41:27,027] Trial 194 finished with value: 0.6959837256445544 and parameters: {'n_neighbors': 18, 'n_components': 43, 'alpha': 0.4550158997160613}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 14:41:27,149 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 195] Fitting Diffision Map: n_neighbors=18, n_components=43, alpha=0.4222129651665113
+2025-02-17 14:41:34,204 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 195] Transforming observations: n_neighbors=18, n_components=43, alpha=0.4222129651665113
+2025-02-17 15:02:28,313 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 195] Calculating silhouette score: n_neighbors=18, n_components=43, alpha=0.4222129651665113
+[I 2025-02-17 15:02:33,213] Trial 195 finished with value: 0.6966190801145976 and parameters: {'n_neighbors': 18, 'n_components': 43, 'alpha': 0.4222129651665113}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 15:02:33,335 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 196] Fitting Diffision Map: n_neighbors=19, n_components=43, alpha=0.34758397629440924
+2025-02-17 15:02:39,478 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 196] Transforming observations: n_neighbors=19, n_components=43, alpha=0.34758397629440924
+2025-02-17 15:23:34,951 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 196] Calculating silhouette score: n_neighbors=19, n_components=43, alpha=0.34758397629440924
+[I 2025-02-17 15:23:39,864] Trial 196 finished with value: 0.6837192043547302 and parameters: {'n_neighbors': 19, 'n_components': 43, 'alpha': 0.34758397629440924}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 15:23:39,993 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 197] Fitting Diffision Map: n_neighbors=22, n_components=43, alpha=0.40050489168802406
+2025-02-17 15:24:01,170 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 197] Transforming observations: n_neighbors=22, n_components=43, alpha=0.40050489168802406
+2025-02-17 15:44:48,541 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 197] Calculating silhouette score: n_neighbors=22, n_components=43, alpha=0.40050489168802406
+[I 2025-02-17 15:44:56,058] Trial 197 finished with value: 0.6440218720060846 and parameters: {'n_neighbors': 22, 'n_components': 43, 'alpha': 0.40050489168802406}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 15:44:56,192 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 198] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.4207052560264448
+2025-02-17 15:45:02,607 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 198] Transforming observations: n_neighbors=18, n_components=41, alpha=0.4207052560264448
+2025-02-17 16:05:50,401 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 198] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.4207052560264448
+[I 2025-02-17 16:05:57,405] Trial 198 finished with value: 0.6988499540393976 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.4207052560264448}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 16:05:57,534 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 199] Fitting Diffision Map: n_neighbors=20, n_components=38, alpha=0.3780713240940287
+2025-02-17 16:06:03,162 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 199] Transforming observations: n_neighbors=20, n_components=38, alpha=0.3780713240940287
+2025-02-17 16:26:58,371 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 199] Calculating silhouette score: n_neighbors=20, n_components=38, alpha=0.3780713240940287
+[I 2025-02-17 16:27:04,220] Trial 199 finished with value: 0.6650815252005156 and parameters: {'n_neighbors': 20, 'n_components': 38, 'alpha': 0.3780713240940287}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 16:27:04,355 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 200] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.42942897113899264
+2025-02-17 16:27:10,285 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 200] Transforming observations: n_neighbors=18, n_components=41, alpha=0.42942897113899264
+2025-02-17 16:48:04,849 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 200] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.42942897113899264
+[I 2025-02-17 16:48:10,188] Trial 200 finished with value: 0.7008662772653482 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.42942897113899264}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 16:48:10,316 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 201] Fitting Diffision Map: n_neighbors=16, n_components=40, alpha=0.4171823459244293
+2025-02-17 16:48:15,403 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 201] Transforming observations: n_neighbors=16, n_components=40, alpha=0.4171823459244293
+2025-02-17 17:09:11,052 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 201] Calculating silhouette score: n_neighbors=16, n_components=40, alpha=0.4171823459244293
+[I 2025-02-17 17:09:15,887] Trial 201 finished with value: 0.6792868068310917 and parameters: {'n_neighbors': 16, 'n_components': 40, 'alpha': 0.4171823459244293}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 17:09:16,033 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 202] Fitting Diffision Map: n_neighbors=19, n_components=35, alpha=0.3929483559547196
+2025-02-17 17:09:24,208 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 202] Transforming observations: n_neighbors=19, n_components=35, alpha=0.3929483559547196
+2025-02-17 17:30:20,001 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 202] Calculating silhouette score: n_neighbors=19, n_components=35, alpha=0.3929483559547196
+[I 2025-02-17 17:30:24,763] Trial 202 finished with value: 0.6295677427395622 and parameters: {'n_neighbors': 19, 'n_components': 35, 'alpha': 0.3929483559547196}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 17:30:24,894 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 203] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.4256785725332631
+2025-02-17 17:30:31,721 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 203] Transforming observations: n_neighbors=18, n_components=41, alpha=0.4256785725332631
+2025-02-17 17:51:21,981 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 203] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.4256785725332631
+[I 2025-02-17 17:51:26,890] Trial 203 finished with value: 0.7008622924399777 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.4256785725332631}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 17:51:27,023 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 204] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.4279575400544108
+2025-02-17 17:51:32,757 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 204] Transforming observations: n_neighbors=18, n_components=41, alpha=0.4279575400544108
+2025-02-17 18:12:23,601 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 204] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.4279575400544108
+[I 2025-02-17 18:12:28,243] Trial 204 finished with value: 0.7008634053802207 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.4279575400544108}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 18:12:28,372 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 205] Fitting Diffision Map: n_neighbors=19, n_components=38, alpha=0.41252967571623517
+2025-02-17 18:12:34,447 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 205] Transforming observations: n_neighbors=19, n_components=38, alpha=0.41252967571623517
+2025-02-17 18:33:30,720 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 205] Calculating silhouette score: n_neighbors=19, n_components=38, alpha=0.41252967571623517
+[I 2025-02-17 18:33:35,440] Trial 205 finished with value: 0.6912815955997347 and parameters: {'n_neighbors': 19, 'n_components': 38, 'alpha': 0.41252967571623517}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 18:33:35,568 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 206] Fitting Diffision Map: n_neighbors=21, n_components=40, alpha=0.4289206010494501
+2025-02-17 18:33:43,484 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 206] Transforming observations: n_neighbors=21, n_components=40, alpha=0.4289206010494501
+2025-02-17 18:54:32,161 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 206] Calculating silhouette score: n_neighbors=21, n_components=40, alpha=0.4289206010494501
+[I 2025-02-17 18:54:36,997] Trial 206 finished with value: 0.6772540922406962 and parameters: {'n_neighbors': 21, 'n_components': 40, 'alpha': 0.4289206010494501}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 18:54:37,120 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 207] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.4281550564943639
+2025-02-17 18:54:43,085 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 207] Transforming observations: n_neighbors=18, n_components=41, alpha=0.4281550564943639
+2025-02-17 19:15:36,524 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 207] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.4281550564943639
+[I 2025-02-17 19:15:41,163] Trial 207 finished with value: 0.7008650620328208 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.4281550564943639}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 19:15:41,289 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 208] Fitting Diffision Map: n_neighbors=18, n_components=37, alpha=0.41820879529319516
+2025-02-17 19:15:46,688 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 208] Transforming observations: n_neighbors=18, n_components=37, alpha=0.41820879529319516
+2025-02-17 19:36:48,952 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 208] Calculating silhouette score: n_neighbors=18, n_components=37, alpha=0.41820879529319516
+[I 2025-02-17 19:36:53,567] Trial 208 finished with value: 0.6805442493240969 and parameters: {'n_neighbors': 18, 'n_components': 37, 'alpha': 0.41820879529319516}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 19:36:53,707 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 209] Fitting Diffision Map: n_neighbors=20, n_components=41, alpha=0.4325157248445522
+2025-02-17 19:36:59,959 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 209] Transforming observations: n_neighbors=20, n_components=41, alpha=0.4325157248445522
+2025-02-17 19:58:05,841 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 209] Calculating silhouette score: n_neighbors=20, n_components=41, alpha=0.4325157248445522
+[I 2025-02-17 19:58:11,160] Trial 209 finished with value: 0.680030766445639 and parameters: {'n_neighbors': 20, 'n_components': 41, 'alpha': 0.4325157248445522}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 19:58:11,295 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 210] Fitting Diffision Map: n_neighbors=16, n_components=39, alpha=0.39686681755373865
+2025-02-17 19:58:19,726 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 210] Transforming observations: n_neighbors=16, n_components=39, alpha=0.39686681755373865
+2025-02-17 20:19:45,195 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 210] Calculating silhouette score: n_neighbors=16, n_components=39, alpha=0.39686681755373865
+[I 2025-02-17 20:19:49,961] Trial 210 finished with value: 0.6991978265446045 and parameters: {'n_neighbors': 16, 'n_components': 39, 'alpha': 0.39686681755373865}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 20:19:50,096 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 211] Fitting Diffision Map: n_neighbors=15, n_components=40, alpha=0.4642055256147202
+2025-02-17 20:19:54,928 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 211] Transforming observations: n_neighbors=15, n_components=40, alpha=0.4642055256147202
+2025-02-17 20:40:55,102 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 211] Calculating silhouette score: n_neighbors=15, n_components=40, alpha=0.4642055256147202
+[I 2025-02-17 20:41:00,573] Trial 211 finished with value: 0.69286945653225 and parameters: {'n_neighbors': 15, 'n_components': 40, 'alpha': 0.4642055256147202}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 20:41:00,696 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 212] Fitting Diffision Map: n_neighbors=14, n_components=44, alpha=0.43642588421781436
+2025-02-17 20:41:06,366 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 212] Transforming observations: n_neighbors=14, n_components=44, alpha=0.43642588421781436
+2025-02-17 21:02:40,842 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 212] Calculating silhouette score: n_neighbors=14, n_components=44, alpha=0.43642588421781436
+[I 2025-02-17 21:02:48,688] Trial 212 finished with value: 0.6753565624279387 and parameters: {'n_neighbors': 14, 'n_components': 44, 'alpha': 0.43642588421781436}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 21:02:48,948 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 213] Fitting Diffision Map: n_neighbors=18, n_components=39, alpha=0.39266829450351803
+2025-02-17 21:02:56,688 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 213] Transforming observations: n_neighbors=18, n_components=39, alpha=0.39266829450351803
+2025-02-17 21:24:18,924 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 213] Calculating silhouette score: n_neighbors=18, n_components=39, alpha=0.39266829450351803
+[I 2025-02-17 21:24:24,065] Trial 213 finished with value: 0.6967758569641536 and parameters: {'n_neighbors': 18, 'n_components': 39, 'alpha': 0.39266829450351803}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 21:24:24,194 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 214] Fitting Diffision Map: n_neighbors=16, n_components=39, alpha=0.4089854359727253
+2025-02-17 21:24:29,884 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 214] Transforming observations: n_neighbors=16, n_components=39, alpha=0.4089854359727253
+2025-02-17 21:47:11,044 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 214] Calculating silhouette score: n_neighbors=16, n_components=39, alpha=0.4089854359727253
+[I 2025-02-17 21:47:16,453] Trial 214 finished with value: 0.6950524979601819 and parameters: {'n_neighbors': 16, 'n_components': 39, 'alpha': 0.4089854359727253}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 21:47:16,580 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 215] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.37328776770659594
+2025-02-17 21:47:23,323 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 215] Transforming observations: n_neighbors=18, n_components=41, alpha=0.37328776770659594
+2025-02-17 22:08:19,671 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 215] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.37328776770659594
+[I 2025-02-17 22:08:24,482] Trial 215 finished with value: 0.7008661233314336 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.37328776770659594}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 22:08:24,611 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 216] Fitting Diffision Map: n_neighbors=61, n_components=41, alpha=0.36336314847044954
+2025-02-17 22:08:37,803 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 216] Transforming observations: n_neighbors=61, n_components=41, alpha=0.36336314847044954
+2025-02-17 22:30:03,641 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 216] Calculating silhouette score: n_neighbors=61, n_components=41, alpha=0.36336314847044954
+[I 2025-02-17 22:30:11,400] Trial 216 finished with value: 0.3917464360843498 and parameters: {'n_neighbors': 61, 'n_components': 41, 'alpha': 0.36336314847044954}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 22:30:11,577 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 217] Fitting Diffision Map: n_neighbors=38, n_components=37, alpha=0.3723113979982461
+2025-02-17 22:30:43,329 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 217] Transforming observations: n_neighbors=38, n_components=37, alpha=0.3723113979982461
+2025-02-17 22:54:19,672 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 217] Calculating silhouette score: n_neighbors=38, n_components=37, alpha=0.3723113979982461
+[I 2025-02-17 22:54:25,015] Trial 217 finished with value: 0.45491050711666153 and parameters: {'n_neighbors': 38, 'n_components': 37, 'alpha': 0.3723113979982461}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 22:54:25,140 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 218] Fitting Diffision Map: n_neighbors=16, n_components=35, alpha=0.39574644138884624
+2025-02-17 22:54:31,089 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 218] Transforming observations: n_neighbors=16, n_components=35, alpha=0.39574644138884624
+2025-02-17 23:16:12,439 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 218] Calculating silhouette score: n_neighbors=16, n_components=35, alpha=0.39574644138884624
+[I 2025-02-17 23:16:17,607] Trial 218 finished with value: 0.663674609731493 and parameters: {'n_neighbors': 16, 'n_components': 35, 'alpha': 0.39574644138884624}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 23:16:17,735 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 219] Fitting Diffision Map: n_neighbors=19, n_components=41, alpha=0.37818394481146617
+2025-02-17 23:16:25,478 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 219] Transforming observations: n_neighbors=19, n_components=41, alpha=0.37818394481146617
+2025-02-17 23:39:04,921 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 219] Calculating silhouette score: n_neighbors=19, n_components=41, alpha=0.37818394481146617
+[I 2025-02-17 23:39:26,447] Trial 219 finished with value: 0.6816507130513476 and parameters: {'n_neighbors': 19, 'n_components': 41, 'alpha': 0.37818394481146617}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-17 23:39:27,241 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 220] Fitting Diffision Map: n_neighbors=17, n_components=39, alpha=0.40286711661329233
+2025-02-17 23:39:50,681 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 220] Transforming observations: n_neighbors=17, n_components=39, alpha=0.40286711661329233
+2025-02-18 00:03:15,161 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 220] Calculating silhouette score: n_neighbors=17, n_components=39, alpha=0.40286711661329233
+[I 2025-02-18 00:03:19,984] Trial 220 finished with value: 0.6840096713977115 and parameters: {'n_neighbors': 17, 'n_components': 39, 'alpha': 0.40286711661329233}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 00:03:20,114 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 221] Fitting Diffision Map: n_neighbors=30, n_components=47, alpha=0.437718424596853
+2025-02-18 00:03:29,409 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 221] Transforming observations: n_neighbors=30, n_components=47, alpha=0.437718424596853
+2025-02-18 00:24:24,651 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 221] Calculating silhouette score: n_neighbors=30, n_components=47, alpha=0.437718424596853
+[I 2025-02-18 00:24:29,520] Trial 221 finished with value: 0.5098009664843655 and parameters: {'n_neighbors': 30, 'n_components': 47, 'alpha': 0.437718424596853}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 00:24:29,647 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 222] Fitting Diffision Map: n_neighbors=18, n_components=15, alpha=0.4523503327893674
+2025-02-18 00:24:35,085 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 222] Transforming observations: n_neighbors=18, n_components=15, alpha=0.4523503327893674
+2025-02-18 00:45:12,000 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 222] Calculating silhouette score: n_neighbors=18, n_components=15, alpha=0.4523503327893674
+[I 2025-02-18 00:45:16,484] Trial 222 finished with value: 0.4844685223825203 and parameters: {'n_neighbors': 18, 'n_components': 15, 'alpha': 0.4523503327893674}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 00:45:16,625 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 223] Fitting Diffision Map: n_neighbors=18, n_components=44, alpha=0.42298028832363077
+2025-02-18 00:45:24,921 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 223] Transforming observations: n_neighbors=18, n_components=44, alpha=0.42298028832363077
+2025-02-18 01:06:16,600 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 223] Calculating silhouette score: n_neighbors=18, n_components=44, alpha=0.42298028832363077
+[I 2025-02-18 01:06:21,524] Trial 223 finished with value: 0.6982914538833901 and parameters: {'n_neighbors': 18, 'n_components': 44, 'alpha': 0.42298028832363077}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 01:06:21,653 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 224] Fitting Diffision Map: n_neighbors=20, n_components=42, alpha=0.41614384792934284
+2025-02-18 01:06:27,650 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 224] Transforming observations: n_neighbors=20, n_components=42, alpha=0.41614384792934284
+2025-02-18 01:28:01,601 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 224] Calculating silhouette score: n_neighbors=20, n_components=42, alpha=0.41614384792934284
+[I 2025-02-18 01:28:07,106] Trial 224 finished with value: 0.6734034714409183 and parameters: {'n_neighbors': 20, 'n_components': 42, 'alpha': 0.41614384792934284}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 01:28:07,232 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 225] Fitting Diffision Map: n_neighbors=19, n_components=39, alpha=0.3563110352140522
+2025-02-18 01:28:14,524 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 225] Transforming observations: n_neighbors=19, n_components=39, alpha=0.3563110352140522
+2025-02-18 01:49:37,661 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 225] Calculating silhouette score: n_neighbors=19, n_components=39, alpha=0.3563110352140522
+[I 2025-02-18 01:49:43,184] Trial 225 finished with value: 0.6761246741811966 and parameters: {'n_neighbors': 19, 'n_components': 39, 'alpha': 0.3563110352140522}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 01:49:43,311 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 226] Fitting Diffision Map: n_neighbors=16, n_components=44, alpha=0.3899769705659328
+2025-02-18 01:49:51,088 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 226] Transforming observations: n_neighbors=16, n_components=44, alpha=0.3899769705659328
+2025-02-18 02:11:10,793 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 226] Calculating silhouette score: n_neighbors=16, n_components=44, alpha=0.3899769705659328
+[I 2025-02-18 02:11:16,359] Trial 226 finished with value: 0.6796509867804554 and parameters: {'n_neighbors': 16, 'n_components': 44, 'alpha': 0.3899769705659328}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 02:11:16,496 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 227] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.46852094930128235
+2025-02-18 02:11:22,610 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 227] Transforming observations: n_neighbors=18, n_components=41, alpha=0.46852094930128235
+2025-02-18 02:32:22,400 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 227] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.46852094930128235
+[I 2025-02-18 02:32:27,474] Trial 227 finished with value: 0.7014467103340065 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.46852094930128235}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 02:32:27,618 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 228] Fitting Diffision Map: n_neighbors=55, n_components=46, alpha=0.47855639159837515
+2025-02-18 02:32:38,527 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 228] Transforming observations: n_neighbors=55, n_components=46, alpha=0.47855639159837515
+2025-02-18 02:53:24,561 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 228] Calculating silhouette score: n_neighbors=55, n_components=46, alpha=0.47855639159837515
+[I 2025-02-18 02:53:29,445] Trial 228 finished with value: 0.35946931652461056 and parameters: {'n_neighbors': 55, 'n_components': 46, 'alpha': 0.47855639159837515}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 02:53:29,575 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 229] Fitting Diffision Map: n_neighbors=17, n_components=42, alpha=0.45353726503074077
+2025-02-18 02:53:34,603 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 229] Transforming observations: n_neighbors=17, n_components=42, alpha=0.45353726503074077
+2025-02-18 03:14:18,722 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 229] Calculating silhouette score: n_neighbors=17, n_components=42, alpha=0.45353726503074077
+[I 2025-02-18 03:14:23,757] Trial 229 finished with value: 0.6964651459279995 and parameters: {'n_neighbors': 17, 'n_components': 42, 'alpha': 0.45353726503074077}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 03:14:23,887 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 230] Fitting Diffision Map: n_neighbors=15, n_components=44, alpha=0.42783625518999263
+2025-02-18 03:14:28,449 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 230] Transforming observations: n_neighbors=15, n_components=44, alpha=0.42783625518999263
+2025-02-18 03:35:24,732 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 230] Calculating silhouette score: n_neighbors=15, n_components=44, alpha=0.42783625518999263
+[I 2025-02-18 03:35:29,500] Trial 230 finished with value: 0.6791216976752197 and parameters: {'n_neighbors': 15, 'n_components': 44, 'alpha': 0.42783625518999263}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 03:35:29,625 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 231] Fitting Diffision Map: n_neighbors=19, n_components=41, alpha=0.4950945982970439
+2025-02-18 03:35:34,927 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 231] Transforming observations: n_neighbors=19, n_components=41, alpha=0.4950945982970439
+2025-02-18 03:56:21,441 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 231] Calculating silhouette score: n_neighbors=19, n_components=41, alpha=0.4950945982970439
+[I 2025-02-18 03:56:26,164] Trial 231 finished with value: 0.6816298445337539 and parameters: {'n_neighbors': 19, 'n_components': 41, 'alpha': 0.4950945982970439}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 03:56:26,291 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 232] Fitting Diffision Map: n_neighbors=17, n_components=44, alpha=0.47281423799249606
+2025-02-18 03:56:33,807 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 232] Transforming observations: n_neighbors=17, n_components=44, alpha=0.47281423799249606
+2025-02-18 04:17:26,325 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 232] Calculating silhouette score: n_neighbors=17, n_components=44, alpha=0.47281423799249606
+[I 2025-02-18 04:17:31,403] Trial 232 finished with value: 0.6919249825817366 and parameters: {'n_neighbors': 17, 'n_components': 44, 'alpha': 0.47281423799249606}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 04:17:31,539 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 233] Fitting Diffision Map: n_neighbors=17, n_components=42, alpha=0.45014348944335464
+2025-02-18 04:17:36,925 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 233] Transforming observations: n_neighbors=17, n_components=42, alpha=0.45014348944335464
+2025-02-18 04:38:29,421 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 233] Calculating silhouette score: n_neighbors=17, n_components=42, alpha=0.45014348944335464
+[I 2025-02-18 04:38:34,376] Trial 233 finished with value: 0.695125966853597 and parameters: {'n_neighbors': 17, 'n_components': 42, 'alpha': 0.45014348944335464}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 04:38:34,502 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 234] Fitting Diffision Map: n_neighbors=16, n_components=41, alpha=0.45975438602202906
+2025-02-18 04:38:39,558 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 234] Transforming observations: n_neighbors=16, n_components=41, alpha=0.45975438602202906
+2025-02-18 04:59:24,940 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 234] Calculating silhouette score: n_neighbors=16, n_components=41, alpha=0.45975438602202906
+[I 2025-02-18 04:59:29,876] Trial 234 finished with value: 0.6774849232765621 and parameters: {'n_neighbors': 16, 'n_components': 41, 'alpha': 0.45975438602202906}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 04:59:30,002 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 235] Fitting Diffision Map: n_neighbors=18, n_components=40, alpha=0.43853542574926263
+2025-02-18 04:59:37,246 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 235] Transforming observations: n_neighbors=18, n_components=40, alpha=0.43853542574926263
+2025-02-18 05:20:23,980 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 235] Calculating silhouette score: n_neighbors=18, n_components=40, alpha=0.43853542574926263
+[I 2025-02-18 05:20:28,755] Trial 235 finished with value: 0.6866173691032942 and parameters: {'n_neighbors': 18, 'n_components': 40, 'alpha': 0.43853542574926263}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 05:20:28,879 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 236] Fitting Diffision Map: n_neighbors=20, n_components=43, alpha=0.4112065021225621
+2025-02-18 05:20:33,724 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 236] Transforming observations: n_neighbors=20, n_components=43, alpha=0.4112065021225621
+2025-02-18 05:41:22,359 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 236] Calculating silhouette score: n_neighbors=20, n_components=43, alpha=0.4112065021225621
+[I 2025-02-18 05:41:27,191] Trial 236 finished with value: 0.666520249547286 and parameters: {'n_neighbors': 20, 'n_components': 43, 'alpha': 0.4112065021225621}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 05:41:27,317 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 237] Fitting Diffision Map: n_neighbors=15, n_components=46, alpha=0.4270270078371206
+2025-02-18 05:41:32,118 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 237] Transforming observations: n_neighbors=15, n_components=46, alpha=0.4270270078371206
+2025-02-18 06:02:29,023 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 237] Calculating silhouette score: n_neighbors=15, n_components=46, alpha=0.4270270078371206
+[I 2025-02-18 06:02:34,055] Trial 237 finished with value: 0.6797931184699622 and parameters: {'n_neighbors': 15, 'n_components': 46, 'alpha': 0.4270270078371206}. Best is trial 154 with value: 0.7020373659532004.
+2025-02-18 06:02:34,207 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 238] Fitting Diffision Map: n_neighbors=18, n_components=42, alpha=0.3979238602380736
+2025-02-18 06:02:42,924 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 238] Transforming observations: n_neighbors=18, n_components=42, alpha=0.3979238602380736
+2025-02-18 06:24:03,964 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 238] Calculating silhouette score: n_neighbors=18, n_components=42, alpha=0.3979238602380736
+[I 2025-02-18 06:24:09,279] Trial 238 finished with value: 0.702037373353986 and parameters: {'n_neighbors': 18, 'n_components': 42, 'alpha': 0.3979238602380736}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 06:24:09,434 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 239] Fitting Diffision Map: n_neighbors=18, n_components=39, alpha=0.4021636500401586
+2025-02-18 06:24:15,881 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 239] Transforming observations: n_neighbors=18, n_components=39, alpha=0.4021636500401586
+2025-02-18 06:45:34,721 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 239] Calculating silhouette score: n_neighbors=18, n_components=39, alpha=0.4021636500401586
+[I 2025-02-18 06:45:39,523] Trial 239 finished with value: 0.6863912833260787 and parameters: {'n_neighbors': 18, 'n_components': 39, 'alpha': 0.4021636500401586}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 06:45:39,662 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 240] Fitting Diffision Map: n_neighbors=20, n_components=44, alpha=0.37965484882623235
+2025-02-18 06:45:46,763 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 240] Transforming observations: n_neighbors=20, n_components=44, alpha=0.37965484882623235
+2025-02-18 07:07:05,800 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 240] Calculating silhouette score: n_neighbors=20, n_components=44, alpha=0.37965484882623235
+[I 2025-02-18 07:07:10,677] Trial 240 finished with value: 0.66685881864822 and parameters: {'n_neighbors': 20, 'n_components': 44, 'alpha': 0.37965484882623235}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 07:07:10,818 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 241] Fitting Diffision Map: n_neighbors=19, n_components=40, alpha=0.39548946875734553
+2025-02-18 07:07:16,289 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 241] Transforming observations: n_neighbors=19, n_components=40, alpha=0.39548946875734553
+2025-02-18 07:28:30,631 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 241] Calculating silhouette score: n_neighbors=19, n_components=40, alpha=0.39548946875734553
+[I 2025-02-18 07:28:35,659] Trial 241 finished with value: 0.6806779937463829 and parameters: {'n_neighbors': 19, 'n_components': 40, 'alpha': 0.39548946875734553}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 07:28:35,797 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 242] Fitting Diffision Map: n_neighbors=13, n_components=37, alpha=0.4185631908731288
+2025-02-18 07:28:42,919 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 242] Transforming observations: n_neighbors=13, n_components=37, alpha=0.4185631908731288
+2025-02-18 07:49:47,430 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 242] Calculating silhouette score: n_neighbors=13, n_components=37, alpha=0.4185631908731288
+[I 2025-02-18 07:49:52,310] Trial 242 finished with value: 0.6820467404047268 and parameters: {'n_neighbors': 13, 'n_components': 37, 'alpha': 0.4185631908731288}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 07:49:52,451 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 243] Fitting Diffision Map: n_neighbors=17, n_components=42, alpha=0.4760170914392536
+2025-02-18 07:49:58,204 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 243] Transforming observations: n_neighbors=17, n_components=42, alpha=0.4760170914392536
+2025-02-18 08:11:10,636 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 243] Calculating silhouette score: n_neighbors=17, n_components=42, alpha=0.4760170914392536
+[I 2025-02-18 08:11:15,482] Trial 243 finished with value: 0.694215329215736 and parameters: {'n_neighbors': 17, 'n_components': 42, 'alpha': 0.4760170914392536}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 08:11:15,622 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 244] Fitting Diffision Map: n_neighbors=17, n_components=42, alpha=0.45711539360292247
+2025-02-18 08:11:24,521 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 244] Transforming observations: n_neighbors=17, n_components=42, alpha=0.45711539360292247
+2025-02-18 08:32:35,120 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 244] Calculating silhouette score: n_neighbors=17, n_components=42, alpha=0.45711539360292247
+[I 2025-02-18 08:32:40,209] Trial 244 finished with value: 0.6948807753495987 and parameters: {'n_neighbors': 17, 'n_components': 42, 'alpha': 0.45711539360292247}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 08:32:40,386 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 245] Fitting Diffision Map: n_neighbors=18, n_components=41, alpha=0.4345334113970619
+2025-02-18 08:32:59,410 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 245] Transforming observations: n_neighbors=18, n_components=41, alpha=0.4345334113970619
+2025-02-18 08:54:08,770 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 245] Calculating silhouette score: n_neighbors=18, n_components=41, alpha=0.4345334113970619
+[I 2025-02-18 08:54:13,608] Trial 245 finished with value: 0.698021141628509 and parameters: {'n_neighbors': 18, 'n_components': 41, 'alpha': 0.4345334113970619}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 08:54:13,739 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 246] Fitting Diffision Map: n_neighbors=45, n_components=40, alpha=0.43729100413867883
+2025-02-18 08:54:25,004 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 246] Transforming observations: n_neighbors=45, n_components=40, alpha=0.43729100413867883
+2025-02-18 09:15:20,001 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 246] Calculating silhouette score: n_neighbors=45, n_components=40, alpha=0.43729100413867883
+[I 2025-02-18 09:15:24,727] Trial 246 finished with value: 0.41985715844927607 and parameters: {'n_neighbors': 45, 'n_components': 40, 'alpha': 0.43729100413867883}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 09:15:24,858 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 247] Fitting Diffision Map: n_neighbors=19, n_components=45, alpha=0.4050759465769989
+2025-02-18 09:15:30,368 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 247] Transforming observations: n_neighbors=19, n_components=45, alpha=0.4050759465769989
+2025-02-18 09:36:29,195 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 247] Calculating silhouette score: n_neighbors=19, n_components=45, alpha=0.4050759465769989
+[I 2025-02-18 09:36:33,914] Trial 247 finished with value: 0.6783522372339538 and parameters: {'n_neighbors': 19, 'n_components': 45, 'alpha': 0.4050759465769989}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 09:36:34,056 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 248] Fitting Diffision Map: n_neighbors=21, n_components=39, alpha=0.37052842511750095
+2025-02-18 09:36:41,478 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 248] Transforming observations: n_neighbors=21, n_components=39, alpha=0.37052842511750095
+2025-02-18 09:57:40,951 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 248] Calculating silhouette score: n_neighbors=21, n_components=39, alpha=0.37052842511750095
+[I 2025-02-18 09:57:45,913] Trial 248 finished with value: 0.6738204890815666 and parameters: {'n_neighbors': 21, 'n_components': 39, 'alpha': 0.37052842511750095}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 09:57:46,042 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 249] Fitting Diffision Map: n_neighbors=18, n_components=43, alpha=0.4241020832648971
+2025-02-18 09:57:53,961 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 249] Transforming observations: n_neighbors=18, n_components=43, alpha=0.4241020832648971
+2025-02-18 10:18:48,391 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 249] Calculating silhouette score: n_neighbors=18, n_components=43, alpha=0.4241020832648971
+[I 2025-02-18 10:18:53,230] Trial 249 finished with value: 0.6966195557771186 and parameters: {'n_neighbors': 18, 'n_components': 43, 'alpha': 0.4241020832648971}. Best is trial 238 with value: 0.702037373353986.
+2025-02-18 10:18:53,353 - NAL-GDB_MNS_v2.SLC-MFC - WARNING - [Callback] Stopping optimization: 250 trials reached (limit=250)
+2025-02-18 10:18:53,353 - NAL-GDB_MNS_v2.SLC-MFC - INFO - Tuned parameters (Score=0.702037373353986): {'n_neighbors': 18, 'n_components': 42, 'alpha': 0.3979238602380736}
+2025-02-18 10:18:53,353 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [End] Hyperparameter Tuning
+2025-02-18 10:46:42,671 - NAL-GDB_MNS_v2.SLC-MFC - INFO - Scaling embeddings by steady-state vector
+2025-02-18 10:46:42,674 - NAL-GDB_MNS_v2.SLC-MFC - INFO - Calculating silhouette score for initial data
