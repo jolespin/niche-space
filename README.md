@@ -2,6 +2,11 @@
 The `nichespace` package is developed for computing quantitative hierarchical niche spaces and qualitative niche spaces for visualization. 
 This package also includes graph theoretical clustering and embedding annotations used bayesian AutoML methods.
 
+## Install
+```
+pip install niche-space
+```
+
 ## Bayesian Hyperparameter Optimization
 `Optuna` is used under the hood with the Tree-structured Parzen Estimator algorithm to leverage Guasissian Mixture Models.  To access the hyperparameter optimization, 
 `compile_parameter_space` and `check_parameter_space` are loaded from `Clairvoyance` (whose AutoML is used by the `EmbeddingAnnotator` class) to provide user-friendly
@@ -40,8 +45,10 @@ numbers of neighbors than a dense dataset.
 
 ```python
 import numpy as np
+import pandas as pd
 from sklearn.model_selection import train_test_split
 from nichespace.neighbors import (
+    pairwise_distances_kneighbors,
     KNeighborsLeidenClustering,
 )
 
@@ -50,13 +57,12 @@ n_observations = 500
 
 X_grouped = pd.read_csv("../test/X_grouped.tsv.gz", sep="\t", index_col=0) > 0
 X_toy = X_grouped.iloc[:n_observations]
-X_training, X_testing = train_test_split(X_toy, test_size=0.3)
 
 # Precompute pairwise distances
 metric="jaccard"
 
 distances = pairwise_distances_kneighbors(
-    X=X_training, 
+    X=X_toy, 
     metric=metric, 
     n_jobs=-1, 
     redundant_form=True,
@@ -77,18 +83,18 @@ clustering = KNeighborsLeidenClustering(
     n_jobs=-1,
 )
 clustering.fit(distances)
-# 2025-02-26 20:32:48,057 - jaccard_similarity_clustering - INFO - [End] Processing distance matrix
-# 2025-02-26 20:32:48,058 - jaccard_similarity_clustering - INFO - [Begin] Hyperparameter Tuning
-# [I 2025-02-26 20:32:48,059] A new study created in memory with name: jaccard_similarity_clustering
-# [I 2025-02-26 20:32:48,586] Trial 0 finished with value: 0.11658078543607725 and parameters: {'n_neighbors': 7}. Best is trial 0 with value: 0.11658078543607725.
-# [I 2025-02-26 20:32:49,269] Trial 1 finished with value: 0.13545759217183717 and parameters: {'n_neighbors': 8}. Best is trial 1 with value: 0.13545759217183717.
-# [I 2025-02-26 20:32:49,955] Trial 2 finished with value: 0.13545759217183717 and parameters: {'n_neighbors': 8}. Best is trial 1 with value: 0.13545759217183717.
-# [I 2025-02-26 20:32:50,614] Trial 3 finished with value: 0.11658078543607725 and parameters: {'n_neighbors': 7}. Best is trial 1 with value: 0.13545759217183717.
-# [I 2025-02-26 20:32:51,279] Trial 4 finished with value: 0.11658078543607725 and parameters: {'n_neighbors': 7}. Best is trial 1 with value: 0.13545759217183717.
-# 2025-02-26 20:32:51,407 - jaccard_similarity_clustering - WARNING - [Callback] Stopping optimization: 5 trials reached (limit=5)
-# 2025-02-26 20:32:51,408 - jaccard_similarity_clustering - INFO - Tuned parameters (Score=0.13545759217183717): {'n_neighbors': 8}
-# 2025-02-26 20:32:51,408 - jaccard_similarity_clustering - INFO - [End] Hyperparameter Tuning
-# Community detection: 100%|██████████| 10/10 [00:00<00:00, 53.60it/s]
+# 2025-02-26 20:45:41,152 - jaccard_similarity_clustering - INFO - [End] Processing distance matrix
+# 2025-02-26 20:45:41,153 - jaccard_similarity_clustering - INFO - [Begin] Hyperparameter Tuning
+# [I 2025-02-26 20:45:41,155] A new study created in memory with name: jaccard_similarity_clustering
+# [I 2025-02-26 20:45:43,368] Trial 0 finished with value: 0.18090088460183 and parameters: {'n_neighbors': 9}. Best is trial 0 with value: 0.18090088460183.
+# [I 2025-02-26 20:45:44,103] Trial 1 finished with value: 0.17937516227113132 and parameters: {'n_neighbors': 10}. Best is trial 0 with value: 0.18090088460183.
+# [I 2025-02-26 20:45:44,823] Trial 2 finished with value: 0.18090088460183 and parameters: {'n_neighbors': 9}. Best is trial 0 with value: 0.18090088460183.
+# [I 2025-02-26 20:45:45,540] Trial 3 finished with value: 0.18090088460183 and parameters: {'n_neighbors': 9}. Best is trial 0 with value: 0.18090088460183.
+# [I 2025-02-26 20:45:46,245] Trial 4 finished with value: 0.18437101801937045 and parameters: {'n_neighbors': 8}. Best is trial 4 with value: 0.18437101801937045.
+# 2025-02-26 20:45:46,294 - jaccard_similarity_clustering - WARNING - [Callback] Stopping optimization: 5 trials reached (limit=5)
+# 2025-02-26 20:45:46,294 - jaccard_similarity_clustering - INFO - Tuned parameters (Score=0.18437101801937045): {'n_neighbors': 8}
+# 2025-02-26 20:45:46,294 - jaccard_similarity_clustering - INFO - [End] Hyperparameter Tuning
+# Community detection: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:00<00:00, 42.96it/s]
 # =============================================================================================================
 # KNeighborsLeidenClustering(Name:jaccard_similarity_clustering, ObservationType: ani-cluster, FeatureType: ko)
 # =============================================================================================================
@@ -97,23 +103,23 @@ clustering.fit(distances)
 #     * cluster_prefix: c
 #     * checkpoint_directory: None
 #     * n_neighbors: 8
-#     * score: 0.13545759217183717
-#     * n_observations: 350
-#     * n_clusters: 11
+#     * score: 0.18437101801937045
+#     * n_observations: 500
+#     * n_clusters: 15
 
 clustering.labels_
-# NAL-ESLC_277166ac6b2cd5e8acc3eee765fd8677     c1
-# NAL-ESLC_2232466fa2308ebd534fb9a40bd2a62c     c1
-# NAL-ESLC_269738373fbd2a4b6ba2cc2d8edfac17     c1
-# NAL-ESLC_0af894e4be82ebacad9e3e44b57d2aa1     c1
-# NAL-ESLC_36a7c2631f0227735806d5cab775349b     c1
-#                                             ... 
-# NAL-ESLC_19b2e8331e0a335bd53957c94ecdde35     c9
-# NAL-ESLC_45af5e14e9bfc2dc2f34ee92488968d5    c10
-# NAL-ESLC_3b8193c12b57ccc88cf6e64fe97da102    c10
-# NAL-ESLC_3d9316ab5dc99a7fe4ac23e157cb75ee    c11
-# NAL-ESLC_3cf6c883ec9a7f3be1cf5dd391b0d9b0    c11
-# Length: 349, dtype: object
+# NAL-ESLC_45c547b7c7d0fb1d2eb1ccbed3ee1ff7     c1
+# NAL-ESLC_452ebe6d3c8f19f9598110bd9be48002     c1
+# NAL-ESLC_484b2f94d8a6c24e94b3f1cb87c98147     c1
+# NAL-ESLC_00045683b92daedb002220d52bbda9fd     c1
+# NAL-ESLC_38e4d757b66995adc0018d329c3b136a     c1
+#                                             ...
+# NAL-ESLC_11aa3949879b1f3668ae3a190e92bd3d    c14
+# NAL-ESLC_17822fab9e078f3444d17fe2e1945785    c14
+# NAL-ESLC_4877918b070ebaea1dea30d43c253603    c14
+# NAL-ESLC_45af5e14e9bfc2dc2f34ee92488968d5    c15
+# NAL-ESLC_3b8193c12b57ccc88cf6e64fe97da102    c15
+# Length: 498, dtype: object
 
 # Write to file
 clustering.to_file("../test/objects/KNeighborsLeidenClustering.pkl")
