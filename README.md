@@ -125,14 +125,14 @@ clustering = KNeighborsLeidenClustering.from_file("../test/objects/KNeighborsLei
 
 
 ## Manifold Learning
-### Using a custom KNN kernel to build a Diffusion Map embedding
+
+### Diffusion Maps using Euclidean distance with a custom KNN kernel on continuous data
 There are several methods used for building diffusion map embeddings from continuous data.  However, fewer methods exist
 for computing diffusion maps from boolean data where Euclidean distance is not appropriate.  Further, most methods that allow
 for non-Euclidean distances often do not support out-of-sample transformations.  This package contains a custom `KNeighborsKernel`
 that allows for KNN kernels with a wide range of distances that can be used with `datafold.dynfold.DiffusionMaps` which is aliased
 as `DiffusionMapEmbedding` in this package.
 
-##### Basic Euclidean distance
 ```python
 import numpy as np
 from sklearn.datasets import make_classification
@@ -162,7 +162,7 @@ print(dmap_X.shape, dmap_Y.shape)
 # (700, 26) (300, 26)
 ```
 
-##### Boolean data and Jaccard distance
+#### Diffusion Maps using Jaccard distance with a custom KNN kernel on boolean data
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -207,6 +207,26 @@ print(dmap_X.shape, dmap_Y.shape)
 ```
 
 ##### Boolean data and Jaccard distance to build a hierarchical niche space
+Instead of building a niche space using a single class for otpimization we are going to build a hierarchical niche space.  
+In this example, we have genomes and KEGG orthologs with presence/absence as our feature matrix.  We've clustered the genomes 
+using [skani](https://github.com/bluenote-1577/skani) based on 95% ANI and 50% alignment fraction (see [VEBA] for more information) 
+to produce the `cluster-ani` class.  The feature matrix was aggregated with respect to `cluster-ani` and then clustered using 
+`KNeighborsLeidenClustering` to yield `cluster-mfc` classes.  The hierarchical niche space algorithm implements the following strategy:
+1. Aggregate `X` with respect to `y1` to yield `X1`
+2. Compute pairwise distance of `X1`
+3. Build custom KNN kernel from the pairwise distance matrix to yield `distance_matrix`
+4. Bayesian hyperparameter optimization
+    * Build a Diffusion Map from the custom KNN kernel
+    * Transform out-of-samples `X` with the Diffision Map computed with `X1`
+    * Compute silhouette scores for `X` using the `y2` labels
+5. Repeat 4 until optimal hyperparameters are identified
+
+This strategy allows for building small kernels from the `training data` (i.e., `X1`), which are faster to transform out-of-sample data, 
+while also learning the hierarchical patterns in the `testing data` (i.e., `X`) with respect to `y2`.  In this example, we are building 
+`Metabolic Functional Class (MFC)` categories clustering `Species-Level Clusters (SLC)` by using set and graph theoretical approaches.
+The `HierarchicalNicheSpace` builds a diffusion space that represents both SLCs and genomes while learning pre-computed clustering patterns.
+
+The steady-state vector is properly accounted for in both the `NicheSpace` and `HierarchicalNicheSpace` classes. 
 
 ```python
 import numpy as np
@@ -295,6 +315,9 @@ hns = HierarchicalNicheSpace.from_file("../test/objects/HierarchicalNicheSpace.p
 
 
 ##### Building a qualitative space from a niche space
+We can't visualize greater than 3 dimensions and there will likely be more than 3 diffusion dimensions.  To
+visualize, we embed the concatenated diffusion coordinates (both `X` and `X1` referred to as `X_basis`) with [PaCMAP](https://github.com/YingfanWang/PaCMAP)
+and perform hyperparameter tuning to learn the class structure (in this example, MFC patterns).
 
 ```python
 from nichespace.manifold import QualitativeSpace
@@ -338,6 +361,12 @@ qualitative_hns = QualitativeSpace.from_file("../test/objects/QualitativeSpace.p
 ```
 
 #### Annotating niches
+Now that we have niche space embeddings, we need to assign some type of human interpretable meaning to the
+embeddings in the form of annotations.  Since Diffusion Maps do not have loadings like Principal Component Analysis
+we have designed an AutoML method called [`Clairvoyance`](https://github.com/jolespin/clairvoyance) which is used under the hood 
+to simultaneously optimize hyperparameters and select features.  In this case, KEGG ortholog biomarkers that are predictive of the
+embedding.  We use the `X` transformed diffusion coordinates as the training data and `X1` transformed diffusion coordinates as 
+testing data.
 
 ```python
 from nichespace.manifold import (
@@ -404,6 +433,13 @@ annotator = EmbeddingAnnotator.from_file("../test/objects/EmbeddingAnnotator.pkl
 ```
 
 ### Pathway coverage and enrichment from predictive features
+In this particular example, we only use the KEGG ortholog pathway subset for features so we can perform KEGG module enrichment 
+and coverage analysis using our [KEGG Pathway Profiler](https://github.com/jolespin/kegg_pathway_profiler).
+
+Since it's not a dependency, please install separately to use this workflow.
+```
+pip install kegg_pathway_profiler
+```
 
 ```python
 import pandas as pd
