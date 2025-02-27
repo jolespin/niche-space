@@ -162,7 +162,7 @@ print(dmap_X.shape, dmap_Y.shape)
 # (700, 26) (300, 26)
 ```
 
-#### Diffusion Maps using Jaccard distance with a custom KNN kernel on boolean data
+### Diffusion Maps using Jaccard distance with a custom KNN kernel on boolean data
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -206,7 +206,7 @@ print(dmap_X.shape, dmap_Y.shape)
 # ((350, 5), (150, 5))
 ```
 
-##### Boolean data and Jaccard distance to build a hierarchical niche space
+### Boolean data and Jaccard distance to build a hierarchical niche space
 Instead of building a niche space using a single class for otpimization we are going to build a hierarchical niche space.  
 In this example, we have genomes and KEGG orthologs with presence/absence as our feature matrix.  We've clustered the genomes 
 using [skani](https://github.com/bluenote-1577/skani) based on 95% ANI and 50% alignment fraction (see [VEBA] for more information) 
@@ -314,7 +314,7 @@ hns = HierarchicalNicheSpace.from_file("../test/objects/HierarchicalNicheSpace.p
 ```
 
 
-##### Building a qualitative space from a niche space
+### Building a qualitative space from a niche space
 We can't visualize greater than 3 dimensions and there will likely be more than 3 diffusion dimensions.  To
 visualize, we embed the concatenated diffusion coordinates (both `X` and `X1` referred to as `X_basis`) with [PaCMAP](https://github.com/YingfanWang/PaCMAP)
 and perform hyperparameter tuning to learn the class structure (in this example, MFC patterns).
@@ -360,7 +360,7 @@ qualitative_hns.to_file("../test/objects/QualitativeSpace.pkl")
 qualitative_hns = QualitativeSpace.from_file("../test/objects/QualitativeSpace.pkl")
 ```
 
-#### Annotating niches
+### Annotating niches
 Now that we have niche space embeddings, we need to assign some type of human interpretable meaning to the
 embeddings in the form of annotations.  Since Diffusion Maps do not have loadings like Principal Component Analysis
 we have designed an AutoML method called [`Clairvoyance`](https://github.com/jolespin/clairvoyance) which is used under the hood 
