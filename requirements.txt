@@ -7,9 +7,11 @@ memory_profiler
 pyexeggutor>=2025.2.19
 datafold>=2.0.1
 clairvoyance-feature-selection>=2025.2.21.post2
-kegg-pathway-profiler>=2024.10.16
 pacmap
+networkx
+igraph
 ensemble_networkx>=2025.2.11.post1
+#kegg-pathway-profiler>=2024.10.16
 optuna
 #pyfastx
 #kneed
