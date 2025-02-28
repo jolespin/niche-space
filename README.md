@@ -474,3 +474,64 @@ df_kegg_enrichment = unweighted_pathway_enrichment_wrapper(
     background_set=set(mns.X_.columns),
 ).sort_values("FDR")
 ```
+
+### Accessing OpenAI API for prompt-based annotations
+The `EmbeddingAnnotator` is a data-driven feature selection approach to annotations.  However, we can also leverage
+LLMs with a properly configured prompt. You'll need to install the [`OpenAPI`](https://github.com/openai/openai-python) package and optionally [dotenv](https://github.com/theskumar/python-dotenv) to use this functionality. 
+
+```
+pip install openai
+pip install dotenv
+```
+
+Here is a simple prompt about annotating a cluster enriched in Nostoc genomes and nitrogen fixation proteins:
+
+```python
+from dotenv import dotenv_values
+from nichespace.llm import LLMAnnotator
+# Load credentials
+# api_key: ---
+# organization_key: ---
+# project_key: ---
+config = dotenv_values("/home/ec2-user/SageMaker/.openai")
+
+# Setup client
+llm = LLMAnnotator(
+    api_key=config["api_key"],
+    organization_key=config["organization_key"],
+    project_key=config["project_key"],
+)
+
+# Setup prompt
+proteins = [
+ ('K02588', 'nitrogenase iron protein NifH'),
+ ('K02586', 'nitrogenase molybdenum-iron protein alpha chain [EC:1.18.6.1]'),
+ ('K02591', 'nitrogenase molybdenum-iron protein beta chain [EC:1.18.6.1]'),
+ ('K00531', 'nitrogenase delta subunit [EC:1.18.6.1]'),
+ ('K22896', 'vanadium-dependent nitrogenase alpha chain [EC:1.18.6.2]'),
+ ('K22897', 'vanadium-dependent nitrogenase beta chain [EC:1.18.6.2]'),
+ ('K22898', 'vanadium nitrogenase delta subunit [EC:1.18.6.2]'),
+ ('K22899', 'vanadium nitrogenase iron protein')]
+organisms = ["d__Bacteria; p__Cyanobacteriota; c__Cyanophyceae; o__Nostocales; f__Nostocaceae; g__Nostoc"]
+
+# Ask prompt
+llm.query(prompt=f"Can you descibe the metabolic and environmental context of a group of organisms" \
+                 f"enriched in [{organisms}] genomes and [{proteins}] proteins?" \
+                 f"Please make the response concise and to 100 words.",
+          model="o3-mini",
+)
+# Nostoc, a filamentous cyanobacterium from the Nostocaceae family, thrives in diverse aquatic and terrestrial ecosystems, 
+# often where nitrogen is limited. Its enrichment in nitrogenase proteins—including both molybdenum-iron and vanadium-dependent 
+# enzymes—indicates a robust capacity for atmospheric nitrogen fixation. This metabolic trait is crucial in converting inert N₂ 
+# into biologically available forms, supporting both self-growth and symbiotic relationships with plants and other organisms. 
+# By performing nitrogen fixation under microaerobic or anoxic conditions within its usually oxygen-rich habitat, Nostoc plays a 
+# vital role in ecosystem nutrient cycling and soil fertility, contributing significantly to primary productivity in nutrient-poor 
+# environments.
+
+# Ask another prompt
+# llm.query(prompt=prompt2)
+
+# Write results
+llm.to_json("llm_annotations.json")
+```
+

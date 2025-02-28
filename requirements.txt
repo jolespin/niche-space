@@ -11,8 +11,8 @@ pacmap
 networkx
 igraph
 ensemble_networkx>=2025.2.11.post1
-#kegg-pathway-profiler>=2024.10.16
 optuna
+#kegg-pathway-profiler>=2024.10.16
 #pyfastx
-#kneed
+#openai
 

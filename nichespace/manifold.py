@@ -1386,8 +1386,9 @@ class QualitativeSpace(object):
         tree = None
         if hasattr(self, "model_"):
             tree = self.model_.tree
-            tree.save(f"{filepath}.ann")
-            self.model_.tree = None
+            if tree is not None:
+                tree.save(f"{filepath}.ann")
+                self.model_.tree = None
 
         write_pickle(self, filepath)
         

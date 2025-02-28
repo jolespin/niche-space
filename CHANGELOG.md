@@ -1,5 +1,5 @@
 #### Daily Change Log:
-
+* [2025.2.17] - Added `LLMAnnotator` in `llm` module
 * [2025.2.24] - Added robust method for pickling `QualitativeSpace` objects (e.g., `annoy_index.save('index_file.ann')`)
 * [2025.2.24] - Added checkpoints to `EmbeddingAnnotator` if a checkpoint directory is provided
 * [2025.2.21] - Added `EmbeddingAnnotator` to `manifold` module
