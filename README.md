@@ -483,17 +483,24 @@ LLMs with a properly configured prompt. You'll need to install the [`OpenAPI`](h
 pip install openai
 pip install dotenv
 ```
+You can put your OpenAI credentials in `~/.openai`:
+
+```
+$cat path/to/.openai
+
+api_key=------------
+organization_key=---
+project_key=--------
+```
 
 Here is a simple prompt about annotating a cluster enriched in Nostoc genomes and nitrogen fixation proteins:
 
 ```python
 from dotenv import dotenv_values
 from nichespace.llm import LLMAnnotator
+
 # Load credentials
-# api_key: ---
-# organization_key: ---
-# project_key: ---
-config = dotenv_values("/home/ec2-user/SageMaker/.openai")
+config = dotenv_values("~/.openai")
 
 # Setup client
 llm = LLMAnnotator(
