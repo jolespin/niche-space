@@ -1,12 +1,13 @@
+quality_label="completeness_gte50.contamination_lt10"
 for organism_type in "prokaryotic" "eukaryotic"
 do 
     job_name="cluster-ani__${organism_type}"
-    input_filepath="../data/cluster/ani/${organism_type}/skani_output.tsv"
-    output_directory="../data/cluster/ani/${organism_type}/completeness_gte90.contamination_lt5"
-    identifiers_filepath="../data/cluster/ani/${organism_type}/completeness_gte90.contamination_lt5/organisms.list"
-    graph_filepath="../data/cluster/ani/${organism_type}/completeness_gte90.contamination_lt5/networkx_graph.pkl.gz"
-    dict_filepath="../data/cluster/ani/${organism_type}/completeness_gte90.contamination_lt5/dict.pkl.gz"
-    representatives_filepath="../data/cluster/ani/${organism_type}/completeness_gte90.contamination_lt5/representatives.tsv.gz"
+    output_directory="../data/cluster/ani/v2025.3.3/${organism_type}/${quality_label}"
+    input_filepath="${output_directory}/skani_output.tsv"
+    identifiers_filepath="${output_directory}/organisms.list"
+    graph_filepath="${output_directory}/networkx_graph.pkl.gz"
+    dict_filepath="${output_directory}/dict.pkl.gz"
+    representatives_filepath="${output_directory}/representatives.tsv.gz"
 
     mkdir -p "${output_directory}"
 
