@@ -206,12 +206,6 @@ def pairwise_distances_kneighbors(
     distances : array or DataFrame
         Distance matrix in requested format
     """
-    if isinstance(metric, str):
-        try:
-            import scipy.spatial.distance
-            metric = getattr(scipy.spatial.distance, metric)
-        except AttributeError:
-            raise ValueError(f"{metric} not supported in scipy.spatial.distance. Please provide a callable for custom metrics.")
 
     if isinstance(X, pd.DataFrame):
         samples = X.index

@@ -46,4 +46,7 @@ setup(
     
     install_requires=requirements, #[:-1],
     tests_require=requirements, #[-1:]
+     scripts=[
+     "bin/edgelist_to_clusters.py",
+     ],
 )
