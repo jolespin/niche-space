@@ -39,6 +39,7 @@ clusterer = KNeighborsLeidenClustering(
     n_jobs=-1,
     n_iter=100, 
     cluster_prefix="MFC-",
+    verbose=4,
         
 )
 clusterer.fit(jaccard_distances)
