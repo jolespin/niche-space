@@ -1,3 +1,9 @@
 2025-03-04 23:45:43,818 - MFC.FullKOfam - INFO - [End] Processing distance matrix
 2025-03-04 23:45:43,819 - MFC.FullKOfam - INFO - [Begin] Hyperparameter Tuning
 2025-03-04 23:45:43,821 - MFC.FullKOfam - INFO - [Trial 0] Convert distance matrix to non-redundant KNN, remove disconnected nodes, and convert to similarity graph: n_neighbors=38
+2025-03-05 00:51:31,538 - MFC.FullKOfam - INFO - [Trial 0] Identify Leiden communities, membership co-occurrence ratios, and building clustered graph: n_neighbors=38
+2025-03-05 01:00:07,486 - MFC.FullKOfam - INFO - [Trial 0] Calculating silhouette scores: n_neighbors=38
+[I 2025-03-05 01:00:15,724] Trial 0 finished with value: 0.09030680420516866 and parameters: {'n_neighbors': 38}. Best is trial 0 with value: 0.09030680420516866.
+2025-03-05 01:00:15,812 - MFC.FullKOfam - WARNING - [Callback] Stopping optimization: 1 trials reached (limit=1)
+2025-03-05 01:00:15,813 - MFC.FullKOfam - INFO - Tuned parameters (Score=0.09030680420516866): {'n_neighbors': 38}
+2025-03-05 01:00:15,813 - MFC.FullKOfam - INFO - [End] Hyperparameter Tuning
