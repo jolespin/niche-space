@@ -48,10 +48,16 @@ def compile_parameter_space(trial, param_space): # This should be merged with `c
         params[k] = suggestion
     return params
 
-def is_square_symmetric(matrix, tol=1e-8):
+def is_square_symmetric(matrix, tol=1e-8, raise_exception=True):
     """Check if a matrix is square and symmetric."""
     matrix = np.array(matrix)  # Ensure it's a NumPy array
-    return matrix.shape[0] == matrix.shape[1] and np.allclose(matrix, matrix.T, atol=tol)
+    same_shape = matrix.shape[0] == matrix.shape[1]
+    all_close = np.allclose(matrix, matrix.T, atol=tol)
+    all_notnull = not np.any(np.isnan(matrix))
+    if raise_exception:
+        raise ValueError(f"Not symmetric\n * Square: {same_shape}\n * Upper/lower triangle close (tol={tol}): {all_close}\n * All not NaN {all_notnull}")
+    else:
+        return all([same_shape, all_close, all_notnull])
 
 
 def stop_when_exceeding_trials(n_trials, logger):

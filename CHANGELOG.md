@@ -1,4 +1,5 @@
 #### Daily Change Log:
+* [2025.3.4] - Added NaN check and raise_exception to `is_square_symmetric`
 * [2025.3.4] - Removed forced "callable" in `pairwise_distance_kneighbors`
 * [2025.2.17] - Added `LLMAnnotator` in `llm` module
 * [2025.2.24] - Added robust method for pickling `QualitativeSpace` objects (e.g., `annoy_index.save('index_file.ann')`)
