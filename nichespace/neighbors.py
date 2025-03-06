@@ -600,11 +600,11 @@ class KNeighborsLeidenClustering(object):
                 else:
 
                     # Convert distance matrix to non-redundant KNN
-                    if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Convert distance matrix to non-redundant KNN, remove disconnected nodes, and convert to similarity graph: n_neighbors={n_neighbors}")
+                    if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Convert distance matrix to non-redundant KNN: n_neighbors={n_neighbors}")
                     knn = convert_distance_matrix_to_kneighbors_matrix(distance_matrix, n_neighbors=n_neighbors, redundant_form=False)
-
-                    # Remove disconnected nodes and convert to similarity
-                    knn = knn[knn > 0]
+                    if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Remove disconnected nodes: n_neighbors={n_neighbors}")                    
+                    knn = knn[knn.values > 0]
+                    if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Convert to similarity: n_neighbors={n_neighbors}")                    
                     knn_similarity = self.distance_to_similarity(knn)
                     del knn
 
@@ -612,11 +612,12 @@ class KNeighborsLeidenClustering(object):
                     graph = enx.convert_network(knn_similarity, ig.Graph)
 
                     # Identify leiden communities with multiple seeds
-                    if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Identify Leiden communities, membership co-occurrence ratios, and building clustered graph: n_neighbors={n_neighbors}")
+                    if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Identify Leiden communities: n_neighbors={n_neighbors}")
                     progressbar_message = None
                     df_communities = enx.community_detection(graph, n_iter=self.n_iter, converge_iter=self.converge_iter, n_jobs=1, progressbar_message=progressbar_message)
 
                     # Identify membership co-occurrence ratios
+                    if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Identify membership co-occurrence ratios: n_neighbors={n_neighbors}")
                     node_pair_membership_cooccurrences = enx.community_membership_cooccurrence(df_communities).mean(axis=1)
                     del df_communities
 
@@ -625,6 +626,7 @@ class KNeighborsLeidenClustering(object):
                     del node_pair_membership_cooccurrences
 
                     # Get list of clustered edges
+                    if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Get list of clustered edges and build clustered graph: n_neighbors={n_neighbors}")
                     clustered_edgelist = enx.get_undirected_igraph_edgelist_indices(graph, node_pairs_with_consistent_membership)
                     del node_pairs_with_consistent_membership
 

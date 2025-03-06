@@ -1,0 +1,21 @@
+(73231, 17279)
+(73206, 17279)
+2025-03-06 06:04:36,141 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Start] Filtering observations and classes below feature threshold: 100
+2025-03-06 06:04:37,709 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Dropping] N = 263 y1 classes
+2025-03-06 06:04:37,715 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Dropping] N = 303 observations
+2025-03-06 06:04:37,716 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 14818 y1 classes
+2025-03-06 06:04:37,718 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 80 y2 classes
+2025-03-06 06:04:37,719 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 72903 observations
+2025-03-06 06:04:37,719 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 17279 features
+2025-03-06 06:04:37,719 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [End] Filtering observations and classes below feature threshold
+2025-03-06 06:04:39,126 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Start] Processing distance matrix
+2025-03-06 07:44:11,055 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - Writing distance matrix checkpoint: ../data/manifold/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.HierarchicalNicheSpace.distance_matrix.parquet
+2025-03-06 07:44:23,973 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [End] Processing distance matrix
+2025-03-06 07:44:24,471 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Begin] Hyperparameter Tuning
+2025-03-06 07:44:24,472 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Loading] Checkpoint file: ../data/manifold/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.Optuna.HierarchicalNicheSpace.pkl
+2025-03-06 07:44:24,475 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 1] Fitting Diffision Map: n_neighbors=79, n_components=48, alpha=0.6458941130666561
+2025-03-06 07:45:06,193 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 1] Transforming observations: n_neighbors=79, n_components=48, alpha=0.6458941130666561
+2025-03-06 15:43:11,970 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 1] Calculating silhouette score: n_neighbors=79, n_components=48, alpha=0.6458941130666561
+[I 2025-03-06 15:44:04,076] Trial 1 finished with value: 0.39962928094255973 and parameters: {'n_neighbors': 79, 'n_components': 48, 'alpha': 0.6458941130666561}. Best is trial 1 with value: 0.39962928094255973.
+2025-03-06 15:44:04,215 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 2] Fitting Diffision Map: n_neighbors=65, n_components=91, alpha=0.9636627605010293
+2025-03-06 15:44:50,218 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 2] Transforming observations: n_neighbors=65, n_components=91, alpha=0.9636627605010293

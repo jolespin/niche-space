@@ -563,6 +563,7 @@ class HierarchicalNicheSpace(object):
         scale_by_steadystate:bool=True,
         niche_prefix="n",
         robust_transform=True,
+        parallel_backend="threads",
 
         # Optuna
         n_trials=50,
@@ -595,7 +596,8 @@ class HierarchicalNicheSpace(object):
         self.scoring_distance_metric = scoring_distance_metric
         self.scale_by_steadystate = scale_by_steadystate
         self.niche_prefix = niche_prefix
-        self. robust_transform = robust_transform
+        self.robust_transform = robust_transform
+        self.parallel_backend = parallel_backend
         
         # Optuna
         self.n_jobs = n_jobs
@@ -807,7 +809,18 @@ class HierarchicalNicheSpace(object):
             X = X.astype(bool)
             X1 = X1.astype(bool)
             
+        self.observations_ = X.index
+        self.observations1_ = X1.index
+        self.features_ = X.columns
+            
         # Distance matrix
+        serialized_checkpoint_filepath = None
+        if self.checkpoint_directory:
+            serialized_checkpoint_filepath = os.path.join(self.checkpoint_directory, f"{self.name}.{self.__class__.__name__}.distance_matrix.parquet")
+            if os.path.exists(serialized_checkpoint_filepath):
+                self.logger.info(f"Loading distance matrix from checkpoint: {serialized_checkpoint_filepath}")
+                distance_matrix = pd.read_parquet(serialized_checkpoint_filepath).values
+                
         if distance_matrix is None:
             if self.verbose > 0:
                 self.logger.info("[Start] Processing distance matrix")
@@ -819,6 +832,10 @@ class HierarchicalNicheSpace(object):
             distance_matrix = squareform(distance_matrix)
         if not distance_matrix.shape[0] == X1.shape[0]:
             raise ValueError(f"distance_matrix.shape[0] ({distance_matrix.shape[0]}) does not match X1.shape[0] ({X1.shape[0]}).  This may be a result of automatic filtering.  If so, please filter before providing input or do not provide distance matrix")
+        if serialized_checkpoint_filepath:
+            if not os.path.exists(serialized_checkpoint_filepath):
+                self.logger.info(f"Writing distance matrix checkpoint: {serialized_checkpoint_filepath}")
+                pd.DataFrame(distance_matrix, index=X1.index, columns=X1.index).to_parquet(serialized_checkpoint_filepath, index=True)
         if self.verbose > 0:
             self.logger.info("[End] Processing distance matrix")
 
@@ -970,7 +987,7 @@ class HierarchicalNicheSpace(object):
         """Parallelizes the transformation using joblib"""
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=UserWarning, message="X does not have valid feature names")
-            output = joblib.Parallel(n_jobs=self.n_jobs, prefer="threads")(
+            output = joblib.Parallel(n_jobs=self.n_jobs, prefer=self.parallel_backend)(
                 joblib.delayed(self._process_row)(model, row.values) for id, row in tqdm(X.iterrows(), desc=progressbar_message, total=X.shape[0], position=0, leave=True)
             )
             return np.vstack(output)

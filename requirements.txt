@@ -10,7 +10,7 @@ clairvoyance-feature-selection>=2025.2.21.post2
 pacmap
 networkx
 igraph
-ensemble_networkx>=2025.3.3
+ensemble_networkx>=2025.3.4.post1
 optuna
 fastparquet
 #kegg-pathway-profiler>=2024.10.16
