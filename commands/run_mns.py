@@ -27,7 +27,7 @@ print(X.shape)
 y1 = genome_to_clusterani.loc[X.index]
 y2 = genome_to_clustermfc.loc[X.index].dropna()
 y1 = y1.loc[y2.index]
-X = X.loc[y2.index]
+X = X.loc[y2.index].astype(float)
 assert np.all(y1.notnull())
 assert np.all(y2.notnull())
 print(X.shape)
@@ -45,6 +45,8 @@ mns = HierarchicalNicheSpace(
     n_jobs=-1,
     verbose=3,
     checkpoint_directory=f"{output_directory}/checkpoints",
+    cast_as_float=True,
+    #parallel_kws={"require":"sharedmem"},
 )
 mns.fit(X, y1, y2) #, distance_matrix=distance_matrix)
 mns.to_file(mns, f"{output_directory}/{mns.name}.HierarchicalNicheSpace.pkl")

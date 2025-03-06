@@ -1,4 +1,6 @@
 #### Daily Change Log:
+* [2025.3.6] - Fixed parallel backend arguments
+* [2025.3.6] - Added `cast_as_float` to `HierarchicalNicheSpace` because of overhead in casting in the backend.
 * [2025.3.4] - Added NaN check and raise_exception to `is_square_symmetric`
 * [2025.3.4] - Removed forced "callable" in `pairwise_distance_kneighbors`
 * [2025.2.17] - Added `LLMAnnotator` in `llm` module

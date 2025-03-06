@@ -563,7 +563,9 @@ class HierarchicalNicheSpace(object):
         scale_by_steadystate:bool=True,
         niche_prefix="n",
         robust_transform=True,
-        parallel_backend="threads",
+        parallel_backend=None,
+        parallel_prefer="threads",
+        parallel_kws:dict=None,
 
         # Optuna
         n_trials=50,
@@ -577,6 +579,8 @@ class HierarchicalNicheSpace(object):
         random_state=0,
         verbose=1,
         stream=sys.stdout,
+        cast_as_float:bool=True,
+
         ):
         
         # General
@@ -597,7 +601,12 @@ class HierarchicalNicheSpace(object):
         self.scale_by_steadystate = scale_by_steadystate
         self.niche_prefix = niche_prefix
         self.robust_transform = robust_transform
-        self.parallel_backend = parallel_backend
+        self.parallel_kws = dict(
+                backend=parallel_backend,
+                prefer=parallel_prefer,
+        )
+        if parallel_kws:
+            self.parallel_kws.update(parallel_kws)
         
         # Optuna
         self.n_jobs = n_jobs
@@ -634,6 +643,7 @@ class HierarchicalNicheSpace(object):
         
         self.logger = build_logger(self.name, stream=stream)
         self.verbose = verbose
+        self.cast_as_float = cast_as_float
         self.is_fitted = False
         
     def tune(
@@ -675,11 +685,11 @@ class HierarchicalNicheSpace(object):
                     model = DiffusionMaps(kernel=kernel, n_eigenpairs=n_components+1, alpha=alpha)
 
                     if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Fitting Diffision Map: n_neighbors={n_neighbors}, n_components={n_components}, alpha={alpha}")
-                    dmap_X1 = model.fit_transform(X1)
+                    dmap_X1 = model.fit_transform(X1.values)
 
                     if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Transforming observations: n_neighbors={n_neighbors}, n_components={n_components}, alpha={alpha}")
                     # dmap_X = model.transform(X)
-                    dmap_X = self._parallel_transform(X, model, progressbar_message=f"[Trial {trial.number}] Projecting initial data into diffusion space")
+                    dmap_X = self._parallel_transform(X.values, model, progressbar_message=f"[Trial {trial.number}] Projecting initial data into diffusion space")
 
                     # Score
                     if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Calculating silhouette score: n_neighbors={n_neighbors}, n_components={n_components}, alpha={alpha}")
@@ -838,6 +848,11 @@ class HierarchicalNicheSpace(object):
                 pd.DataFrame(distance_matrix, index=X1.index, columns=X1.index).to_parquet(serialized_checkpoint_filepath, index=True)
         if self.verbose > 0:
             self.logger.info("[End] Processing distance matrix")
+            
+        # Cast as float
+        if self.cast_as_float: # Decrease overhead for parallel transform
+            X = X.astype(float)
+            X1 = X1.astype(float)
 
         # Store
         if not isinstance(y1, pd.CategoricalDtype):
@@ -892,7 +907,7 @@ class HierarchicalNicheSpace(object):
         self.model_ = DiffusionMaps(kernel=self.kernel_, n_eigenpairs=self.n_components+1, alpha=self.alpha)
         
         # Fit
-        dmap = self.model_.fit(X1)
+        dmap = self.model_.fit(X1.values)
 
         # Grouped
         if self.robust_transform:
@@ -985,10 +1000,12 @@ class HierarchicalNicheSpace(object):
 
     def _parallel_transform(self, X, model, progressbar_message=None):
         """Parallelizes the transformation using joblib"""
+        if isinstance(X, pd.DataFrame):
+            X = X.values
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=UserWarning, message="X does not have valid feature names")
-            output = joblib.Parallel(n_jobs=self.n_jobs, prefer=self.parallel_backend)(
-                joblib.delayed(self._process_row)(model, row.values) for id, row in tqdm(X.iterrows(), desc=progressbar_message, total=X.shape[0], position=0, leave=True)
+            output = joblib.Parallel(n_jobs=self.n_jobs, **self.parallel_kws)(
+                joblib.delayed(self._process_row)(model, row) for row in tqdm(X, desc=progressbar_message, total=X.shape[0], position=0, leave=True)
             )
             return np.vstack(output)
 
