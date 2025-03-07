@@ -1,32 +1,16 @@
 (73231, 17279)
 (73206, 17279)
-2025-03-06 23:42:27,201 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Start] Filtering observations and classes below feature threshold: 100
-2025-03-06 23:42:30,872 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Dropping] N = 263 y1 classes
-2025-03-06 23:42:30,876 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Dropping] N = 303 observations
-2025-03-06 23:42:30,877 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 14818 y1 classes
-2025-03-06 23:42:30,880 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 80 y2 classes
-2025-03-06 23:42:30,880 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 72903 observations
-2025-03-06 23:42:30,880 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 17279 features
-2025-03-06 23:42:30,880 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [End] Filtering observations and classes below feature threshold
-2025-03-06 23:42:33,475 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - Loading distance matrix from checkpoint: ../data/manifold/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.HierarchicalNicheSpace.distance_matrix.parquet
-2025-03-06 23:42:46,525 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [End] Processing distance matrix
-2025-03-06 23:42:47,045 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Begin] Hyperparameter Tuning
-2025-03-06 23:42:47,045 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Loading] Checkpoint file: ../data/manifold/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.Optuna.HierarchicalNicheSpace.pkl
-2025-03-06 23:42:47,049 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 4] Fitting Diffision Map: n_neighbors=82, n_components=94, alpha=0.07103605819788694
-2025-03-06 23:43:38,021 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 4] Transforming observations: n_neighbors=82, n_components=94, alpha=0.07103605819788694
-[W 2025-03-06 23:46:58,602] Trial 4 failed with parameters: {'n_neighbors': 82, 'n_components': 94, 'alpha': 0.07103605819788694} because of the following error: KeyboardInterrupt().
-Traceback (most recent call last):
-  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
-    value_or_values = func(trial)
-  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/nichespace/manifold.py", line 692, in _objective
-    dmap_X = self._parallel_transform(X.values, model, progressbar_message=f"[Trial {trial.number}] Projecting initial data into diffusion space")
-  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/nichespace/manifold.py", line 1007, in _parallel_transform
-    output = joblib.Parallel(n_jobs=self.n_jobs, **self.parallel_kws)(
-  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/joblib/parallel.py", line 2007, in __call__
-    return output if self.return_generator else list(output)
-  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/joblib/parallel.py", line 1650, in _get_outputs
-    yield from self._retrieve()
-  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/joblib/parallel.py", line 1762, in _retrieve
-    time.sleep(0.01)
-KeyboardInterrupt
-[W 2025-03-06 23:46:58,606] Trial 4 failed with value None.
+2025-03-07 20:41:29,944 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Start] Filtering observations and classes below feature threshold: 100
+2025-03-07 20:41:33,838 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Dropping] N = 263 y1 classes
+2025-03-07 20:41:33,843 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Dropping] N = 303 observations
+2025-03-07 20:41:33,844 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 14818 y1 classes
+2025-03-07 20:41:33,847 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 80 y2 classes
+2025-03-07 20:41:33,847 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 72903 observations
+2025-03-07 20:41:33,847 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 17279 features
+2025-03-07 20:41:33,847 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [End] Filtering observations and classes below feature threshold
+2025-03-07 20:41:36,377 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - Loading distance matrix from checkpoint: ../data/manifold/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.HierarchicalNicheSpace.distance_matrix.parquet
+2025-03-07 20:41:49,442 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [End] Processing distance matrix
+2025-03-07 20:41:57,229 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Begin] Hyperparameter Tuning
+2025-03-07 20:41:57,229 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Loading] Checkpoint file: ../data/manifold/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.Optuna.HierarchicalNicheSpace.pkl
+2025-03-07 20:41:57,233 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 5] Fitting Diffision Map: n_neighbors=19, n_components=43, alpha=0.02021839744032572
+2025-03-07 20:42:10,801 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 5] Transforming observations: n_neighbors=19, n_components=43, alpha=0.02021839744032572

@@ -6,6 +6,7 @@ from collections import (
     defaultdict,
     OrderedDict,
 )
+from typing import Optional, Union
 from tqdm import tqdm
 import numpy as np # Can't install NumPy 2.2.2 which is what the pkls were saved with
 import pandas as pd # 'v2.2.3'
@@ -27,7 +28,10 @@ from sklearn.metrics import (
 )
 
 from sklearn.tree import DecisionTreeRegressor
-
+# --------------------------------------------------
+from sklearn.utils.validation import check_is_fitted
+from datafold.pcfold import TSCDataFrame
+# --------------------------------------------------
 from datafold.dynfold import (
     DiffusionMaps, 
     Roseland,
@@ -166,6 +170,8 @@ class NicheSpace(object):
         verbose=1,
         stream=sys.stdout,
         ):
+        
+        warnings.warn("NicheSpace has not had the performance updates that HierarchicalNicheSpace has recieved")
         
         # General
         if name is None:
@@ -455,7 +461,7 @@ class NicheSpace(object):
         ):
         if not self.is_fitted:
             raise Exception("Please run .fit to build DiffusionMap model before continuing")
-        dmap = self._parallel_transform(self, X, model_, progressbar_message=progressbar_message)
+        dmap = self._parallel_transform(self, X, self.model_, progressbar_message=progressbar_message)
         if isinstance(X, pd.DataFrame):
             X_dmap = pd.DataFrame(dmap, index=X.index)
             X_dmap.columns = [f"{self.niche_prefix}0_steady-state"] + list(map(lambda i: f"{self.niche_prefix}{i}", range(1,dmap.shape[1])))
@@ -947,7 +953,7 @@ class HierarchicalNicheSpace(object):
         ):
         if not self.is_fitted:
             raise Exception("Please run .fit to build DiffusionMap model before continuing")
-        dmap = self._parallel_transform(self, X, model_, progressbar_message=progressbar_message)
+        dmap = self._parallel_transform(self, X, self.model_, progressbar_message=progressbar_message)
         if isinstance(X, pd.DataFrame):
             X_dmap = pd.DataFrame(dmap, index=X.index)
             X_dmap.columns = [f"{self.niche_prefix}0_steady-state"] + list(map(lambda i: f"{self.niche_prefix}{i}", range(1,dmap.shape[1])))
@@ -993,10 +999,73 @@ class HierarchicalNicheSpace(object):
             columns=X.columns[1:]  # Remove first column name from new DataFrame
         )
 
+    # @staticmethod
+    # def _process_row(model, row):
+    #     """Helper function to apply model.transform to a single row"""
+    #     return model.transform(row.reshape(1, -1))
+    
     @staticmethod
     def _process_row(model, row):
-        """Helper function to apply model.transform to a single row"""
-        return model.transform(row.reshape(1, -1))
+        r"""Embed out-of-sample points with Nyström extension.
+
+        From solving the eigenproblem of the diffusion kernel :math:`K`
+        (:class:`.DmapKernelFixed`)
+
+        .. math::
+            K(X,X) \Psi = \Psi \Lambda
+
+        follows the Nyström extension for out-of-sample mappings:
+
+        .. math::
+            K(X, Y) \Psi \Lambda^{-1} = \Psi
+
+        where :math:`K(X, Y)` is a component-wise evaluation of the kernel.
+
+        Note, that the Nyström mapping can be used for image mappings irrespective of
+        whether the computed kernel matrix :math:`K(X,X)` is symmetric.
+        For details on this see :cite:t:`fernandez-2015` (especially Eq. 5).
+
+        Parameters
+        ----------
+        X: TSCDataFrame, pandas.DataFrame, numpy.ndarray
+            Data points of shape `(n_samples, n_features)` to be embedded.
+
+        Returns
+        -------
+        TSCDataFrame, pandas.DataFrame, numpy.ndarray
+            same type as `X` of shape `(n_samples, n_coords)`
+        """
+        X = row.reshape(1,-1)
+        # check_is_fitted(model, ("X_fit_", "eigenvalues_", "eigenvectors_"))
+
+        # X = model._validate_datafold_data(X)
+        # model._validate_feature_input(X, direction="transform")
+
+        kernel_matrix_cdist = model._dmap_kernel(model.X_fit_, X)
+
+        # choose object to copy time information from
+        if isinstance(kernel_matrix_cdist, TSCDataFrame):
+            # if possible take time index from kernel_matrix (especially
+            # dynamics-adapted kernels can drop samples from X)
+            index_from: Optional[TSCDataFrame] = kernel_matrix_cdist
+        elif isinstance(X, TSCDataFrame) and kernel_matrix_cdist.shape[0] == X.shape[0]:
+            # if kernel is numpy.ndarray or scipy.sparse.csr_matrix, but X_fit_ is a time
+            # series, then take indices from X_fit_ -- this only works if no samples are
+            # dropped in the kernel computation.
+            index_from = X
+        else:
+            index_from = None
+
+        eigvec, eigvals = model._select_eigenpairs_target_coords()
+
+        eigvec_nystroem = model._nystrom(
+            kernel_matrix_cdist,
+            eigvec=np.asarray(eigvec),
+            eigvals=eigvals,
+            index_from=index_from,
+        )
+
+        return model._perform_dmap_embedding(eigvec_nystroem)
 
     def _parallel_transform(self, X, model, progressbar_message=None):
         """Parallelizes the transformation using joblib"""
