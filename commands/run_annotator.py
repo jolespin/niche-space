@@ -15,7 +15,9 @@ from nichespace.manifold import (
 # quality_label="completeness_gte90.contamination_lt5"
 quality_label="completeness_gte50.contamination_lt10"
 model_name="NAL-GDB_MNS_v3.SLC-MFC.medium"
-mns = read_pickle(f"../data/training/{quality_label}/{model_name}.HierarchicalNicheSpace.pkl")
+mns = read_pickle(f"../data/manifold/{quality_label}/{model_name}.HierarchicalNicheSpace.pkl")
+output_directory=f"../data/annotate/{quality_label}"
+os.makedirs(output_directory, exists_ok=True)
 
 # Annotate
 annotator = EmbeddingAnnotator(
@@ -30,7 +32,7 @@ annotator = EmbeddingAnnotator(
     n_concurrent_trials=1, 
     n_jobs=-1,
     verbose=3,
-    checkpoint_directory=f"../data/training/{quality_label}/checkpoints",
+    checkpoint_directory=f"../data/annotate/{quality_label}/checkpoints",
 )
 
 annotator.fit(
@@ -40,4 +42,4 @@ annotator.fit(
     Y_testing=mns.diffusion_coordinates_grouped_,
 )
 
-annotator.to_file(f"../data/training/{quality_label}/{model_name}.EmbeddingAnnotator.pkl")
+annotator.to_file(f"../data/annotate/{quality_label}/{model_name}.EmbeddingAnnotator.pkl")

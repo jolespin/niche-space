@@ -33,6 +33,7 @@ assert np.all(y2.notnull())
 print(X.shape)
 #distance_matrix = pd.read_parquet("../data/training/v2025.3.3/completeness_gte50.contamination_lt10/X1.minimum_nfeatures-100.jaccard_distance.redundant.parquet")
 
+# Trial 20 finished with value: 0.6272154597719747 and parameters: {'n_components': 47, 'alpha': 0.01855074648175971}. Best is trial 20 with value: 0.6272154597719747.
 n, m = X.shape
 mns = HierarchicalNicheSpace(
     observation_type="genome",
@@ -42,8 +43,10 @@ mns = HierarchicalNicheSpace(
     name="NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium",
     #n_neighbors=[int, int(np.log(n)), int(np.sqrt(n)/2)],
     n_neighbors=19,
-    n_components=[int,40,80],
-    n_trials=15,
+    n_components=47,
+    alpha=0.01855074648175971,
+    #n_components=[int,40,80],
+    n_trials=21,
     n_jobs=-1,
     verbose=3,
     checkpoint_directory=f"{output_directory}/checkpoints",
@@ -51,5 +54,5 @@ mns = HierarchicalNicheSpace(
     #parallel_kws={"require":"sharedmem"},
 )
 mns.fit(X, y1, y2) #, distance_matrix=distance_matrix)
-mns.to_file(mns, f"{output_directory}/{mns.name}.HierarchicalNicheSpace.pkl")
+mns.to_file(f"{output_directory}/{mns.name}.HierarchicalNicheSpace.pkl")
 
