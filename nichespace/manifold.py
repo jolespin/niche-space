@@ -1542,6 +1542,7 @@ class EmbeddingAnnotator(object):
         training_testing_weights = [1.0,1.0],
         remove_zero_weighted_features=True,
         maximum_tries_to_remove_zero_weighted_features=100,
+        automl_kws=None,
 
         # Labeling
         name:str=None,
@@ -1576,7 +1577,10 @@ class EmbeddingAnnotator(object):
         self.training_testing_weights = training_testing_weights
         self.remove_zero_weighted_features = remove_zero_weighted_features
         self.maximum_tries_to_remove_zero_weighted_features = maximum_tries_to_remove_zero_weighted_features
-
+        if automl_kws is None:
+            automl_kws = dict()
+        self.automl_kws = automl_kws
+        
         # Labeling
         self.name = name
         self.observation_type = observation_type
@@ -1647,6 +1651,9 @@ class EmbeddingAnnotator(object):
                 observation_type=self.observation_type,
                 feature_type=self.feature_type,
                 target_type=self.embedding_type,
+                copy_X=False,
+                copy_y=False,
+                **self.automl_kws,
             )
 
             # with SuppressStderr():

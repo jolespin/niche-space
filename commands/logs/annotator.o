@@ -1,1 +1,1 @@
-2025-03-11 05:52:56,883 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - Creating checkpoint directory: ../data/annotate/v2025.3.3/completeness_gte50.contamination_lt10/checkpoints
+2025-03-11 19:50:12,740 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Creating] Checkpoint file: ../data/annotate/v2025.3.3/completeness_gte50.contamination_lt10/checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.BayesianClairvoyanceRegression.n1.pkl
