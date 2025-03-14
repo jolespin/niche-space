@@ -953,7 +953,7 @@ class HierarchicalNicheSpace(object):
         ):
         if not self.is_fitted:
             raise Exception("Please run .fit to build DiffusionMap model before continuing")
-        dmap = self._parallel_transform(self, X, self.model_, progressbar_message=progressbar_message)
+        dmap = self._parallel_transform(X, self.model_, progressbar_message=progressbar_message)
         if isinstance(X, pd.DataFrame):
             X_dmap = pd.DataFrame(dmap, index=X.index)
             X_dmap.columns = [f"{self.niche_prefix}0_steady-state"] + list(map(lambda i: f"{self.niche_prefix}{i}", range(1,dmap.shape[1])))
