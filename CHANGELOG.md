@@ -1,5 +1,5 @@
 #### Daily Change Log:
-* [2025.3.14] - Fixed `.transform` method where `self` was being passed to `self._parallel_transform` backend
+* [2025.3.14] - Fixed `.transform` method where `self` was being passed to `self._parallel_transform` backend. Also, `.transform` was returning `NoneType` when input was `pd.DataFrame` and adding steady-state scaling.
 * [2025.3.6] - Fixed parallel backend arguments
 * [2025.3.6] - Added `cast_as_float` to `HierarchicalNicheSpace` because of overhead in casting in the backend.
 * [2025.3.4] - Added NaN check and raise_exception to `is_square_symmetric`
