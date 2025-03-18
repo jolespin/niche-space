@@ -953,13 +953,27 @@ class HierarchicalNicheSpace(object):
         ):
         if not self.is_fitted:
             raise Exception("Please run .fit to build DiffusionMap model before continuing")
+            
+        if X.shape[1] != len(self.features_):
+            raise ValueError("Number of X features must match number of fitted features")
+            
+        if isinstance(X, pd.DataFrame):
+            if np.any(X.columns != self.features_):
+                raise ValueError("X features must match fitted features")
+                
         dmap = self._parallel_transform(X, self.model_, progressbar_message=progressbar_message)
         if isinstance(X, pd.DataFrame):
+
             X_dmap = pd.DataFrame(dmap, index=X.index)
             X_dmap.columns = [f"{self.niche_prefix}0_steady-state"] + list(map(lambda i: f"{self.niche_prefix}{i}", range(1,dmap.shape[1])))
             X_dmap.index.name = self.observation_type
             X_dmap.columns.name = self.feature_type
+            if self.scale_by_steadystate:
+                X_dmap = self._scale_by_first_column(X_dmap)
+            return X_dmap
         else:
+            if self.scale_by_steadystate:
+                dmap = self._scale_by_first_column(dmap)
             return dmap
         
         
@@ -975,7 +989,7 @@ class HierarchicalNicheSpace(object):
         return X_basis, y_basis
     
     @staticmethod
-    def _scale_by_first_column(X: pd.DataFrame) -> pd.DataFrame:
+    def _scale_by_first_column(X):
         """
         Scale all columns of a DataFrame (except the first one) by the first column.
 
@@ -989,15 +1003,21 @@ class HierarchicalNicheSpace(object):
         pd.DataFrame
             A new DataFrame with the first column removed and the remaining columns scaled.
         """
-        values = X.values  # Convert to NumPy array for efficiency
-        steady_state_vector = values[:, 0].reshape(-1, 1)  # Extract first column as divisor
-        scaled_values = values[:, 1:] / steady_state_vector  # Perform element-wise division
+        if isinstance(X, pd.DataFrame):
+            values = X.values  # Convert to NumPy array for efficiency
+            steady_state_vector = values[:, 0].reshape(-1, 1)  # Extract first column as divisor
+            scaled_values = values[:, 1:] / steady_state_vector  # Perform element-wise division
 
-        return pd.DataFrame(
-            scaled_values, 
-            index=X.index, 
-            columns=X.columns[1:]  # Remove first column name from new DataFrame
-        )
+            return pd.DataFrame(
+                scaled_values, 
+                index=X.index, 
+                columns=X.columns[1:]  # Remove first column name from new DataFrame
+            )
+        else:
+            values = X.copy()  
+            steady_state_vector = values[:, 0].reshape(-1, 1)  # Extract first column as divisor
+            scaled_values = values[:, 1:] / steady_state_vector  # Perform element-wise division
+            return scaled_values
 
     # @staticmethod
     # def _process_row(model, row):
