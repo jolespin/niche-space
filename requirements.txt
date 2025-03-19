@@ -13,6 +13,8 @@ igraph
 ensemble_networkx>=2025.3.4.post1
 optuna
 fastparquet
+xarray
+h5netcdf
 #kegg-pathway-profiler>=2024.10.16
 #pyfastx
 #openai
