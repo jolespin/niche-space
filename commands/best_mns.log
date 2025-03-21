@@ -1,5 +1,0 @@
-2025-02-15 21:36:51,138 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 84] Fitting Diffision Map: n_neighbors=16, n_components=40, alpha=0.5763722751777183
-2025-02-15 21:36:58,762 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 84] Transforming observations: n_neighbors=16, n_components=40, alpha=0.5763722751777183
-2025-02-15 21:57:53,970 - NAL-GDB_MNS_v2.SLC-MFC - INFO - [Trial 84] Calculating silhouette score: n_neighbors=16, n_components=40, alpha=0.5763722751777183
-[I 2025-02-15 21:57:58,745] Trial 84 finished with value: 0.7013868505228956 and parameters: {'n_neighbors': 16, 'n_components': 40, 'alpha': 0.5763722751777183}. Best is trial 84 with value: 0.7013868505228956.
-

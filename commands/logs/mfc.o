@@ -1,0 +1,407 @@
+2025-03-05 07:19:50,502 - MFC.FullKOfam - INFO - [End] Processing distance matrix
+2025-03-05 07:19:50,502 - MFC.FullKOfam - INFO - [Begin] Hyperparameter Tuning
+2025-03-05 07:19:50,503 - MFC.FullKOfam - INFO - Creating checkpoint directory: ../data/cluster/mfc/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints
+2025-03-05 07:19:50,503 - MFC.FullKOfam - INFO - [Creating] Checkpoint file: ../data/cluster/mfc/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/MFC.FullKOfam.Optuna.KNeighborsLeidenClustering.pkl
+2025-03-05 07:19:50,504 - MFC.FullKOfam - INFO - [Trial 0] Convert distance matrix to non-redundant KNN: n_neighbors=38
+2025-03-05 07:23:28,252 - MFC.FullKOfam - INFO - [Trial 0] Remove disconnected nodes: n_neighbors=38
+2025-03-05 07:23:33,158 - MFC.FullKOfam - INFO - [Trial 0] Convert to similarity: n_neighbors=38
+2025-03-05 07:23:34,419 - MFC.FullKOfam - INFO - [Trial 0] Identify Leiden communities: n_neighbors=38
+2025-03-05 07:29:37,932 - MFC.FullKOfam - INFO - [Trial 0] Identify membership co-occurrence ratios: n_neighbors=38
+2025-03-05 07:40:57,279 - MFC.FullKOfam - INFO - [Trial 0] Get list of clustered edges and build clustered graph: n_neighbors=38
+2025-03-05 07:41:02,661 - MFC.FullKOfam - INFO - [Trial 0] Calculating silhouette scores: n_neighbors=38
+[I 2025-03-05 07:41:11,141] Trial 0 finished with value: 0.08168432690568814 and parameters: {'n_neighbors': 38}. Best is trial 0 with value: 0.08168432690568814.
+2025-03-05 07:41:11,237 - MFC.FullKOfam - INFO - [Trial 1] Convert distance matrix to non-redundant KNN: n_neighbors=46
+2025-03-05 07:44:54,356 - MFC.FullKOfam - INFO - [Trial 1] Remove disconnected nodes: n_neighbors=46
+2025-03-05 07:44:59,406 - MFC.FullKOfam - INFO - [Trial 1] Convert to similarity: n_neighbors=46
+2025-03-05 07:45:00,887 - MFC.FullKOfam - INFO - [Trial 1] Identify Leiden communities: n_neighbors=46
+2025-03-05 07:53:07,573 - MFC.FullKOfam - INFO - [Trial 1] Identify membership co-occurrence ratios: n_neighbors=46
+2025-03-05 08:04:17,760 - MFC.FullKOfam - INFO - [Trial 1] Get list of clustered edges and build clustered graph: n_neighbors=46
+2025-03-05 08:04:24,073 - MFC.FullKOfam - INFO - [Trial 1] Calculating silhouette scores: n_neighbors=46
+[I 2025-03-05 08:04:32,641] Trial 1 finished with value: 0.07247907969772897 and parameters: {'n_neighbors': 46}. Best is trial 0 with value: 0.08168432690568814.
+2025-03-05 08:04:32,734 - MFC.FullKOfam - INFO - [Trial 2] Convert distance matrix to non-redundant KNN: n_neighbors=40
+2025-03-05 08:08:15,387 - MFC.FullKOfam - INFO - [Trial 2] Remove disconnected nodes: n_neighbors=40
+2025-03-05 08:08:20,431 - MFC.FullKOfam - INFO - [Trial 2] Convert to similarity: n_neighbors=40
+2025-03-05 08:08:21,701 - MFC.FullKOfam - INFO - [Trial 2] Identify Leiden communities: n_neighbors=40
+2025-03-05 08:14:56,706 - MFC.FullKOfam - INFO - [Trial 2] Identify membership co-occurrence ratios: n_neighbors=40
+2025-03-05 08:26:05,869 - MFC.FullKOfam - INFO - [Trial 2] Get list of clustered edges and build clustered graph: n_neighbors=40
+2025-03-05 08:26:11,799 - MFC.FullKOfam - INFO - [Trial 2] Calculating silhouette scores: n_neighbors=40
+[I 2025-03-05 08:26:20,462] Trial 2 finished with value: 0.07865829629131894 and parameters: {'n_neighbors': 40}. Best is trial 0 with value: 0.08168432690568814.
+2025-03-05 08:26:20,557 - MFC.FullKOfam - INFO - [Trial 3] Convert distance matrix to non-redundant KNN: n_neighbors=37
+2025-03-05 08:30:05,157 - MFC.FullKOfam - INFO - [Trial 3] Remove disconnected nodes: n_neighbors=37
+2025-03-05 08:30:10,219 - MFC.FullKOfam - INFO - [Trial 3] Convert to similarity: n_neighbors=37
+2025-03-05 08:30:11,391 - MFC.FullKOfam - INFO - [Trial 3] Identify Leiden communities: n_neighbors=37
+2025-03-05 08:36:16,882 - MFC.FullKOfam - INFO - [Trial 3] Identify membership co-occurrence ratios: n_neighbors=37
+2025-03-05 08:47:27,195 - MFC.FullKOfam - INFO - [Trial 3] Get list of clustered edges and build clustered graph: n_neighbors=37
+2025-03-05 08:47:32,056 - MFC.FullKOfam - INFO - [Trial 3] Calculating silhouette scores: n_neighbors=37
+[I 2025-03-05 08:47:40,541] Trial 3 finished with value: 0.07989676789499502 and parameters: {'n_neighbors': 37}. Best is trial 0 with value: 0.08168432690568814.
+2025-03-05 08:47:40,635 - MFC.FullKOfam - INFO - [Trial 4] Convert distance matrix to non-redundant KNN: n_neighbors=31
+2025-03-05 08:51:23,195 - MFC.FullKOfam - INFO - [Trial 4] Remove disconnected nodes: n_neighbors=31
+2025-03-05 08:51:28,256 - MFC.FullKOfam - INFO - [Trial 4] Convert to similarity: n_neighbors=31
+2025-03-05 08:51:29,236 - MFC.FullKOfam - INFO - [Trial 4] Identify Leiden communities: n_neighbors=31
+2025-03-05 08:57:00,958 - MFC.FullKOfam - INFO - [Trial 4] Identify membership co-occurrence ratios: n_neighbors=31
+2025-03-05 09:08:07,467 - MFC.FullKOfam - INFO - [Trial 4] Get list of clustered edges and build clustered graph: n_neighbors=31
+2025-03-05 09:08:11,564 - MFC.FullKOfam - INFO - [Trial 4] Calculating silhouette scores: n_neighbors=31
+[I 2025-03-05 09:08:20,045] Trial 4 finished with value: 0.08591832226343166 and parameters: {'n_neighbors': 31}. Best is trial 4 with value: 0.08591832226343166.
+2025-03-05 09:08:20,138 - MFC.FullKOfam - INFO - [Trial 5] Convert distance matrix to non-redundant KNN: n_neighbors=43
+2025-03-05 09:12:02,048 - MFC.FullKOfam - INFO - [Trial 5] Remove disconnected nodes: n_neighbors=43
+2025-03-05 09:12:07,083 - MFC.FullKOfam - INFO - [Trial 5] Convert to similarity: n_neighbors=43
+2025-03-05 09:12:08,434 - MFC.FullKOfam - INFO - [Trial 5] Identify Leiden communities: n_neighbors=43
+2025-03-05 09:19:36,699 - MFC.FullKOfam - INFO - [Trial 5] Identify membership co-occurrence ratios: n_neighbors=43
+2025-03-05 09:30:45,638 - MFC.FullKOfam - INFO - [Trial 5] Get list of clustered edges and build clustered graph: n_neighbors=43
+2025-03-05 09:30:51,408 - MFC.FullKOfam - INFO - [Trial 5] Calculating silhouette scores: n_neighbors=43
+[I 2025-03-05 09:30:59,902] Trial 5 finished with value: 0.08370918910870627 and parameters: {'n_neighbors': 43}. Best is trial 4 with value: 0.08591832226343166.
+2025-03-05 09:30:59,997 - MFC.FullKOfam - INFO - [Trial 6] Convert distance matrix to non-redundant KNN: n_neighbors=32
+2025-03-05 09:34:41,995 - MFC.FullKOfam - INFO - [Trial 6] Remove disconnected nodes: n_neighbors=32
+2025-03-05 09:34:47,034 - MFC.FullKOfam - INFO - [Trial 6] Convert to similarity: n_neighbors=32
+2025-03-05 09:34:48,049 - MFC.FullKOfam - INFO - [Trial 6] Identify Leiden communities: n_neighbors=32
+2025-03-05 09:40:28,863 - MFC.FullKOfam - INFO - [Trial 6] Identify membership co-occurrence ratios: n_neighbors=32
+2025-03-05 09:51:41,007 - MFC.FullKOfam - INFO - [Trial 6] Get list of clustered edges and build clustered graph: n_neighbors=32
+2025-03-05 09:51:45,024 - MFC.FullKOfam - INFO - [Trial 6] Calculating silhouette scores: n_neighbors=32
+[I 2025-03-05 09:51:53,559] Trial 6 finished with value: 0.09292720717233716 and parameters: {'n_neighbors': 32}. Best is trial 6 with value: 0.09292720717233716.
+2025-03-05 09:51:53,654 - MFC.FullKOfam - INFO - [Trial 7] Convert distance matrix to non-redundant KNN: n_neighbors=56
+2025-03-05 09:55:38,349 - MFC.FullKOfam - INFO - [Trial 7] Remove disconnected nodes: n_neighbors=56
+2025-03-05 09:55:43,418 - MFC.FullKOfam - INFO - [Trial 7] Convert to similarity: n_neighbors=56
+2025-03-05 09:55:45,222 - MFC.FullKOfam - INFO - [Trial 7] Identify Leiden communities: n_neighbors=56
+2025-03-05 10:04:08,161 - MFC.FullKOfam - INFO - [Trial 7] Identify membership co-occurrence ratios: n_neighbors=56
+2025-03-05 10:15:24,028 - MFC.FullKOfam - INFO - [Trial 7] Get list of clustered edges and build clustered graph: n_neighbors=56
+2025-03-05 10:15:30,678 - MFC.FullKOfam - INFO - [Trial 7] Calculating silhouette scores: n_neighbors=56
+[I 2025-03-05 10:15:39,250] Trial 7 finished with value: 0.0838662600555668 and parameters: {'n_neighbors': 56}. Best is trial 6 with value: 0.09292720717233716.
+2025-03-05 10:15:39,344 - MFC.FullKOfam - INFO - [Trial 8] Convert distance matrix to non-redundant KNN: n_neighbors=60
+2025-03-05 10:19:22,212 - MFC.FullKOfam - INFO - [Trial 8] Remove disconnected nodes: n_neighbors=60
+2025-03-05 10:19:27,257 - MFC.FullKOfam - INFO - [Trial 8] Convert to similarity: n_neighbors=60
+2025-03-05 10:19:29,181 - MFC.FullKOfam - INFO - [Trial 8] Identify Leiden communities: n_neighbors=60
+2025-03-05 10:27:46,915 - MFC.FullKOfam - INFO - [Trial 8] Identify membership co-occurrence ratios: n_neighbors=60
+2025-03-05 10:38:51,964 - MFC.FullKOfam - INFO - [Trial 8] Get list of clustered edges and build clustered graph: n_neighbors=60
+2025-03-05 10:38:58,719 - MFC.FullKOfam - INFO - [Trial 8] Calculating silhouette scores: n_neighbors=60
+[I 2025-03-05 10:39:07,296] Trial 8 finished with value: 0.0781593289049176 and parameters: {'n_neighbors': 60}. Best is trial 6 with value: 0.09292720717233716.
+2025-03-05 10:39:07,390 - MFC.FullKOfam - INFO - [Trial 9] Convert distance matrix to non-redundant KNN: n_neighbors=29
+2025-03-05 10:42:50,034 - MFC.FullKOfam - INFO - [Trial 9] Remove disconnected nodes: n_neighbors=29
+2025-03-05 10:42:55,086 - MFC.FullKOfam - INFO - [Trial 9] Convert to similarity: n_neighbors=29
+2025-03-05 10:42:55,990 - MFC.FullKOfam - INFO - [Trial 9] Identify Leiden communities: n_neighbors=29
+2025-03-05 10:47:51,946 - MFC.FullKOfam - INFO - [Trial 9] Identify membership co-occurrence ratios: n_neighbors=29
+2025-03-05 10:58:49,437 - MFC.FullKOfam - INFO - [Trial 9] Get list of clustered edges and build clustered graph: n_neighbors=29
+2025-03-05 10:58:53,414 - MFC.FullKOfam - INFO - [Trial 9] Calculating silhouette scores: n_neighbors=29
+[I 2025-03-05 10:59:01,852] Trial 9 finished with value: 0.07556938016612638 and parameters: {'n_neighbors': 29}. Best is trial 6 with value: 0.09292720717233716.
+2025-03-05 10:59:01,954 - MFC.FullKOfam - INFO - [Trial 10] Convert distance matrix to non-redundant KNN: n_neighbors=12
+2025-03-05 11:02:44,385 - MFC.FullKOfam - INFO - [Trial 10] Remove disconnected nodes: n_neighbors=12
+2025-03-05 11:02:49,691 - MFC.FullKOfam - INFO - [Trial 10] Convert to similarity: n_neighbors=12
+2025-03-05 11:02:50,052 - MFC.FullKOfam - INFO - [Trial 10] Identify Leiden communities: n_neighbors=12
+2025-03-05 11:05:36,899 - MFC.FullKOfam - INFO - [Trial 10] Identify membership co-occurrence ratios: n_neighbors=12
+2025-03-05 11:17:09,369 - MFC.FullKOfam - INFO - [Trial 10] Get list of clustered edges and build clustered graph: n_neighbors=12
+2025-03-05 11:17:11,828 - MFC.FullKOfam - INFO - [Trial 10] Calculating silhouette scores: n_neighbors=12
+[I 2025-03-05 11:17:20,124] Trial 10 finished with value: 0.08453827174102177 and parameters: {'n_neighbors': 12}. Best is trial 6 with value: 0.09292720717233716.
+2025-03-05 11:17:20,226 - MFC.FullKOfam - INFO - [Trial 11] Convert distance matrix to non-redundant KNN: n_neighbors=24
+2025-03-05 11:21:02,311 - MFC.FullKOfam - INFO - [Trial 11] Remove disconnected nodes: n_neighbors=24
+2025-03-05 11:21:07,386 - MFC.FullKOfam - INFO - [Trial 11] Convert to similarity: n_neighbors=24
+2025-03-05 11:21:08,135 - MFC.FullKOfam - INFO - [Trial 11] Identify Leiden communities: n_neighbors=24
+2025-03-05 11:25:28,311 - MFC.FullKOfam - INFO - [Trial 11] Identify membership co-occurrence ratios: n_neighbors=24
+2025-03-05 11:36:37,903 - MFC.FullKOfam - INFO - [Trial 11] Get list of clustered edges and build clustered graph: n_neighbors=24
+2025-03-05 11:36:41,635 - MFC.FullKOfam - INFO - [Trial 11] Calculating silhouette scores: n_neighbors=24
+[I 2025-03-05 11:36:50,094] Trial 11 finished with value: 0.08682164180352286 and parameters: {'n_neighbors': 24}. Best is trial 6 with value: 0.09292720717233716.
+2025-03-05 11:36:50,195 - MFC.FullKOfam - INFO - [Trial 12] Convert distance matrix to non-redundant KNN: n_neighbors=20
+2025-03-05 11:40:33,359 - MFC.FullKOfam - INFO - [Trial 12] Remove disconnected nodes: n_neighbors=20
+2025-03-05 11:40:38,487 - MFC.FullKOfam - INFO - [Trial 12] Convert to similarity: n_neighbors=20
+2025-03-05 11:40:39,108 - MFC.FullKOfam - INFO - [Trial 12] Identify Leiden communities: n_neighbors=20
+2025-03-05 11:44:19,082 - MFC.FullKOfam - INFO - [Trial 12] Identify membership co-occurrence ratios: n_neighbors=20
+2025-03-05 11:56:04,435 - MFC.FullKOfam - INFO - [Trial 12] Get list of clustered edges and build clustered graph: n_neighbors=20
+2025-03-05 11:56:07,929 - MFC.FullKOfam - INFO - [Trial 12] Calculating silhouette scores: n_neighbors=20
+[I 2025-03-05 11:56:16,397] Trial 12 finished with value: 0.08976921590581813 and parameters: {'n_neighbors': 20}. Best is trial 6 with value: 0.09292720717233716.
+2025-03-05 11:56:16,498 - MFC.FullKOfam - INFO - [Trial 13] Convert distance matrix to non-redundant KNN: n_neighbors=18
+2025-03-05 11:59:59,070 - MFC.FullKOfam - INFO - [Trial 13] Remove disconnected nodes: n_neighbors=18
+2025-03-05 12:00:04,229 - MFC.FullKOfam - INFO - [Trial 13] Convert to similarity: n_neighbors=18
+2025-03-05 12:00:04,778 - MFC.FullKOfam - INFO - [Trial 13] Identify Leiden communities: n_neighbors=18
+2025-03-05 12:03:10,832 - MFC.FullKOfam - INFO - [Trial 13] Identify membership co-occurrence ratios: n_neighbors=18
+2025-03-05 12:15:00,493 - MFC.FullKOfam - INFO - [Trial 13] Get list of clustered edges and build clustered graph: n_neighbors=18
+2025-03-05 12:15:03,739 - MFC.FullKOfam - INFO - [Trial 13] Calculating silhouette scores: n_neighbors=18
+[I 2025-03-05 12:15:12,122] Trial 13 finished with value: 0.0965974024627644 and parameters: {'n_neighbors': 18}. Best is trial 13 with value: 0.0965974024627644.
+2025-03-05 12:15:12,220 - MFC.FullKOfam - INFO - [Trial 14] Convert distance matrix to non-redundant KNN: n_neighbors=10
+2025-03-05 12:18:54,568 - MFC.FullKOfam - INFO - [Trial 14] Remove disconnected nodes: n_neighbors=10
+2025-03-05 12:18:59,935 - MFC.FullKOfam - INFO - [Trial 14] Convert to similarity: n_neighbors=10
+2025-03-05 12:19:00,236 - MFC.FullKOfam - INFO - [Trial 14] Identify Leiden communities: n_neighbors=10
+2025-03-05 12:21:34,704 - MFC.FullKOfam - INFO - [Trial 14] Identify membership co-occurrence ratios: n_neighbors=10
+2025-03-05 12:33:11,726 - MFC.FullKOfam - INFO - [Trial 14] Get list of clustered edges and build clustered graph: n_neighbors=10
+2025-03-05 12:33:13,857 - MFC.FullKOfam - INFO - [Trial 14] Calculating silhouette scores: n_neighbors=10
+[I 2025-03-05 12:33:21,998] Trial 14 finished with value: 0.08594485746011347 and parameters: {'n_neighbors': 10}. Best is trial 13 with value: 0.0965974024627644.
+2025-03-05 12:33:22,098 - MFC.FullKOfam - INFO - [Trial 15] Convert distance matrix to non-redundant KNN: n_neighbors=19
+2025-03-05 12:37:04,965 - MFC.FullKOfam - INFO - [Trial 15] Remove disconnected nodes: n_neighbors=19
+2025-03-05 12:37:10,098 - MFC.FullKOfam - INFO - [Trial 15] Convert to similarity: n_neighbors=19
+2025-03-05 12:37:10,681 - MFC.FullKOfam - INFO - [Trial 15] Identify Leiden communities: n_neighbors=19
+2025-03-05 12:40:29,074 - MFC.FullKOfam - INFO - [Trial 15] Identify membership co-occurrence ratios: n_neighbors=19
+2025-03-05 12:52:12,190 - MFC.FullKOfam - INFO - [Trial 15] Get list of clustered edges and build clustered graph: n_neighbors=19
+2025-03-05 12:52:15,444 - MFC.FullKOfam - INFO - [Trial 15] Calculating silhouette scores: n_neighbors=19
+[I 2025-03-05 12:52:23,871] Trial 15 finished with value: 0.10111065365139017 and parameters: {'n_neighbors': 19}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 12:52:23,972 - MFC.FullKOfam - INFO - [Trial 16] Convert distance matrix to non-redundant KNN: n_neighbors=18
+2025-03-05 12:56:06,964 - MFC.FullKOfam - INFO - [Trial 16] Remove disconnected nodes: n_neighbors=18
+2025-03-05 12:56:12,115 - MFC.FullKOfam - INFO - [Trial 16] Convert to similarity: n_neighbors=18
+2025-03-05 12:56:12,672 - MFC.FullKOfam - INFO - [Trial 16] Identify Leiden communities: n_neighbors=18
+2025-03-05 12:59:17,905 - MFC.FullKOfam - INFO - [Trial 16] Identify membership co-occurrence ratios: n_neighbors=18
+2025-03-05 13:11:08,170 - MFC.FullKOfam - INFO - [Trial 16] Get list of clustered edges and build clustered graph: n_neighbors=18
+2025-03-05 13:11:11,576 - MFC.FullKOfam - INFO - [Trial 16] Calculating silhouette scores: n_neighbors=18
+[I 2025-03-05 13:11:20,070] Trial 16 finished with value: 0.0965974024627644 and parameters: {'n_neighbors': 18}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 13:11:20,170 - MFC.FullKOfam - INFO - [Trial 17] Convert distance matrix to non-redundant KNN: n_neighbors=16
+2025-03-05 13:15:05,044 - MFC.FullKOfam - INFO - [Trial 17] Remove disconnected nodes: n_neighbors=16
+2025-03-05 13:15:10,252 - MFC.FullKOfam - INFO - [Trial 17] Convert to similarity: n_neighbors=16
+2025-03-05 13:15:10,753 - MFC.FullKOfam - INFO - [Trial 17] Identify Leiden communities: n_neighbors=16
+2025-03-05 13:18:31,164 - MFC.FullKOfam - INFO - [Trial 17] Identify membership co-occurrence ratios: n_neighbors=16
+2025-03-05 13:30:04,532 - MFC.FullKOfam - INFO - [Trial 17] Get list of clustered edges and build clustered graph: n_neighbors=16
+2025-03-05 13:30:07,645 - MFC.FullKOfam - INFO - [Trial 17] Calculating silhouette scores: n_neighbors=16
+[I 2025-03-05 13:30:16,339] Trial 17 finished with value: 0.09225376925932706 and parameters: {'n_neighbors': 16}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 13:30:16,438 - MFC.FullKOfam - INFO - [Trial 18] Convert distance matrix to non-redundant KNN: n_neighbors=27
+2025-03-05 13:33:59,444 - MFC.FullKOfam - INFO - [Trial 18] Remove disconnected nodes: n_neighbors=27
+2025-03-05 13:34:04,520 - MFC.FullKOfam - INFO - [Trial 18] Convert to similarity: n_neighbors=27
+2025-03-05 13:34:05,365 - MFC.FullKOfam - INFO - [Trial 18] Identify Leiden communities: n_neighbors=27
+2025-03-05 13:38:45,531 - MFC.FullKOfam - INFO - [Trial 18] Identify membership co-occurrence ratios: n_neighbors=27
+2025-03-05 13:49:52,099 - MFC.FullKOfam - INFO - [Trial 18] Get list of clustered edges and build clustered graph: n_neighbors=27
+2025-03-05 13:49:56,255 - MFC.FullKOfam - INFO - [Trial 18] Calculating silhouette scores: n_neighbors=27
+[I 2025-03-05 13:50:04,791] Trial 18 finished with value: 0.07844805333976528 and parameters: {'n_neighbors': 27}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 13:50:04,893 - MFC.FullKOfam - INFO - [Trial 19] Convert distance matrix to non-redundant KNN: n_neighbors=21
+2025-03-05 13:53:49,784 - MFC.FullKOfam - INFO - [Trial 19] Remove disconnected nodes: n_neighbors=21
+2025-03-05 13:53:54,931 - MFC.FullKOfam - INFO - [Trial 19] Convert to similarity: n_neighbors=21
+2025-03-05 13:53:55,589 - MFC.FullKOfam - INFO - [Trial 19] Identify Leiden communities: n_neighbors=21
+2025-03-05 13:58:02,284 - MFC.FullKOfam - INFO - [Trial 19] Identify membership co-occurrence ratios: n_neighbors=21
+2025-03-05 14:09:49,170 - MFC.FullKOfam - INFO - [Trial 19] Get list of clustered edges and build clustered graph: n_neighbors=21
+2025-03-05 14:09:52,637 - MFC.FullKOfam - INFO - [Trial 19] Calculating silhouette scores: n_neighbors=21
+[I 2025-03-05 14:10:01,291] Trial 19 finished with value: 0.0938375691801072 and parameters: {'n_neighbors': 21}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 14:10:01,390 - MFC.FullKOfam - INFO - [Trial 20] Convert distance matrix to non-redundant KNN: n_neighbors=9
+2025-03-05 14:13:46,307 - MFC.FullKOfam - INFO - [Trial 20] Remove disconnected nodes: n_neighbors=9
+2025-03-05 14:13:51,750 - MFC.FullKOfam - INFO - [Trial 20] Convert to similarity: n_neighbors=9
+2025-03-05 14:13:52,013 - MFC.FullKOfam - INFO - [Trial 20] Identify Leiden communities: n_neighbors=9
+2025-03-05 14:16:08,975 - MFC.FullKOfam - INFO - [Trial 20] Identify membership co-occurrence ratios: n_neighbors=9
+2025-03-05 14:27:51,714 - MFC.FullKOfam - INFO - [Trial 20] Get list of clustered edges and build clustered graph: n_neighbors=9
+2025-03-05 14:27:53,841 - MFC.FullKOfam - INFO - [Trial 20] Calculating silhouette scores: n_neighbors=9
+[I 2025-03-05 14:28:02,130] Trial 20 finished with value: 0.08096615213779398 and parameters: {'n_neighbors': 9}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 14:28:02,230 - MFC.FullKOfam - INFO - [Trial 21] Convert distance matrix to non-redundant KNN: n_neighbors=16
+2025-03-05 14:31:45,809 - MFC.FullKOfam - INFO - [Trial 21] Remove disconnected nodes: n_neighbors=16
+2025-03-05 14:31:51,019 - MFC.FullKOfam - INFO - [Trial 21] Convert to similarity: n_neighbors=16
+2025-03-05 14:31:51,505 - MFC.FullKOfam - INFO - [Trial 21] Identify Leiden communities: n_neighbors=16
+2025-03-05 14:35:09,548 - MFC.FullKOfam - INFO - [Trial 21] Identify membership co-occurrence ratios: n_neighbors=16
+2025-03-05 14:46:46,764 - MFC.FullKOfam - INFO - [Trial 21] Get list of clustered edges and build clustered graph: n_neighbors=16
+2025-03-05 14:46:49,801 - MFC.FullKOfam - INFO - [Trial 21] Calculating silhouette scores: n_neighbors=16
+[I 2025-03-05 14:46:58,430] Trial 21 finished with value: 0.09225376925932706 and parameters: {'n_neighbors': 16}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 14:46:58,530 - MFC.FullKOfam - INFO - [Trial 22] Convert distance matrix to non-redundant KNN: n_neighbors=17
+2025-03-05 14:50:42,565 - MFC.FullKOfam - INFO - [Trial 22] Remove disconnected nodes: n_neighbors=17
+2025-03-05 14:50:47,764 - MFC.FullKOfam - INFO - [Trial 22] Convert to similarity: n_neighbors=17
+2025-03-05 14:50:48,304 - MFC.FullKOfam - INFO - [Trial 22] Identify Leiden communities: n_neighbors=17
+2025-03-05 14:53:51,162 - MFC.FullKOfam - INFO - [Trial 22] Identify membership co-occurrence ratios: n_neighbors=17
+2025-03-05 15:05:29,321 - MFC.FullKOfam - INFO - [Trial 22] Get list of clustered edges and build clustered graph: n_neighbors=17
+2025-03-05 15:05:32,397 - MFC.FullKOfam - INFO - [Trial 22] Calculating silhouette scores: n_neighbors=17
+[I 2025-03-05 15:05:40,832] Trial 22 finished with value: 0.09330804888257317 and parameters: {'n_neighbors': 17}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 15:05:40,932 - MFC.FullKOfam - INFO - [Trial 23] Convert distance matrix to non-redundant KNN: n_neighbors=24
+2025-03-05 15:09:23,893 - MFC.FullKOfam - INFO - [Trial 23] Remove disconnected nodes: n_neighbors=24
+2025-03-05 15:09:28,988 - MFC.FullKOfam - INFO - [Trial 23] Convert to similarity: n_neighbors=24
+2025-03-05 15:09:29,747 - MFC.FullKOfam - INFO - [Trial 23] Identify Leiden communities: n_neighbors=24
+2025-03-05 15:13:48,707 - MFC.FullKOfam - INFO - [Trial 23] Identify membership co-occurrence ratios: n_neighbors=24
+2025-03-05 15:24:55,183 - MFC.FullKOfam - INFO - [Trial 23] Get list of clustered edges and build clustered graph: n_neighbors=24
+2025-03-05 15:24:58,928 - MFC.FullKOfam - INFO - [Trial 23] Calculating silhouette scores: n_neighbors=24
+[I 2025-03-05 15:25:07,413] Trial 23 finished with value: 0.08682164180352286 and parameters: {'n_neighbors': 24}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 15:25:07,513 - MFC.FullKOfam - INFO - [Trial 24] Convert distance matrix to non-redundant KNN: n_neighbors=14
+2025-03-05 15:28:50,441 - MFC.FullKOfam - INFO - [Trial 24] Remove disconnected nodes: n_neighbors=14
+2025-03-05 15:28:55,674 - MFC.FullKOfam - INFO - [Trial 24] Convert to similarity: n_neighbors=14
+2025-03-05 15:28:56,096 - MFC.FullKOfam - INFO - [Trial 24] Identify Leiden communities: n_neighbors=14
+2025-03-05 15:31:48,308 - MFC.FullKOfam - INFO - [Trial 24] Identify membership co-occurrence ratios: n_neighbors=14
+2025-03-05 15:43:28,900 - MFC.FullKOfam - INFO - [Trial 24] Get list of clustered edges and build clustered graph: n_neighbors=14
+2025-03-05 15:43:31,495 - MFC.FullKOfam - INFO - [Trial 24] Calculating silhouette scores: n_neighbors=14
+[I 2025-03-05 15:43:39,897] Trial 24 finished with value: 0.09636434650748521 and parameters: {'n_neighbors': 14}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 15:43:39,997 - MFC.FullKOfam - INFO - [Trial 25] Convert distance matrix to non-redundant KNN: n_neighbors=20
+2025-03-05 15:47:25,000 - MFC.FullKOfam - INFO - [Trial 25] Remove disconnected nodes: n_neighbors=20
+2025-03-05 15:47:30,138 - MFC.FullKOfam - INFO - [Trial 25] Convert to similarity: n_neighbors=20
+2025-03-05 15:47:30,766 - MFC.FullKOfam - INFO - [Trial 25] Identify Leiden communities: n_neighbors=20
+2025-03-05 15:51:09,686 - MFC.FullKOfam - INFO - [Trial 25] Identify membership co-occurrence ratios: n_neighbors=20
+2025-03-05 16:02:57,611 - MFC.FullKOfam - INFO - [Trial 25] Get list of clustered edges and build clustered graph: n_neighbors=20
+2025-03-05 16:03:01,027 - MFC.FullKOfam - INFO - [Trial 25] Calculating silhouette scores: n_neighbors=20
+[I 2025-03-05 16:03:09,597] Trial 25 finished with value: 0.08976921590581813 and parameters: {'n_neighbors': 20}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 16:03:09,701 - MFC.FullKOfam - INFO - [Trial 26] Convert distance matrix to non-redundant KNN: n_neighbors=24
+2025-03-05 16:06:57,230 - MFC.FullKOfam - INFO - [Trial 26] Remove disconnected nodes: n_neighbors=24
+2025-03-05 16:07:02,427 - MFC.FullKOfam - INFO - [Trial 26] Convert to similarity: n_neighbors=24
+2025-03-05 16:07:03,307 - MFC.FullKOfam - INFO - [Trial 26] Identify Leiden communities: n_neighbors=24
+2025-03-05 16:12:03,132 - MFC.FullKOfam - INFO - [Trial 26] Identify membership co-occurrence ratios: n_neighbors=24
+2025-03-05 16:23:45,218 - MFC.FullKOfam - INFO - [Trial 26] Get list of clustered edges and build clustered graph: n_neighbors=24
+2025-03-05 16:23:50,263 - MFC.FullKOfam - INFO - [Trial 26] Calculating silhouette scores: n_neighbors=24
+[I 2025-03-05 16:23:59,040] Trial 26 finished with value: 0.08682164180352286 and parameters: {'n_neighbors': 24}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 16:23:59,162 - MFC.FullKOfam - INFO - [Trial 27] Convert distance matrix to non-redundant KNN: n_neighbors=34
+2025-03-05 16:27:50,881 - MFC.FullKOfam - INFO - [Trial 27] Remove disconnected nodes: n_neighbors=34
+2025-03-05 16:27:56,011 - MFC.FullKOfam - INFO - [Trial 27] Convert to similarity: n_neighbors=34
+2025-03-05 16:27:57,270 - MFC.FullKOfam - INFO - [Trial 27] Identify Leiden communities: n_neighbors=34
+2025-03-05 16:35:06,108 - MFC.FullKOfam - INFO - [Trial 27] Identify membership co-occurrence ratios: n_neighbors=34
+2025-03-05 16:46:48,278 - MFC.FullKOfam - INFO - [Trial 27] Get list of clustered edges and build clustered graph: n_neighbors=34
+2025-03-05 16:46:54,304 - MFC.FullKOfam - INFO - [Trial 27] Calculating silhouette scores: n_neighbors=34
+[I 2025-03-05 16:47:02,972] Trial 27 finished with value: 0.07059170480635593 and parameters: {'n_neighbors': 34}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 16:47:03,093 - MFC.FullKOfam - INFO - [Trial 28] Convert distance matrix to non-redundant KNN: n_neighbors=27
+2025-03-05 16:50:54,195 - MFC.FullKOfam - INFO - [Trial 28] Remove disconnected nodes: n_neighbors=27
+2025-03-05 16:50:59,353 - MFC.FullKOfam - INFO - [Trial 28] Convert to similarity: n_neighbors=27
+2025-03-05 16:51:00,328 - MFC.FullKOfam - INFO - [Trial 28] Identify Leiden communities: n_neighbors=27
+2025-03-05 16:56:23,568 - MFC.FullKOfam - INFO - [Trial 28] Identify membership co-occurrence ratios: n_neighbors=27
+2025-03-05 17:08:11,691 - MFC.FullKOfam - INFO - [Trial 28] Get list of clustered edges and build clustered graph: n_neighbors=27
+2025-03-05 17:08:17,062 - MFC.FullKOfam - INFO - [Trial 28] Calculating silhouette scores: n_neighbors=27
+[I 2025-03-05 17:08:25,773] Trial 28 finished with value: 0.07844805333976528 and parameters: {'n_neighbors': 27}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 17:08:25,893 - MFC.FullKOfam - INFO - [Trial 29] Convert distance matrix to non-redundant KNN: n_neighbors=51
+2025-03-05 17:12:17,570 - MFC.FullKOfam - INFO - [Trial 29] Remove disconnected nodes: n_neighbors=51
+2025-03-05 17:12:22,705 - MFC.FullKOfam - INFO - [Trial 29] Convert to similarity: n_neighbors=51
+2025-03-05 17:12:24,516 - MFC.FullKOfam - INFO - [Trial 29] Identify Leiden communities: n_neighbors=51
+2025-03-05 17:22:34,080 - MFC.FullKOfam - INFO - [Trial 29] Identify membership co-occurrence ratios: n_neighbors=51
+2025-03-05 17:34:22,370 - MFC.FullKOfam - INFO - [Trial 29] Get list of clustered edges and build clustered graph: n_neighbors=51
+2025-03-05 17:34:30,720 - MFC.FullKOfam - INFO - [Trial 29] Calculating silhouette scores: n_neighbors=51
+[I 2025-03-05 17:34:39,600] Trial 29 finished with value: 0.080186068155743 and parameters: {'n_neighbors': 51}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 17:34:39,719 - MFC.FullKOfam - INFO - [Trial 30] Convert distance matrix to non-redundant KNN: n_neighbors=20
+2025-03-05 17:38:30,427 - MFC.FullKOfam - INFO - [Trial 30] Remove disconnected nodes: n_neighbors=20
+2025-03-05 17:38:35,630 - MFC.FullKOfam - INFO - [Trial 30] Convert to similarity: n_neighbors=20
+2025-03-05 17:38:36,366 - MFC.FullKOfam - INFO - [Trial 30] Identify Leiden communities: n_neighbors=20
+2025-03-05 17:42:48,075 - MFC.FullKOfam - INFO - [Trial 30] Identify membership co-occurrence ratios: n_neighbors=20
+2025-03-05 17:55:07,737 - MFC.FullKOfam - INFO - [Trial 30] Get list of clustered edges and build clustered graph: n_neighbors=20
+2025-03-05 17:55:12,303 - MFC.FullKOfam - INFO - [Trial 30] Calculating silhouette scores: n_neighbors=20
+[I 2025-03-05 17:55:20,947] Trial 30 finished with value: 0.08976921590581813 and parameters: {'n_neighbors': 20}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 17:55:21,070 - MFC.FullKOfam - INFO - [Trial 31] Convert distance matrix to non-redundant KNN: n_neighbors=14
+2025-03-05 17:59:12,655 - MFC.FullKOfam - INFO - [Trial 31] Remove disconnected nodes: n_neighbors=14
+2025-03-05 17:59:17,984 - MFC.FullKOfam - INFO - [Trial 31] Convert to similarity: n_neighbors=14
+2025-03-05 17:59:18,519 - MFC.FullKOfam - INFO - [Trial 31] Identify Leiden communities: n_neighbors=14
+2025-03-05 18:02:35,299 - MFC.FullKOfam - INFO - [Trial 31] Identify membership co-occurrence ratios: n_neighbors=14
+2025-03-05 18:14:51,114 - MFC.FullKOfam - INFO - [Trial 31] Get list of clustered edges and build clustered graph: n_neighbors=14
+2025-03-05 18:14:54,571 - MFC.FullKOfam - INFO - [Trial 31] Calculating silhouette scores: n_neighbors=14
+[I 2025-03-05 18:15:03,193] Trial 31 finished with value: 0.09636434650748521 and parameters: {'n_neighbors': 14}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 18:15:03,317 - MFC.FullKOfam - INFO - [Trial 32] Convert distance matrix to non-redundant KNN: n_neighbors=13
+2025-03-05 18:18:57,855 - MFC.FullKOfam - INFO - [Trial 32] Remove disconnected nodes: n_neighbors=13
+2025-03-05 18:19:03,253 - MFC.FullKOfam - INFO - [Trial 32] Convert to similarity: n_neighbors=13
+2025-03-05 18:19:03,760 - MFC.FullKOfam - INFO - [Trial 32] Identify Leiden communities: n_neighbors=13
+2025-03-05 18:22:24,722 - MFC.FullKOfam - INFO - [Trial 32] Identify membership co-occurrence ratios: n_neighbors=13
+2025-03-05 18:34:46,482 - MFC.FullKOfam - INFO - [Trial 32] Get list of clustered edges and build clustered graph: n_neighbors=13
+2025-03-05 18:34:49,845 - MFC.FullKOfam - INFO - [Trial 32] Calculating silhouette scores: n_neighbors=13
+[I 2025-03-05 18:34:58,418] Trial 32 finished with value: 0.09987819684528824 and parameters: {'n_neighbors': 13}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 18:34:58,541 - MFC.FullKOfam - INFO - [Trial 33] Convert distance matrix to non-redundant KNN: n_neighbors=12
+2025-03-05 18:38:51,334 - MFC.FullKOfam - INFO - [Trial 33] Remove disconnected nodes: n_neighbors=12
+2025-03-05 18:38:56,797 - MFC.FullKOfam - INFO - [Trial 33] Convert to similarity: n_neighbors=12
+2025-03-05 18:38:57,259 - MFC.FullKOfam - INFO - [Trial 33] Identify Leiden communities: n_neighbors=12
+2025-03-05 18:42:03,303 - MFC.FullKOfam - INFO - [Trial 33] Identify membership co-occurrence ratios: n_neighbors=12
+2025-03-05 18:54:21,765 - MFC.FullKOfam - INFO - [Trial 33] Get list of clustered edges and build clustered graph: n_neighbors=12
+2025-03-05 18:54:24,947 - MFC.FullKOfam - INFO - [Trial 33] Calculating silhouette scores: n_neighbors=12
+[I 2025-03-05 18:54:33,582] Trial 33 finished with value: 0.08453827174102177 and parameters: {'n_neighbors': 12}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 18:54:33,704 - MFC.FullKOfam - INFO - [Trial 34] Convert distance matrix to non-redundant KNN: n_neighbors=17
+2025-03-05 18:58:28,133 - MFC.FullKOfam - INFO - [Trial 34] Remove disconnected nodes: n_neighbors=17
+2025-03-05 18:58:33,483 - MFC.FullKOfam - INFO - [Trial 34] Convert to similarity: n_neighbors=17
+2025-03-05 18:58:34,146 - MFC.FullKOfam - INFO - [Trial 34] Identify Leiden communities: n_neighbors=17
+2025-03-05 19:02:05,763 - MFC.FullKOfam - INFO - [Trial 34] Identify membership co-occurrence ratios: n_neighbors=17
+2025-03-05 19:14:31,264 - MFC.FullKOfam - INFO - [Trial 34] Get list of clustered edges and build clustered graph: n_neighbors=17
+2025-03-05 19:14:35,639 - MFC.FullKOfam - INFO - [Trial 34] Calculating silhouette scores: n_neighbors=17
+[I 2025-03-05 19:14:44,454] Trial 34 finished with value: 0.09330804888257317 and parameters: {'n_neighbors': 17}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 19:14:44,578 - MFC.FullKOfam - INFO - [Trial 35] Convert distance matrix to non-redundant KNN: n_neighbors=9
+2025-03-05 19:18:39,490 - MFC.FullKOfam - INFO - [Trial 35] Remove disconnected nodes: n_neighbors=9
+2025-03-05 19:18:45,103 - MFC.FullKOfam - INFO - [Trial 35] Convert to similarity: n_neighbors=9
+2025-03-05 19:18:45,458 - MFC.FullKOfam - INFO - [Trial 35] Identify Leiden communities: n_neighbors=9
+2025-03-05 19:21:16,046 - MFC.FullKOfam - INFO - [Trial 35] Identify membership co-occurrence ratios: n_neighbors=9
+2025-03-05 19:33:36,865 - MFC.FullKOfam - INFO - [Trial 35] Get list of clustered edges and build clustered graph: n_neighbors=9
+2025-03-05 19:33:39,601 - MFC.FullKOfam - INFO - [Trial 35] Calculating silhouette scores: n_neighbors=9
+[I 2025-03-05 19:33:48,014] Trial 35 finished with value: 0.08096615213779398 and parameters: {'n_neighbors': 9}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 19:33:48,138 - MFC.FullKOfam - INFO - [Trial 36] Convert distance matrix to non-redundant KNN: n_neighbors=22
+2025-03-05 19:37:41,533 - MFC.FullKOfam - INFO - [Trial 36] Remove disconnected nodes: n_neighbors=22
+2025-03-05 19:37:46,785 - MFC.FullKOfam - INFO - [Trial 36] Convert to similarity: n_neighbors=22
+2025-03-05 19:37:47,601 - MFC.FullKOfam - INFO - [Trial 36] Identify Leiden communities: n_neighbors=22
+2025-03-05 19:42:28,293 - MFC.FullKOfam - INFO - [Trial 36] Identify membership co-occurrence ratios: n_neighbors=22
+2025-03-05 19:54:56,342 - MFC.FullKOfam - INFO - [Trial 36] Get list of clustered edges and build clustered graph: n_neighbors=22
+2025-03-05 19:55:01,125 - MFC.FullKOfam - INFO - [Trial 36] Calculating silhouette scores: n_neighbors=22
+[I 2025-03-05 19:55:10,001] Trial 36 finished with value: 0.08784685525357037 and parameters: {'n_neighbors': 22}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 19:55:10,123 - MFC.FullKOfam - INFO - [Trial 37] Convert distance matrix to non-redundant KNN: n_neighbors=39
+2025-03-05 19:59:05,220 - MFC.FullKOfam - INFO - [Trial 37] Remove disconnected nodes: n_neighbors=39
+2025-03-05 19:59:10,432 - MFC.FullKOfam - INFO - [Trial 37] Convert to similarity: n_neighbors=39
+2025-03-05 19:59:11,830 - MFC.FullKOfam - INFO - [Trial 37] Identify Leiden communities: n_neighbors=39
+2025-03-05 20:06:18,935 - MFC.FullKOfam - INFO - [Trial 37] Identify membership co-occurrence ratios: n_neighbors=39
+2025-03-05 20:18:14,306 - MFC.FullKOfam - INFO - [Trial 37] Get list of clustered edges and build clustered graph: n_neighbors=39
+2025-03-05 20:18:22,503 - MFC.FullKOfam - INFO - [Trial 37] Calculating silhouette scores: n_neighbors=39
+[I 2025-03-05 20:18:31,416] Trial 37 finished with value: 0.08451478654377889 and parameters: {'n_neighbors': 39}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 20:18:31,540 - MFC.FullKOfam - INFO - [Trial 38] Convert distance matrix to non-redundant KNN: n_neighbors=13
+2025-03-05 20:22:26,607 - MFC.FullKOfam - INFO - [Trial 38] Remove disconnected nodes: n_neighbors=13
+2025-03-05 20:22:32,065 - MFC.FullKOfam - INFO - [Trial 38] Convert to similarity: n_neighbors=13
+2025-03-05 20:22:32,568 - MFC.FullKOfam - INFO - [Trial 38] Identify Leiden communities: n_neighbors=13
+2025-03-05 20:25:55,704 - MFC.FullKOfam - INFO - [Trial 38] Identify membership co-occurrence ratios: n_neighbors=13
+2025-03-05 20:38:12,489 - MFC.FullKOfam - INFO - [Trial 38] Get list of clustered edges and build clustered graph: n_neighbors=13
+2025-03-05 20:38:15,967 - MFC.FullKOfam - INFO - [Trial 38] Calculating silhouette scores: n_neighbors=13
+[I 2025-03-05 20:38:24,605] Trial 38 finished with value: 0.09987819684528824 and parameters: {'n_neighbors': 13}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 20:38:24,727 - MFC.FullKOfam - INFO - [Trial 39] Convert distance matrix to non-redundant KNN: n_neighbors=13
+2025-03-05 20:42:18,602 - MFC.FullKOfam - INFO - [Trial 39] Remove disconnected nodes: n_neighbors=13
+2025-03-05 20:42:24,033 - MFC.FullKOfam - INFO - [Trial 39] Convert to similarity: n_neighbors=13
+2025-03-05 20:42:24,533 - MFC.FullKOfam - INFO - [Trial 39] Identify Leiden communities: n_neighbors=13
+2025-03-05 20:45:46,097 - MFC.FullKOfam - INFO - [Trial 39] Identify membership co-occurrence ratios: n_neighbors=13
+2025-03-05 20:58:03,921 - MFC.FullKOfam - INFO - [Trial 39] Get list of clustered edges and build clustered graph: n_neighbors=13
+2025-03-05 20:58:07,386 - MFC.FullKOfam - INFO - [Trial 39] Calculating silhouette scores: n_neighbors=13
+[I 2025-03-05 20:58:16,012] Trial 39 finished with value: 0.09987819684528824 and parameters: {'n_neighbors': 13}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 20:58:16,135 - MFC.FullKOfam - INFO - [Trial 40] Convert distance matrix to non-redundant KNN: n_neighbors=13
+2025-03-05 21:02:08,527 - MFC.FullKOfam - INFO - [Trial 40] Remove disconnected nodes: n_neighbors=13
+2025-03-05 21:02:13,972 - MFC.FullKOfam - INFO - [Trial 40] Convert to similarity: n_neighbors=13
+2025-03-05 21:02:14,469 - MFC.FullKOfam - INFO - [Trial 40] Identify Leiden communities: n_neighbors=13
+2025-03-05 21:05:35,123 - MFC.FullKOfam - INFO - [Trial 40] Identify membership co-occurrence ratios: n_neighbors=13
+2025-03-05 21:17:53,240 - MFC.FullKOfam - INFO - [Trial 40] Get list of clustered edges and build clustered graph: n_neighbors=13
+2025-03-05 21:17:56,667 - MFC.FullKOfam - INFO - [Trial 40] Calculating silhouette scores: n_neighbors=13
+[I 2025-03-05 21:18:05,337] Trial 40 finished with value: 0.09987819684528824 and parameters: {'n_neighbors': 13}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 21:18:05,460 - MFC.FullKOfam - INFO - [Trial 41] Convert distance matrix to non-redundant KNN: n_neighbors=14
+2025-03-05 21:21:59,259 - MFC.FullKOfam - INFO - [Trial 41] Remove disconnected nodes: n_neighbors=14
+2025-03-05 21:22:04,700 - MFC.FullKOfam - INFO - [Trial 41] Convert to similarity: n_neighbors=14
+2025-03-05 21:22:05,243 - MFC.FullKOfam - INFO - [Trial 41] Identify Leiden communities: n_neighbors=14
+2025-03-05 21:25:22,660 - MFC.FullKOfam - INFO - [Trial 41] Identify membership co-occurrence ratios: n_neighbors=14
+2025-03-05 21:37:45,987 - MFC.FullKOfam - INFO - [Trial 41] Get list of clustered edges and build clustered graph: n_neighbors=14
+2025-03-05 21:37:49,431 - MFC.FullKOfam - INFO - [Trial 41] Calculating silhouette scores: n_neighbors=14
+[I 2025-03-05 21:37:57,984] Trial 41 finished with value: 0.09636434650748521 and parameters: {'n_neighbors': 14}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 21:37:58,109 - MFC.FullKOfam - INFO - [Trial 42] Convert distance matrix to non-redundant KNN: n_neighbors=12
+2025-03-05 21:41:51,940 - MFC.FullKOfam - INFO - [Trial 42] Remove disconnected nodes: n_neighbors=12
+2025-03-05 21:41:57,445 - MFC.FullKOfam - INFO - [Trial 42] Convert to similarity: n_neighbors=12
+2025-03-05 21:41:57,903 - MFC.FullKOfam - INFO - [Trial 42] Identify Leiden communities: n_neighbors=12
+2025-03-05 21:45:05,343 - MFC.FullKOfam - INFO - [Trial 42] Identify membership co-occurrence ratios: n_neighbors=12
+2025-03-05 21:57:24,612 - MFC.FullKOfam - INFO - [Trial 42] Get list of clustered edges and build clustered graph: n_neighbors=12
+2025-03-05 21:57:27,826 - MFC.FullKOfam - INFO - [Trial 42] Calculating silhouette scores: n_neighbors=12
+[I 2025-03-05 21:57:36,360] Trial 42 finished with value: 0.08453827174102177 and parameters: {'n_neighbors': 12}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 21:57:36,484 - MFC.FullKOfam - INFO - [Trial 43] Convert distance matrix to non-redundant KNN: n_neighbors=11
+2025-03-05 22:01:29,995 - MFC.FullKOfam - INFO - [Trial 43] Remove disconnected nodes: n_neighbors=11
+2025-03-05 22:01:35,513 - MFC.FullKOfam - INFO - [Trial 43] Convert to similarity: n_neighbors=11
+2025-03-05 22:01:35,935 - MFC.FullKOfam - INFO - [Trial 43] Identify Leiden communities: n_neighbors=11
+2025-03-05 22:04:40,407 - MFC.FullKOfam - INFO - [Trial 43] Identify membership co-occurrence ratios: n_neighbors=11
+2025-03-05 22:16:53,188 - MFC.FullKOfam - INFO - [Trial 43] Get list of clustered edges and build clustered graph: n_neighbors=11
+2025-03-05 22:16:56,281 - MFC.FullKOfam - INFO - [Trial 43] Calculating silhouette scores: n_neighbors=11
+[I 2025-03-05 22:17:04,729] Trial 43 finished with value: 0.0786688727096717 and parameters: {'n_neighbors': 11}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 22:17:04,853 - MFC.FullKOfam - INFO - [Trial 44] Convert distance matrix to non-redundant KNN: n_neighbors=14
+2025-03-05 22:20:58,541 - MFC.FullKOfam - INFO - [Trial 44] Remove disconnected nodes: n_neighbors=14
+2025-03-05 22:21:03,969 - MFC.FullKOfam - INFO - [Trial 44] Convert to similarity: n_neighbors=14
+2025-03-05 22:21:04,505 - MFC.FullKOfam - INFO - [Trial 44] Identify Leiden communities: n_neighbors=14
+2025-03-05 22:24:21,704 - MFC.FullKOfam - INFO - [Trial 44] Identify membership co-occurrence ratios: n_neighbors=14
+2025-03-05 22:36:42,020 - MFC.FullKOfam - INFO - [Trial 44] Get list of clustered edges and build clustered graph: n_neighbors=14
+2025-03-05 22:36:45,538 - MFC.FullKOfam - INFO - [Trial 44] Calculating silhouette scores: n_neighbors=14
+[I 2025-03-05 22:36:54,108] Trial 44 finished with value: 0.09636434650748521 and parameters: {'n_neighbors': 14}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 22:36:54,233 - MFC.FullKOfam - INFO - [Trial 45] Convert distance matrix to non-redundant KNN: n_neighbors=47
+2025-03-05 22:40:48,107 - MFC.FullKOfam - INFO - [Trial 45] Remove disconnected nodes: n_neighbors=47
+2025-03-05 22:40:53,298 - MFC.FullKOfam - INFO - [Trial 45] Convert to similarity: n_neighbors=47
+2025-03-05 22:40:54,968 - MFC.FullKOfam - INFO - [Trial 45] Identify Leiden communities: n_neighbors=47
+2025-03-05 22:50:03,954 - MFC.FullKOfam - INFO - [Trial 45] Identify membership co-occurrence ratios: n_neighbors=47
+2025-03-05 23:01:50,545 - MFC.FullKOfam - INFO - [Trial 45] Get list of clustered edges and build clustered graph: n_neighbors=47
+2025-03-05 23:01:58,808 - MFC.FullKOfam - INFO - [Trial 45] Calculating silhouette scores: n_neighbors=47
+[I 2025-03-05 23:02:07,758] Trial 45 finished with value: 0.08686569107160884 and parameters: {'n_neighbors': 47}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 23:02:07,883 - MFC.FullKOfam - INFO - [Trial 46] Convert distance matrix to non-redundant KNN: n_neighbors=14
+2025-03-05 23:06:01,182 - MFC.FullKOfam - INFO - [Trial 46] Remove disconnected nodes: n_neighbors=14
+2025-03-05 23:06:06,581 - MFC.FullKOfam - INFO - [Trial 46] Convert to similarity: n_neighbors=14
+2025-03-05 23:06:07,115 - MFC.FullKOfam - INFO - [Trial 46] Identify Leiden communities: n_neighbors=14
+2025-03-05 23:09:23,016 - MFC.FullKOfam - INFO - [Trial 46] Identify membership co-occurrence ratios: n_neighbors=14
+2025-03-05 23:21:36,612 - MFC.FullKOfam - INFO - [Trial 46] Get list of clustered edges and build clustered graph: n_neighbors=14
+2025-03-05 23:21:40,000 - MFC.FullKOfam - INFO - [Trial 46] Calculating silhouette scores: n_neighbors=14
+[I 2025-03-05 23:21:48,647] Trial 46 finished with value: 0.09636434650748521 and parameters: {'n_neighbors': 14}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 23:21:48,772 - MFC.FullKOfam - INFO - [Trial 47] Convert distance matrix to non-redundant KNN: n_neighbors=9
+2025-03-05 23:25:40,760 - MFC.FullKOfam - INFO - [Trial 47] Remove disconnected nodes: n_neighbors=9
+2025-03-05 23:25:46,338 - MFC.FullKOfam - INFO - [Trial 47] Convert to similarity: n_neighbors=9
+2025-03-05 23:25:46,681 - MFC.FullKOfam - INFO - [Trial 47] Identify Leiden communities: n_neighbors=9
+2025-03-05 23:28:16,144 - MFC.FullKOfam - INFO - [Trial 47] Identify membership co-occurrence ratios: n_neighbors=9
+2025-03-05 23:40:24,673 - MFC.FullKOfam - INFO - [Trial 47] Get list of clustered edges and build clustered graph: n_neighbors=9
+2025-03-05 23:40:27,339 - MFC.FullKOfam - INFO - [Trial 47] Calculating silhouette scores: n_neighbors=9
+[I 2025-03-05 23:40:35,804] Trial 47 finished with value: 0.08096615213779398 and parameters: {'n_neighbors': 9}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 23:40:35,926 - MFC.FullKOfam - INFO - [Trial 48] Convert distance matrix to non-redundant KNN: n_neighbors=12
+2025-03-05 23:44:26,594 - MFC.FullKOfam - INFO - [Trial 48] Remove disconnected nodes: n_neighbors=12
+2025-03-05 23:44:32,062 - MFC.FullKOfam - INFO - [Trial 48] Convert to similarity: n_neighbors=12
+2025-03-05 23:44:32,513 - MFC.FullKOfam - INFO - [Trial 48] Identify Leiden communities: n_neighbors=12
+2025-03-05 23:47:36,362 - MFC.FullKOfam - INFO - [Trial 48] Identify membership co-occurrence ratios: n_neighbors=12
+2025-03-05 23:59:47,309 - MFC.FullKOfam - INFO - [Trial 48] Get list of clustered edges and build clustered graph: n_neighbors=12
+2025-03-05 23:59:50,321 - MFC.FullKOfam - INFO - [Trial 48] Calculating silhouette scores: n_neighbors=12
+[I 2025-03-05 23:59:58,832] Trial 48 finished with value: 0.08453827174102177 and parameters: {'n_neighbors': 12}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-05 23:59:58,954 - MFC.FullKOfam - INFO - [Trial 49] Convert distance matrix to non-redundant KNN: n_neighbors=19
+2025-03-06 00:03:50,716 - MFC.FullKOfam - INFO - [Trial 49] Remove disconnected nodes: n_neighbors=19
+2025-03-06 00:03:56,009 - MFC.FullKOfam - INFO - [Trial 49] Convert to similarity: n_neighbors=19
+2025-03-06 00:03:56,711 - MFC.FullKOfam - INFO - [Trial 49] Identify Leiden communities: n_neighbors=19
+2025-03-06 00:07:44,000 - MFC.FullKOfam - INFO - [Trial 49] Identify membership co-occurrence ratios: n_neighbors=19
+2025-03-06 00:19:58,606 - MFC.FullKOfam - INFO - [Trial 49] Get list of clustered edges and build clustered graph: n_neighbors=19
+2025-03-06 00:20:02,895 - MFC.FullKOfam - INFO - [Trial 49] Calculating silhouette scores: n_neighbors=19
+[I 2025-03-06 00:20:11,599] Trial 49 finished with value: 0.10111065365139017 and parameters: {'n_neighbors': 19}. Best is trial 15 with value: 0.10111065365139017.
+2025-03-06 00:20:11,716 - MFC.FullKOfam - WARNING - [Callback] Stopping optimization: 50 trials reached (limit=50)
+2025-03-06 00:20:11,716 - MFC.FullKOfam - INFO - Tuned parameters (Score=0.10111065365139017): {'n_neighbors': 19}
+2025-03-06 00:20:11,717 - MFC.FullKOfam - INFO - [End] Hyperparameter Tuning

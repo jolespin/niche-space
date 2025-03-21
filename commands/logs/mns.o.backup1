@@ -1,0 +1,75 @@
+(73231, 17279)
+(73206, 17279)
+2025-03-07 20:41:29,944 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Start] Filtering observations and classes below feature threshold: 100
+2025-03-07 20:41:33,838 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Dropping] N = 263 y1 classes
+2025-03-07 20:41:33,843 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Dropping] N = 303 observations
+2025-03-07 20:41:33,844 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 14818 y1 classes
+2025-03-07 20:41:33,847 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 80 y2 classes
+2025-03-07 20:41:33,847 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 72903 observations
+2025-03-07 20:41:33,847 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Remaining] N = 17279 features
+2025-03-07 20:41:33,847 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [End] Filtering observations and classes below feature threshold
+2025-03-07 20:41:36,377 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - Loading distance matrix from checkpoint: ../data/manifold/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.HierarchicalNicheSpace.distance_matrix.parquet
+2025-03-07 20:41:49,442 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [End] Processing distance matrix
+2025-03-07 20:41:57,229 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Begin] Hyperparameter Tuning
+2025-03-07 20:41:57,229 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Loading] Checkpoint file: ../data/manifold/v2025.3.3/completeness_gte50.contamination_lt10//checkpoints/NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium.Optuna.HierarchicalNicheSpace.pkl
+2025-03-07 20:41:57,233 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 5] Fitting Diffision Map: n_neighbors=19, n_components=43, alpha=0.02021839744032572
+2025-03-07 20:42:10,801 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 5] Transforming observations: n_neighbors=19, n_components=43, alpha=0.02021839744032572
+2025-03-08 01:11:46,359 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 5] Calculating silhouette score: n_neighbors=19, n_components=43, alpha=0.02021839744032572
+[I 2025-03-08 01:12:37,028] Trial 5 finished with value: 0.6234202468347619 and parameters: {'n_components': 43, 'alpha': 0.02021839744032572}. Best is trial 5 with value: 0.6234202468347619.
+2025-03-08 01:12:37,170 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 6] Fitting Diffision Map: n_neighbors=19, n_components=74, alpha=0.7781567509498505
+2025-03-08 01:12:51,388 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 6] Transforming observations: n_neighbors=19, n_components=74, alpha=0.7781567509498505
+2025-03-08 05:35:55,185 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 6] Calculating silhouette score: n_neighbors=19, n_components=74, alpha=0.7781567509498505
+[I 2025-03-08 05:36:46,737] Trial 6 finished with value: 0.548228074231984 and parameters: {'n_components': 74, 'alpha': 0.7781567509498505}. Best is trial 5 with value: 0.6234202468347619.
+2025-03-08 05:36:46,882 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 7] Fitting Diffision Map: n_neighbors=19, n_components=75, alpha=0.978618342232764
+2025-03-08 05:37:01,353 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 7] Transforming observations: n_neighbors=19, n_components=75, alpha=0.978618342232764
+2025-03-08 10:00:32,791 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 7] Calculating silhouette score: n_neighbors=19, n_components=75, alpha=0.978618342232764
+[I 2025-03-08 10:01:23,824] Trial 7 finished with value: 0.5442308950918688 and parameters: {'n_components': 75, 'alpha': 0.978618342232764}. Best is trial 5 with value: 0.6234202468347619.
+2025-03-08 10:01:23,967 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 8] Fitting Diffision Map: n_neighbors=19, n_components=72, alpha=0.46147936225293185
+2025-03-08 10:01:38,024 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 8] Transforming observations: n_neighbors=19, n_components=72, alpha=0.46147936225293185
+2025-03-08 14:22:20,515 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 8] Calculating silhouette score: n_neighbors=19, n_components=72, alpha=0.46147936225293185
+[I 2025-03-08 14:23:11,980] Trial 8 finished with value: 0.5551076356090251 and parameters: {'n_components': 72, 'alpha': 0.46147936225293185}. Best is trial 5 with value: 0.6234202468347619.
+2025-03-08 14:23:12,122 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 9] Fitting Diffision Map: n_neighbors=19, n_components=72, alpha=0.11827442586893322
+2025-03-08 14:23:26,332 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 9] Transforming observations: n_neighbors=19, n_components=72, alpha=0.11827442586893322
+2025-03-08 18:45:25,068 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 9] Calculating silhouette score: n_neighbors=19, n_components=72, alpha=0.11827442586893322
+[I 2025-03-08 18:46:16,570] Trial 9 finished with value: 0.5551076358995446 and parameters: {'n_components': 72, 'alpha': 0.11827442586893322}. Best is trial 5 with value: 0.6234202468347619.
+2025-03-08 18:46:16,722 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 10] Fitting Diffision Map: n_neighbors=19, n_components=66, alpha=0.1433532874090464
+2025-03-08 18:46:31,080 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 10] Transforming observations: n_neighbors=19, n_components=66, alpha=0.1433532874090464
+2025-03-08 23:05:06,918 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 10] Calculating silhouette score: n_neighbors=19, n_components=66, alpha=0.1433532874090464
+[I 2025-03-08 23:05:58,245] Trial 10 finished with value: 0.5606258232444338 and parameters: {'n_components': 66, 'alpha': 0.1433532874090464}. Best is trial 5 with value: 0.6234202468347619.
+2025-03-08 23:05:58,387 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 11] Fitting Diffision Map: n_neighbors=19, n_components=78, alpha=0.5218483217500717
+2025-03-08 23:06:13,038 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 11] Transforming observations: n_neighbors=19, n_components=78, alpha=0.5218483217500717
+2025-03-09 03:27:22,794 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 11] Calculating silhouette score: n_neighbors=19, n_components=78, alpha=0.5218483217500717
+[I 2025-03-09 03:28:14,492] Trial 11 finished with value: 0.5213190599292185 and parameters: {'n_components': 78, 'alpha': 0.5218483217500717}. Best is trial 5 with value: 0.6234202468347619.
+2025-03-09 03:28:14,639 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 12] Fitting Diffision Map: n_neighbors=19, n_components=57, alpha=0.26455561210462697
+2025-03-09 03:28:28,906 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 12] Transforming observations: n_neighbors=19, n_components=57, alpha=0.26455561210462697
+2025-03-09 07:49:01,004 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 12] Calculating silhouette score: n_neighbors=19, n_components=57, alpha=0.26455561210462697
+[I 2025-03-09 07:49:51,606] Trial 12 finished with value: 0.5876128220755306 and parameters: {'n_components': 57, 'alpha': 0.26455561210462697}. Best is trial 5 with value: 0.6234202468347619.
+2025-03-09 07:49:51,747 - NAL-GDB_MNS__v2025.3.3__SLC-MFC.medium - INFO - [Trial 13] Fitting Diffision Map: n_neighbors=19, n_components=71, alpha=0.45615033221654855
+[W 2025-03-09 07:50:03,748] Trial 13 failed with parameters: {'n_components': 71, 'alpha': 0.45615033221654855} because of the following error: KeyboardInterrupt().
+Traceback (most recent call last):
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/nichespace/manifold.py", line 694, in _objective
+    dmap_X1 = model.fit_transform(X1.values)
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/sklearn/utils/_set_output.py", line 140, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/datafold/dynfold/dmap.py", line 646, in fit_transform
+    self.fit(X=X, y=y, **fit_params)
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/datafold/dynfold/dmap.py", line 547, in fit
+    ) = _DmapKernelAlgorithms.solve_eigenproblem(
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/datafold/dynfold/dmap.py", line 61, in solve_eigenproblem
+    eigvals, eigvect = compute_kernel_eigenpairs(
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/datafold/pcfold/eigsolver.py", line 245, in compute_kernel_eigenpairs
+    eigvals, eigvects = scipy_eigsolver(
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/datafold/pcfold/eigsolver.py", line 118, in scipy_eigsolver
+    eigvals, eigvects = scipy_eigvec_solver(kernel_matrix, **solver_kwargs)
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/scipy/sparse/linalg/_eigen/arpack/arpack.py", line 1697, in eigsh
+    params.iterate()
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/scipy/sparse/linalg/_eigen/arpack/arpack.py", line 560, in iterate
+    self.workd[yslice] = self.OPa(self.workd[Bxslice])
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/scipy/sparse/linalg/_interface.py", line 234, in matvec
+    y = self._matvec(x)
+  File "/home/ec2-user/SageMaker/environments/mns/lib/python3.9/site-packages/scipy/sparse/linalg/_eigen/arpack/arpack.py", line 928, in _matvec
+    return self.M_lu.solve(x.astype(self.dtype))
+KeyboardInterrupt
+[W 2025-03-09 07:50:03,756] Trial 13 failed with value None.

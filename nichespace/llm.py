@@ -2,7 +2,6 @@
 import json
 import hashlib
 from collections import OrderedDict
-from dotenv import dotenv_values
 from pyexeggutor import (
     format_header,
     open_file_writer,

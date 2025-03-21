@@ -32,3 +32,7 @@ do
 
 done
 
+echo "Combining clustering results"
+
+cat ../data/cluster/ani/v2025.3.3/*/${quality_label}/genome_clusters.tsv | gzip > ../data/training/v2025.3.3/${quality_label}/genome_to_ani-cluster.tsv.gz
+

@@ -6,6 +6,7 @@ from collections import (
     defaultdict,
     OrderedDict,
 )
+from typing import Optional, Union
 from tqdm import tqdm
 import numpy as np # Can't install NumPy 2.2.2 which is what the pkls were saved with
 import pandas as pd # 'v2.2.3'
@@ -27,7 +28,10 @@ from sklearn.metrics import (
 )
 
 from sklearn.tree import DecisionTreeRegressor
-
+# --------------------------------------------------
+from sklearn.utils.validation import check_is_fitted
+from datafold.pcfold import TSCDataFrame
+# --------------------------------------------------
 from datafold.dynfold import (
     DiffusionMaps, 
     Roseland,
@@ -166,6 +170,8 @@ class NicheSpace(object):
         verbose=1,
         stream=sys.stdout,
         ):
+        
+        warnings.warn("NicheSpace has not had the performance updates that HierarchicalNicheSpace has recieved")
         
         # General
         if name is None:
@@ -455,7 +461,7 @@ class NicheSpace(object):
         ):
         if not self.is_fitted:
             raise Exception("Please run .fit to build DiffusionMap model before continuing")
-        dmap = self._parallel_transform(self, X, model_, progressbar_message=progressbar_message)
+        dmap = self._parallel_transform(self, X, self.model_, progressbar_message=progressbar_message)
         if isinstance(X, pd.DataFrame):
             X_dmap = pd.DataFrame(dmap, index=X.index)
             X_dmap.columns = [f"{self.niche_prefix}0_steady-state"] + list(map(lambda i: f"{self.niche_prefix}{i}", range(1,dmap.shape[1])))
@@ -563,6 +569,9 @@ class HierarchicalNicheSpace(object):
         scale_by_steadystate:bool=True,
         niche_prefix="n",
         robust_transform=True,
+        parallel_backend=None,
+        parallel_prefer="threads",
+        parallel_kws:dict=None,
 
         # Optuna
         n_trials=50,
@@ -576,6 +585,8 @@ class HierarchicalNicheSpace(object):
         random_state=0,
         verbose=1,
         stream=sys.stdout,
+        cast_as_float:bool=True,
+
         ):
         
         # General
@@ -595,7 +606,13 @@ class HierarchicalNicheSpace(object):
         self.scoring_distance_metric = scoring_distance_metric
         self.scale_by_steadystate = scale_by_steadystate
         self.niche_prefix = niche_prefix
-        self. robust_transform = robust_transform
+        self.robust_transform = robust_transform
+        self.parallel_kws = dict(
+                backend=parallel_backend,
+                prefer=parallel_prefer,
+        )
+        if parallel_kws:
+            self.parallel_kws.update(parallel_kws)
         
         # Optuna
         self.n_jobs = n_jobs
@@ -632,6 +649,7 @@ class HierarchicalNicheSpace(object):
         
         self.logger = build_logger(self.name, stream=stream)
         self.verbose = verbose
+        self.cast_as_float = cast_as_float
         self.is_fitted = False
         
     def tune(
@@ -673,11 +691,11 @@ class HierarchicalNicheSpace(object):
                     model = DiffusionMaps(kernel=kernel, n_eigenpairs=n_components+1, alpha=alpha)
 
                     if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Fitting Diffision Map: n_neighbors={n_neighbors}, n_components={n_components}, alpha={alpha}")
-                    dmap_X1 = model.fit_transform(X1)
+                    dmap_X1 = model.fit_transform(X1.values)
 
                     if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Transforming observations: n_neighbors={n_neighbors}, n_components={n_components}, alpha={alpha}")
                     # dmap_X = model.transform(X)
-                    dmap_X = self._parallel_transform(X, model, progressbar_message=f"[Trial {trial.number}] Projecting initial data into diffusion space")
+                    dmap_X = self._parallel_transform(X.values, model, progressbar_message=f"[Trial {trial.number}] Projecting initial data into diffusion space")
 
                     # Score
                     if self.verbose > 1: self.logger.info(f"[Trial {trial.number}] Calculating silhouette score: n_neighbors={n_neighbors}, n_components={n_components}, alpha={alpha}")
@@ -807,7 +825,18 @@ class HierarchicalNicheSpace(object):
             X = X.astype(bool)
             X1 = X1.astype(bool)
             
+        self.observations_ = X.index
+        self.observations1_ = X1.index
+        self.features_ = X.columns
+            
         # Distance matrix
+        serialized_checkpoint_filepath = None
+        if self.checkpoint_directory:
+            serialized_checkpoint_filepath = os.path.join(self.checkpoint_directory, f"{self.name}.{self.__class__.__name__}.distance_matrix.parquet")
+            if os.path.exists(serialized_checkpoint_filepath):
+                self.logger.info(f"Loading distance matrix from checkpoint: {serialized_checkpoint_filepath}")
+                distance_matrix = pd.read_parquet(serialized_checkpoint_filepath).values
+                
         if distance_matrix is None:
             if self.verbose > 0:
                 self.logger.info("[Start] Processing distance matrix")
@@ -819,8 +848,17 @@ class HierarchicalNicheSpace(object):
             distance_matrix = squareform(distance_matrix)
         if not distance_matrix.shape[0] == X1.shape[0]:
             raise ValueError(f"distance_matrix.shape[0] ({distance_matrix.shape[0]}) does not match X1.shape[0] ({X1.shape[0]}).  This may be a result of automatic filtering.  If so, please filter before providing input or do not provide distance matrix")
+        if serialized_checkpoint_filepath:
+            if not os.path.exists(serialized_checkpoint_filepath):
+                self.logger.info(f"Writing distance matrix checkpoint: {serialized_checkpoint_filepath}")
+                pd.DataFrame(distance_matrix, index=X1.index, columns=X1.index).to_parquet(serialized_checkpoint_filepath, index=True)
         if self.verbose > 0:
             self.logger.info("[End] Processing distance matrix")
+            
+        # Cast as float
+        if self.cast_as_float: # Decrease overhead for parallel transform
+            X = X.astype(float)
+            X1 = X1.astype(float)
 
         # Store
         if not isinstance(y1, pd.CategoricalDtype):
@@ -875,7 +913,7 @@ class HierarchicalNicheSpace(object):
         self.model_ = DiffusionMaps(kernel=self.kernel_, n_eigenpairs=self.n_components+1, alpha=self.alpha)
         
         # Fit
-        dmap = self.model_.fit(X1)
+        dmap = self.model_.fit(X1.values)
 
         # Grouped
         if self.robust_transform:
@@ -915,13 +953,27 @@ class HierarchicalNicheSpace(object):
         ):
         if not self.is_fitted:
             raise Exception("Please run .fit to build DiffusionMap model before continuing")
-        dmap = self._parallel_transform(self, X, model_, progressbar_message=progressbar_message)
+            
+        if X.shape[1] != len(self.features_):
+            raise ValueError("Number of X features must match number of fitted features")
+            
         if isinstance(X, pd.DataFrame):
+            if np.any(X.columns != self.features_):
+                raise ValueError("X features must match fitted features")
+                
+        dmap = self._parallel_transform(X, self.model_, progressbar_message=progressbar_message)
+        if isinstance(X, pd.DataFrame):
+
             X_dmap = pd.DataFrame(dmap, index=X.index)
             X_dmap.columns = [f"{self.niche_prefix}0_steady-state"] + list(map(lambda i: f"{self.niche_prefix}{i}", range(1,dmap.shape[1])))
             X_dmap.index.name = self.observation_type
             X_dmap.columns.name = self.feature_type
+            if self.scale_by_steadystate:
+                X_dmap = self._scale_by_first_column(X_dmap)
+            return X_dmap
         else:
+            if self.scale_by_steadystate:
+                dmap = self._scale_by_first_column(dmap)
             return dmap
         
         
@@ -937,7 +989,7 @@ class HierarchicalNicheSpace(object):
         return X_basis, y_basis
     
     @staticmethod
-    def _scale_by_first_column(X: pd.DataFrame) -> pd.DataFrame:
+    def _scale_by_first_column(X):
         """
         Scale all columns of a DataFrame (except the first one) by the first column.
 
@@ -951,27 +1003,98 @@ class HierarchicalNicheSpace(object):
         pd.DataFrame
             A new DataFrame with the first column removed and the remaining columns scaled.
         """
-        values = X.values  # Convert to NumPy array for efficiency
-        steady_state_vector = values[:, 0].reshape(-1, 1)  # Extract first column as divisor
-        scaled_values = values[:, 1:] / steady_state_vector  # Perform element-wise division
+        if isinstance(X, pd.DataFrame):
+            values = X.values  # Convert to NumPy array for efficiency
+            steady_state_vector = values[:, 0].reshape(-1, 1)  # Extract first column as divisor
+            scaled_values = values[:, 1:] / steady_state_vector  # Perform element-wise division
 
-        return pd.DataFrame(
-            scaled_values, 
-            index=X.index, 
-            columns=X.columns[1:]  # Remove first column name from new DataFrame
-        )
+            return pd.DataFrame(
+                scaled_values, 
+                index=X.index, 
+                columns=X.columns[1:]  # Remove first column name from new DataFrame
+            )
+        else:
+            values = X.copy()  
+            steady_state_vector = values[:, 0].reshape(-1, 1)  # Extract first column as divisor
+            scaled_values = values[:, 1:] / steady_state_vector  # Perform element-wise division
+            return scaled_values
 
+    # @staticmethod
+    # def _process_row(model, row):
+    #     """Helper function to apply model.transform to a single row"""
+    #     return model.transform(row.reshape(1, -1))
+    
     @staticmethod
     def _process_row(model, row):
-        """Helper function to apply model.transform to a single row"""
-        return model.transform(row.reshape(1, -1))
+        r"""Embed out-of-sample points with Nyström extension.
+
+        From solving the eigenproblem of the diffusion kernel :math:`K`
+        (:class:`.DmapKernelFixed`)
+
+        .. math::
+            K(X,X) \Psi = \Psi \Lambda
+
+        follows the Nyström extension for out-of-sample mappings:
+
+        .. math::
+            K(X, Y) \Psi \Lambda^{-1} = \Psi
+
+        where :math:`K(X, Y)` is a component-wise evaluation of the kernel.
+
+        Note, that the Nyström mapping can be used for image mappings irrespective of
+        whether the computed kernel matrix :math:`K(X,X)` is symmetric.
+        For details on this see :cite:t:`fernandez-2015` (especially Eq. 5).
+
+        Parameters
+        ----------
+        X: TSCDataFrame, pandas.DataFrame, numpy.ndarray
+            Data points of shape `(n_samples, n_features)` to be embedded.
+
+        Returns
+        -------
+        TSCDataFrame, pandas.DataFrame, numpy.ndarray
+            same type as `X` of shape `(n_samples, n_coords)`
+        """
+        X = row.reshape(1,-1)
+        # check_is_fitted(model, ("X_fit_", "eigenvalues_", "eigenvectors_"))
+
+        # X = model._validate_datafold_data(X)
+        # model._validate_feature_input(X, direction="transform")
+
+        kernel_matrix_cdist = model._dmap_kernel(model.X_fit_, X)
+
+        # choose object to copy time information from
+        if isinstance(kernel_matrix_cdist, TSCDataFrame):
+            # if possible take time index from kernel_matrix (especially
+            # dynamics-adapted kernels can drop samples from X)
+            index_from: Optional[TSCDataFrame] = kernel_matrix_cdist
+        elif isinstance(X, TSCDataFrame) and kernel_matrix_cdist.shape[0] == X.shape[0]:
+            # if kernel is numpy.ndarray or scipy.sparse.csr_matrix, but X_fit_ is a time
+            # series, then take indices from X_fit_ -- this only works if no samples are
+            # dropped in the kernel computation.
+            index_from = X
+        else:
+            index_from = None
+
+        eigvec, eigvals = model._select_eigenpairs_target_coords()
+
+        eigvec_nystroem = model._nystrom(
+            kernel_matrix_cdist,
+            eigvec=np.asarray(eigvec),
+            eigvals=eigvals,
+            index_from=index_from,
+        )
+
+        return model._perform_dmap_embedding(eigvec_nystroem)
 
     def _parallel_transform(self, X, model, progressbar_message=None):
         """Parallelizes the transformation using joblib"""
+        if isinstance(X, pd.DataFrame):
+            X = X.values
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", category=UserWarning, message="X does not have valid feature names")
-            output = joblib.Parallel(n_jobs=self.n_jobs, prefer="threads")(
-                joblib.delayed(self._process_row)(model, row.values) for id, row in tqdm(X.iterrows(), desc=progressbar_message, total=X.shape[0], position=0, leave=True)
+            output = joblib.Parallel(n_jobs=self.n_jobs, **self.parallel_kws)(
+                joblib.delayed(self._process_row)(model, row) for row in tqdm(X, desc=progressbar_message, total=X.shape[0], position=0, leave=True)
             )
             return np.vstack(output)
 
@@ -1439,6 +1562,7 @@ class EmbeddingAnnotator(object):
         training_testing_weights = [1.0,1.0],
         remove_zero_weighted_features=True,
         maximum_tries_to_remove_zero_weighted_features=100,
+        automl_kws=None,
 
         # Labeling
         name:str=None,
@@ -1473,7 +1597,10 @@ class EmbeddingAnnotator(object):
         self.training_testing_weights = training_testing_weights
         self.remove_zero_weighted_features = remove_zero_weighted_features
         self.maximum_tries_to_remove_zero_weighted_features = maximum_tries_to_remove_zero_weighted_features
-
+        if automl_kws is None:
+            automl_kws = dict()
+        self.automl_kws = automl_kws
+        
         # Labeling
         self.name = name
         self.observation_type = observation_type
@@ -1544,6 +1671,9 @@ class EmbeddingAnnotator(object):
                 observation_type=self.observation_type,
                 feature_type=self.feature_type,
                 target_type=self.embedding_type,
+                copy_X=False,
+                copy_y=False,
+                **self.automl_kws,
             )
 
             # with SuppressStderr():
