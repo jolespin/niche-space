@@ -15,6 +15,7 @@ optuna
 fastparquet
 xarray
 h5netcdf
+anndata
 #kegg-pathway-profiler>=2024.10.16
 #pyfastx
 #openai
