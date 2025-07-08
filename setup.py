@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-
 from os import path
 
 script_directory = path.abspath(path.dirname(__file__))
@@ -13,16 +12,15 @@ with open(path.join(script_directory, package_name, '__init__.py')) as f:
             version = line.split("=")[-1].strip().strip('"')
 assert version is not None, f"Check version in {package_name}/__init__.py"
 
-with open(path.join(script_directory, 'README.md')) as f:
+with open(path.join(script_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-requirements = list()
+requirements = []
 with open(path.join(script_directory, 'requirements.txt')) as f:
     for line in f.readlines():
         line = line.strip()
-        if line:
-            if not line.startswith("#"):
-                requirements.append(line)
+        if line and not line.startswith("#"):
+            requirements.append(line)
 
 setup(
     name="niche-space",
@@ -30,20 +28,20 @@ setup(
     version=version,
     description='Hierarchical niche space analysis in python',
     long_description=long_description,
-
-    # The project's main homepage.
-    url='https://github.com/jolespin/nichespace',
-
-    # Author details
+    long_description_content_type='text/markdown',  # Ensures README.md renders on PyPI
+    url='https://github.com/jolespin/niche-space',
     author='Josh L. Espinoza',
-
-    # Choose your license
     license='MIT',
     packages=find_packages(),
-    
-    install_requires=requirements, #[:-1],
-    tests_require=requirements, #[-1:]
-     scripts=[
-     "bin/edgelist_to_clusters.py",
-     ],
+    install_requires=requirements,
+    tests_require=requirements,
+    scripts=[
+        "bin/edgelist_to_clusters.py",
+    ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 )
+
