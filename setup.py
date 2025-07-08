@@ -25,7 +25,7 @@ with open(path.join(script_directory, 'requirements.txt')) as f:
                 requirements.append(line)
 
 setup(
-    name=package_name,
+    name="niche-space",
     python_requires='>=3.6',
     version=version,
     description='Hierarchical niche space analysis in python',
@@ -38,10 +38,7 @@ setup(
     author='Josh L. Espinoza',
 
     # Choose your license
-    license='GPLv3',
-    # provides=['metabolic_niche_space'],
-    # packages=['metabolic_niche_space'],
-    # py_modules=["manifold", "neighbors"],
+    license='MIT',
     packages=find_packages(),
     
     install_requires=requirements, #[:-1],
