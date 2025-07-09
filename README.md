@@ -6,9 +6,6 @@ This package also includes graph theoretical clustering and embedding annotation
 ```
 # PyPI
 pip install niche-space
-
-# Conda
-conda install -c new-atlantis-labs niche-space
 ```
 
 ## Bayesian Hyperparameter Optimization
@@ -532,8 +529,8 @@ llm.query(prompt=f"Can you descibe the metabolic and environmental context of a 
           model="o3-mini",
 )
 # Nostoc, a filamentous cyanobacterium from the Nostocaceae family, thrives in diverse aquatic and terrestrial ecosystems, 
-# often where nitrogen is limited. Its enrichment in nitrogenase proteins—including both molybdenum-iron and vanadium-dependent 
-# enzymes—indicates a robust capacity for atmospheric nitrogen fixation. This metabolic trait is crucial in converting inert N₂ 
+# often where nitrogen is limited. Its enrichment in nitrogenase proteins???including both molybdenum-iron and vanadium-dependent 
+# enzymes???indicates a robust capacity for atmospheric nitrogen fixation. This metabolic trait is crucial in converting inert N??? 
 # into biologically available forms, supporting both self-growth and symbiotic relationships with plants and other organisms. 
 # By performing nitrogen fixation under microaerobic or anoxic conditions within its usually oxygen-rich habitat, Nostoc plays a 
 # vital role in ecosystem nutrient cycling and soil fertility, contributing significantly to primary productivity in nutrient-poor 
