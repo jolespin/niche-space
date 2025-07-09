@@ -4,7 +4,6 @@ This package also includes graph theoretical clustering and embedding annotation
 
 ## Install
 ```
-# PyPI
 pip install niche-space
 ```
 
