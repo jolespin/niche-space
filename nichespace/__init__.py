@@ -1,4 +1,4 @@
-__version__ = "2025.3.14"
+__version__ = "2025.7.10"
 
 from . import utils
 from . import manifold

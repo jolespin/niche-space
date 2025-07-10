@@ -31,7 +31,7 @@ setup(
     long_description_content_type='text/markdown',  # Ensures README.md renders on PyPI
     url='https://github.com/jolespin/niche-space',
     author='Josh L. Espinoza',
-    license='MIT',
+    license='Apache 2.0',
     packages=find_packages(),
     install_requires=requirements,
     tests_require=requirements,
