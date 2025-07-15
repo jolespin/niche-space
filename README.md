@@ -1,6 +1,6 @@
 # Niche Space
-The `nichespace` package is developed for computing quantitative hierarchical niche spaces and qualitative niche spaces for visualization. 
-This package also includes graph theoretical clustering and embedding annotations used bayesian AutoML methods.
+The `nichespace` package is developed for computing quantitative and qualitative hierarchical niche spaces for exploration and insight. 
+This package also includes graph theoretical clustering and embedding annotations using bayesian AutoML methods and large language models.
 
 ## Install
 ```
